@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="media/flavicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hulled Sunflower Kernels — Agros-98 AD Bulgaria</title>
+  <meta name="description" content="Bulgarian hulled sunflower kernels in four grades: Bakery, Premium Bakery, Confectionery, and Chips. Produced by Agros-98 AD, Suvorovo & Varna." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/products.css" />
+  <link rel="alternate" hreflang="en" href="https://www.agros.net/hulled-sunflower-kernels.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.agros.net/hulled-sunflower-kernels.html" />
+  <style>
+    /* ── Grade Selector Bar ─────────────────────────────────── */
+    .grade-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 64px;
+      z-index: 100;
+      padding: 0;
+    }
+    .grade-bar__inner {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .grade-bar__inner::-webkit-scrollbar { display: none; }
+    .grade-tab {
+      flex-shrink: 0;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      padding: 1.1rem 1.75rem;
+      border: none;
+      border-bottom: 3px solid transparent;
+      background: transparent;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .grade-tab:hover { color: var(--brand-amber); }
+    .grade-tab:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+    .grade-tab.is-active {
+      color: var(--brand-amber);
+      border-bottom-color: var(--brand-amber);
+      background: rgba(184,114,58,0.04);
+    }
+    .grade-tab__badge {
+      display: inline-block;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 100px;
+      margin-left: 7px;
+      vertical-align: middle;
+      background: rgba(184,114,58,0.12);
+      color: var(--brand-amber);
+      transition: background 0.2s;
+    }
+    .grade-tab.is-active .grade-tab__badge {
+      background: var(--brand-amber);
+      color: var(--white);
+    }
+
+    /* ── Grade Panel ────────────────────────────────────────── */
+    .grade-panel { display: none; }
+    .grade-panel.is-active { display: contents; }
+
+    /* ── Applications Section ───────────────────────────────── */
+    .apps-section {
+      padding: 4.5rem 0;
+      background: var(--white);
+    }
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 1024px) { .apps-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px)  { .apps-grid { grid-template-columns: 1fr; } }
+    .app-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1.25rem;
+      transition: transform var(--transition-spring), box-shadow var(--transition-base);
+    }
+    .app-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(30,22,10,0.08); }
+    .app-card__icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .app-card__title {
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.35rem;
+    }
+    .app-card__sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ── Spec table transition ──────────────────────────────── */
+    #spec-tbody tr {
+      animation: rowFadeIn 0.25s ease both;
+    }
+    @keyframes rowFadeIn {
+      from { opacity: 0; transform: translateX(-6px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    #grade-desc-wrap {
+      transition: opacity 0.2s;
+    }
+    #grade-desc-wrap.is-fading { opacity: 0; }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container"><div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Agros-98 AD Home">
+      <img src="media/agros-logo.png" alt="Agros-98 AD" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html" class="nav__link">Home</a></li>
+      <li class="nav__item--has-dropdown">
+        <a href="products.html" class="nav__link">Products <svg class="nav__dropdown-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></a>
+        <div class="nav__mega-dropdown" id="nav-dropdown"></div>
+      </li>
+      <li><a href="contact.html" class="nav__link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav__cta">Request a Quote</a>
+    <div class="nav__lang">
+      <a href="hulled-sunflower-kernels.html" class="nav__lang-link nav__lang-link--active" hreflang="en" aria-current="true">EN</a>
+      <a href="bg/hulled-sunflower-kernels.html" class="nav__lang-link" hreflang="bg">BG</a>
+      <a href="de/hulled-sunflower-kernels.html" class="nav__lang-link" hreflang="de">DE</a>
+    </div>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div></div>
+</nav>
+<div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+  <nav class="nav__mobile-links">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="products.html" class="nav__mobile-link">Products</a>
+    <a href="contact.html" class="nav__mobile-link">Contact</a>
+  </nav>
+  <a href="contact.html" class="nav__mobile-cta">Request a Quote</a>
+</div>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb__sep" aria-hidden="true">›</li>
+      <li class="breadcrumb__item"><a href="products.html">Products</a></li>
+      <li class="breadcrumb__sep" aria-hidden="true">›</li>
+      <li class="breadcrumb__item"><a href="products.html?cat=seeds">Seeds &amp; Kernels</a></li>
+      <li class="breadcrumb__sep" aria-hidden="true">›</li>
+      <li class="breadcrumb__item" aria-current="page">Hulled Sunflower Kernels</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="prod-hero prod-hero--has-bg" style="background-image: url('Media/products/sunflower-kernels-bg.webp');" aria-labelledby="prod-title">
+  <div class="prod-hero__pattern" aria-hidden="true"></div>
+  <div class="container">
+    <div class="prod-hero__content">
+      <div>
+        <p class="prod-hero__cat-label">Seeds &amp; Kernels</p>
+        <h1 class="prod-hero__title" id="prod-title">Hulled Sunflower Kernels</h1>
+        <p class="prod-hero__tagline" style="font-style:italic;font-size:0.95rem;margin-bottom:1rem;color:rgba(255,255,255,0.45)">Hulled / De-hulled Sunflower Seeds — four grades available</p>
+        <p class="prod-hero__tagline">Bulgarian-grown sunflower kernels processed at our integrated Suvorovo facility. Available in Bakery, Premium Bakery, Confectionery, and Chips grades to match every application.</p>
+        <div class="prod-hero__certs">
+          <span class="prod-hero__cert">Halal &amp; Kosher</span>
+          <span class="prod-hero__cert">ISO22000</span>
+          <span class="prod-hero__cert">FSSC22000</span>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+          <a href="contact.html" class="btn btn--primary">Request a Price</a>
+          <a href="contact.html" class="btn btn--outline-light">Request a Sample</a>
+        </div>
+      </div>
+      <div class="prod-hero__moq">
+        <p class="prod-hero__moq-heading">Order Details</p>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">MOQ</span>
+          <span class="prod-hero__moq-val">1 × 20ft container</span>
+        </div>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">Origin</span>
+          <span class="prod-hero__moq-val">Bulgaria (Varna Region)</span>
+        </div>
+        <hr class="prod-hero__moq-divider" />
+        <p class="prod-hero__moq-heading" style="margin-bottom:0.75rem">Packaging Options</p>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">Option</span>
+          <span class="prod-hero__moq-val">25 kg paper bags</span>
+        </div>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">Option</span>
+          <span class="prod-hero__moq-val">50 kg PP bags</span>
+        </div>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">Option</span>
+          <span class="prod-hero__moq-val">500 kg big bags</span>
+        </div>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">Option</span>
+          <span class="prod-hero__moq-val">1 000 kg big bags</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GRADE SELECTOR BAR ===== -->
+<div class="grade-bar" role="tablist" aria-label="Select grade">
+  <div class="container">
+    <div class="grade-bar__inner">
+      <button class="grade-tab is-active" data-grade="bakery" role="tab" aria-selected="true" aria-controls="panel-bakery">
+        Bakery
+      </button>
+      <button class="grade-tab" data-grade="premium" role="tab" aria-selected="false" aria-controls="panel-premium">
+        Premium Bakery <span class="grade-tab__badge">New</span>
+      </button>
+      <button class="grade-tab" data-grade="confectionery" role="tab" aria-selected="false" aria-controls="panel-confectionery">
+        Confectionery
+      </button>
+      <button class="grade-tab" data-grade="chips" role="tab" aria-selected="false" aria-controls="panel-chips">
+        Chips
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRODUCT BODY ===== -->
+<section class="prod-body section" aria-label="Product details">
+  <div class="container">
+    <div class="prod-body__grid">
+
+      <!-- LEFT: Description (grade-specific) -->
+      <div class="prod-body__desc reveal reveal--left" id="grade-desc-wrap">
+
+        <!-- BAKERY -->
+        <div class="grade-panel is-active" id="panel-bakery-desc">
+          <h2 class="prod-body__desc-title">Bakery Grade</h2>
+          <p>Agros-98's Bakery Grade hulled sunflower kernels are produced from sunflower varieties grown on our own farmland in the Varna region under a low-pesticide cultivation program. After harvest, seeds go through multiple cleaning and gravity-separation stages to achieve purity of 99.9% or above.</p>
+          <p>The bakery size range — 550 to 600 pieces per ounce — delivers consistent kernel size that toasts evenly and integrates uniformly into bread doughs, rolls, crackers, and granola. The white-to-light-grey colour provides excellent visual appeal in finished products.</p>
+          <p>Processing takes place in our integrated Suvorovo facility using equipment calibrated for food-grade production. Full documentation including COA, Certificate of Origin, and phytosanitary certificates is supplied with every shipment.</p>
+        </div>
+
+        <!-- PREMIUM BAKERY -->
+        <div class="grade-panel" id="panel-premium-desc">
+          <h2 class="prod-body__desc-title">Premium Bakery Grade</h2>
+          <p>Our Premium Bakery Grade represents the finest selection from our sunflower kernel range — hand-sorted for extra-large kernel size, exceptional whiteness, and the tightest purity tolerances we offer. Each batch undergoes an additional optical sorting pass to remove any off-colour or undersized kernels.</p>
+          <p>At 500 to 550 pieces per ounce, these kernels are visibly larger than standard bakery grade and deliver a premium visual impact in artisan breads, patisserie toppings, and health-food products where kernel appearance matters.</p>
+          <p>Moisture is held to a tighter maximum of 7%, reducing the risk of rancidity during storage and giving manufacturers more flexibility in shelf-life calculations. Available with Kosher documentation on request.</p>
+        </div>
+
+        <!-- CONFECTIONERY -->
+        <div class="grade-panel" id="panel-confectionery-desc">
+          <h2 class="prod-body__desc-title">Confectionery Grade</h2>
+          <p>Confectionery Grade kernels are the largest whole-kernel fraction from our hulling operation, selected for uniform size and pure white appearance. At 450 to 500 pieces per ounce, each kernel has significant visual and textural impact — ideal for snack mixes, trail mixes, coated confections, and savoury toppings.</p>
+          <p>Broken kernel content is held to a strict maximum of 2%, ensuring a premium intact-kernel ratio in the finished pack. The colour specification requires pure white to light-cream kernels, free from grey or off-tones.</p>
+          <p>Kosher documentation is available on request. This grade is widely used in the European snack food and private-label confectionery market and can be supplied in both 25 kg paper bags and 1 000 kg big-bags.</p>
+        </div>
+
+        <!-- CHIPS -->
+        <div class="grade-panel" id="panel-chips-desc">
+          <h2 class="prod-body__desc-title">Chips (Broken Kernels)</h2>
+          <p>Sunflower kernel chips are a natural by-product of our hulling and sizing process — pieces that fall outside the whole-kernel size fractions. Despite their irregular shape, chips retain the same nutritional profile as whole kernels: high oil content (42–48%), good protein levels, and clean flavour.</p>
+          <p>Whole kernel content is limited to a maximum of 5%, meaning the overwhelming majority of the product is genuine broken pieces — a requirement for customers formulating bird-feed, energy bars, or granola who need a specific chip character rather than crushed whole kernels.</p>
+          <p>Supplied in bulk 500 kg or 1 000 kg big-bags for feed and industrial customers, or in 25 kg paper bags for smaller food manufacturers. Non-GMO and Bulgarian origin documentation is standard with all shipments.</p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Spec Table -->
+      <div class="reveal reveal--right">
+        <h2 class="prod-body__desc-title">Technical Specifications</h2>
+        <table class="spec-table" aria-label="Product specifications" id="spec-table">
+          <thead class="spec-table__head">
+            <tr><th scope="col">Parameter</th><th scope="col">Specification</th></tr>
+          </thead>
+          <tbody id="spec-tbody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+        <p style="font-size:0.72rem;color:var(--text-muted);margin-top:0.75rem;line-height:1.5">
+          Specifications are typical values. Actual COA provided with each shipment.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPLICATIONS ===== -->
+<section class="apps-section" aria-labelledby="apps-title">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="section__eyebrow">Common Applications</p>
+      <h2 class="section__title" id="apps-title">Where Our Kernels Are Used</h2>
+    </div>
+    <div class="apps-grid reveal">
+      <div class="app-card">
+        <span class="app-card__icon">🍞</span>
+        <p class="app-card__title">Bakery &amp; Bread</p>
+        <p class="app-card__sub">Rolls, loaves, crackers, flatbreads, and artisan breads</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🍫</span>
+        <p class="app-card__title">Confectionery</p>
+        <p class="app-card__sub">Coated kernels, pralines, chocolate bars, and snack-size packs</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🥣</span>
+        <p class="app-card__title">Cereals &amp; Granola</p>
+        <p class="app-card__sub">Breakfast cereals, muesli blends, and granola topping</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🥗</span>
+        <p class="app-card__title">Trail Mixes</p>
+        <p class="app-card__sub">Retail trail mixes, snack nuts, and on-the-go packs</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🏋️</span>
+        <p class="app-card__title">Health &amp; Energy Bars</p>
+        <p class="app-card__sub">Protein bars, seed bars, and functional sports nutrition</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🌿</span>
+        <p class="app-card__title">Plant-Based Foods</p>
+        <p class="app-card__sub">Vegan cheeses, meat alternatives, and plant-based snacks</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🐦</span>
+        <p class="app-card__title">Bird Feed</p>
+        <p class="app-card__sub">Wild bird feed, pet food blends, and avian nutrition (chips grade)</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🧴</span>
+        <p class="app-card__title">Press for Oil</p>
+        <p class="app-card__sub">Cold-press input for sunflower oil production — chips grade</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOCUMENTATION ===== -->
+<section class="docs-section section" aria-labelledby="docs-title">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="section__eyebrow">Documentation</p>
+      <h2 class="section__title" id="docs-title">Available with Every Shipment</h2>
+    </div>
+    <div class="docs-grid reveal">
+      <div class="doc-card">
+        <div class="doc-card__icon">📋</div>
+        <div>
+          <p class="doc-card__title">Certificate of Analysis</p>
+          <p class="doc-card__sub">Full parameter analysis per batch</p>
+          <span class="doc-card__status doc-card__status--available">Standard</span>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card__icon">🌍</div>
+        <div>
+          <p class="doc-card__title">Certificate of Origin</p>
+          <p class="doc-card__sub">Bulgarian origin, EUR.1 for EU shipments</p>
+          <span class="doc-card__status doc-card__status--available">Standard</span>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card__icon">🌿</div>
+        <div>
+          <p class="doc-card__title">Phytosanitary Certificate</p>
+          <p class="doc-card__sub">Issued by Bulgarian BFSA</p>
+          <span class="doc-card__status doc-card__status--on-request">On Request</span>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card__icon">🔬</div>
+        <div>
+          <p class="doc-card__title">Third-Party Lab Report</p>
+          <p class="doc-card__sub">Accredited laboratory testing</p>
+          <span class="doc-card__status doc-card__status--on-request">On Request</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section section" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section__header section__header--center reveal">
+      <p class="section__eyebrow">FAQ</p>
+      <h2 class="section__title" id="faq-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question">What is the difference between Bakery and Confectionery grade?<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer__inner">Confectionery grade kernels are larger (450–500 pcs/oz) and selected for uniform appearance and a stricter broken-kernel limit (max 2%). Bakery grade (550–600 pcs/oz) is slightly smaller and ideal for toasting and incorporation into doughs. Premium Bakery sits between the two at 500–550 pcs/oz with tighter purity and moisture specs.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What is the minimum order quantity?<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer__inner">Our MOQ is one 20-foot container, typically 18–20 metric tonnes depending on packaging configuration. Smaller trial orders (1–5 MT) can be arranged for new customers subject to availability.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Are the kernels raw or roasted?<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer__inner">We supply raw hulled kernels only. Roasting is not part of our current process. Many of our bakery and confectionery customers roast in-line or through partner roasters.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is Kosher certification available?<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer__inner">Kosher documentation is available on request for Bakery, Premium Bakery, and Confectionery grades. Please specify this requirement when enquiring so we can include it in the quotation.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can you supply organic-certified product?<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer__inner">We currently produce under a low-pesticide programme but do not hold organic certification at this time. Please contact us to discuss your specific certification requirements — we are actively exploring organic pathways.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What documentation comes with each shipment?<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer__inner">Every shipment includes a Certificate of Analysis (COA) and Certificate of Origin. EUR.1 movement certificates are available for EU-bound shipments. Phytosanitary certificates and third-party lab reports can be arranged on request.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-band__inner">
+      <div>
+        <h2 class="cta-band__title">Interested in Hulled Sunflower Kernels?</h2>
+        <p class="cta-band__subtitle">Contact our sales team to discuss grade selection, pricing, samples, and shipping terms.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="contact.html" class="btn btn--gold">Request a Price</a>
+        <a href="products.html" class="btn btn--outline-light">All Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo"><img src="media/agros-logo.png" alt="Agros-98 AD" class="footer__logo-img" /></a>
+        <p class="footer__tagline">From field to final packaging — quality you can trace. Suvorovo &amp; Varna, Bulgaria.</p>
+        <p class="footer__vat">Registered in Bulgaria &middot; VAT BG208709219</p>
+      </div>
+      <div>
+        <p class="footer__heading">Products</p>
+        <ul class="footer__links">
+          <li><a href="products.html?cat=seeds" class="footer__link">Seeds &amp; Kernels</a></li>
+          <li><a href="products.html?cat=oils" class="footer__link">Cold-Pressed Oils</a></li>
+          <li><a href="products.html?cat=flours" class="footer__link">Flours &amp; Proteins</a></li>
+          <li><a href="products.html" class="footer__link">All Products →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Company</p>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Home</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+          <li><a href="contact.html" class="footer__link">Request a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Contact</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div>
+            <strong>Sales</strong> Georgi Berbenkov<br>
+            <a href="mailto:g.berbenkov@agros.net" class="footer__contact-link">g.berbenkov@agros.net</a><br>
+            <a href="tel:+359879127112" class="footer__contact-link">+359 879 127 112</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+      <p class="footer__copy">&copy; 2025 Agros-98 AD. All rights reserved.</p>
+      <div class="footer__bottom-links">
+        <a href="contact.html" class="footer__bottom-link">Contact</a>
+        <a href="products.html" class="footer__bottom-link">Products</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/products-data.js"></script>
+<script src="js/main.js"></script>
+<script>
+renderNavDropdown();
+
+/* ── Grade data ─────────────────────────────────────────────── */
+var GRADES = {
+  bakery: {
+    specs: [
+      ['Moisture',        'max 8%'],
+      ['Purity',          'min 99.9%'],
+      ['Size',            '550–600 pcs/oz'],
+      ['Oil Content',     '45–50%'],
+      ['Color',           'White / grey striped'],
+      ['Free Fatty Acids','max 0.5%'],
+      ['Hulls',           'max 0.1%'],
+      ['Broken Kernels',  'max 1%'],
+    ]
+  },
+  premium: {
+    specs: [
+      ['Moisture',        'max 7%'],
+      ['Purity',          'min 99.95%'],
+      ['Size',            '500–550 pcs/oz'],
+      ['Oil Content',     '46–52%'],
+      ['Color',           'Pure white'],
+      ['Free Fatty Acids','max 0.3%'],
+      ['Hulls',           'max 0.05%'],
+      ['Broken Kernels',  'max 0.5%'],
+    ]
+  },
+  confectionery: {
+    specs: [
+      ['Moisture',        'max 8%'],
+      ['Purity',          'min 99.9%'],
+      ['Size',            '450–500 pcs/oz'],
+      ['Oil Content',     '45–50%'],
+      ['Color',           'White, uniform'],
+      ['Free Fatty Acids','max 0.5%'],
+      ['Hulls',           'max 0.1%'],
+      ['Broken Kernels',  'max 2%'],
+    ]
+  },
+  chips: {
+    specs: [
+      ['Moisture',        'max 8%'],
+      ['Whole Kernels',   'max 5%'],
+      ['Hulls',           'max 1%'],
+      ['Oil Content',     '42–48%'],
+      ['Purity',          'min 99%'],
+      ['Color',           'White / grey'],
+      ['Protein',         '20–24%'],
+      ['Free Fatty Acids','max 1.0%'],
+    ]
+  }
+};
+
+/* ── Render spec table ──────────────────────────────────────── */
+function renderSpecs(grade) {
+  var tbody = document.getElementById('spec-tbody');
+  tbody.innerHTML = GRADES[grade].specs.map(function(row) {
+    return '<tr><td>' + row[0] + '</td><td>' + row[1] + '</td></tr>';
+  }).join('');
+}
+
+/* ── Show description panel ─────────────────────────────────── */
+function showDesc(grade) {
+  document.querySelectorAll('.grade-panel').forEach(function(p) {
+    p.classList.remove('is-active');
+  });
+  var panel = document.getElementById('panel-' + grade + '-desc');
+  if (panel) panel.classList.add('is-active');
+}
+
+/* ── Tab switching ──────────────────────────────────────────── */
+renderSpecs('bakery');
+
+document.querySelectorAll('.grade-tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    var grade = tab.getAttribute('data-grade');
+
+    // Update tabs
+    document.querySelectorAll('.grade-tab').forEach(function(t) {
+      t.classList.remove('is-active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('is-active');
+    tab.setAttribute('aria-selected', 'true');
+
+    // Fade description, swap specs
+    var wrap = document.getElementById('grade-desc-wrap');
+    wrap.classList.add('is-fading');
+    setTimeout(function() {
+      showDesc(grade);
+      renderSpecs(grade);
+      wrap.classList.remove('is-fading');
+    }, 180);
+  });
+});
+
+/* ── FAQ accordion (re-use existing logic from main.js) ─────── */
+</script>
+</body>
+</html>

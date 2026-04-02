@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="../media/flavicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agros-98 AD — Samen, Öle &amp; Mehle aus Bulgarien</title>
+  <meta name="description" content="Agros-98 AD ist ein bulgarischer Produzent und Exporteur von Sonnenblumenkernen, kaltgepressten Ölen, Leinsamen, Koriander und Spezialmehlen. Vom Feld bis zur endgültigen Verpackung." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="alternate" hreflang="en" href="https://www.agros.net/" />
+  <link rel="alternate" hreflang="bg" href="https://www.agros.net/bg/" />
+  <link rel="alternate" hreflang="de" href="https://www.agros.net/de/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.agros.net/" />
+
+  <!-- Grain SVG filter -->
+  <svg style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg">
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+  </svg>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Agros-98 AD Startseite"><img src="../media/agros-logo.png" alt="Agros-98 AD" class="nav__logo-img" /></a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Startseite</a></li>
+        <li class="nav__item--has-dropdown">
+          <a href="products.html" class="nav__link">
+            Produkte
+            <svg class="nav__dropdown-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 6l4 4 4-4"/>
+            </svg>
+          </a>
+          <div class="nav__mega-dropdown" id="nav-dropdown"></div>
+        </li>
+        <li><a href="contact.html" class="nav__link">Kontakt</a></li>
+      </ul>
+      <a href="contact.html" class="nav__cta">Angebot anfragen</a>
+      <div class="nav__lang">
+        <a href="../index.html" class="nav__lang-link" hreflang="en">EN</a>
+        <a href="../bg/index.html" class="nav__lang-link" hreflang="bg">BG</a>
+        <a href="index.html" class="nav__lang-link nav__lang-link--active" hreflang="de" aria-current="true">DE</a>
+      </div>
+      <button class="nav__hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="nav__mobile" role="dialog" aria-label="Mobile Navigation">
+  <nav class="nav__mobile-links">
+    <a href="index.html" class="nav__mobile-link">Startseite</a>
+    <a href="products.html" class="nav__mobile-link">Produkte</a>
+    <a href="contact.html" class="nav__mobile-link">Kontakt</a>
+  </nav>
+  <a href="contact.html" class="nav__mobile-cta">Angebot anfragen</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-label="Hero">
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+    <source src="../media/hero.mp4" type="video/mp4" />
+  </video>
+  <div class="hero__video-overlay" aria-hidden="true"></div>
+  <div class="hero__grain" style="background-image:url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"300\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.75\" numOctaves=\"4\" stitchTiles=\"stitch\"/></filter><rect width=\"300\" height=\"300\" filter=\"url(%23n)\" opacity=\"1\"/></svg>');background-size:200px 200px;"></div>
+  <div class="hero__pattern" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero__content">
+      <h1 class="hero__title">Wir produzieren, reinigen,<br>verpacken und liefern<br><span class="hero__title-world">in die ganze Welt.</span></h1>
+      <div class="hero__flaxseed-badge">
+        <span class="hero__flaxseed-badge-icon">★</span>
+        <div>
+          <strong>#1 Produzent &amp; Exporteur</strong>
+          <span>Für Goldenen Leinsamen in Europa</span>
+        </div>
+      </div>
+      <div class="hero__actions">
+        <a href="flaxseed-golden.html" class="btn btn--gold">Unser Goldener Leinsamen</a>
+        <a href="products.html" class="btn btn--outline-light">Alle Produkte</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true">
+    <div class="hero__scroll-line"></div>
+    <span>Scrollen</span>
+  </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<section class="stats-bar" aria-label="Unternehmenskennzahlen">
+  <div class="container">
+    <div class="stats-bar__grid">
+      <div class="stats-bar__item">
+        <span class="stats-bar__number" data-counter="30" data-suffix="+">30+</span>
+        <span class="stats-bar__label">Jahre am Markt</span>
+      </div>
+      <div class="stats-bar__item">
+        <span class="stats-bar__number" data-counter="19">19</span>
+        <span class="stats-bar__label">Produktlinien</span>
+      </div>
+      <div class="stats-bar__item">
+        <span class="stats-bar__number">100%</span>
+        <span class="stats-bar__label">Eigene Verarbeitung</span>
+      </div>
+      <div class="stats-bar__item">
+        <span class="stats-bar__number">BG</span>
+        <span class="stats-bar__label">Herkunft Bulgarien</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTRO / WER WIR SIND ===== -->
+<section class="intro section" aria-labelledby="intro-title">
+  <div class="intro__bg" aria-hidden="true"></div>
+  <div class="intro__overlay" aria-hidden="true"></div>
+  <div class="container">
+    <div class="intro__inner reveal">
+      <div class="intro__header">
+        <p class="section__eyebrow intro__eyebrow">Wer wir sind</p>
+        <h2 class="section__title intro__title" id="intro-title">Verwurzelt in der bulgarischen Landwirtschaft</h2>
+      </div>
+      <div class="intro__content">
+        <div class="intro__text">
+          <p class="intro__lead">Agros-98 AD ist ein bulgarisches Agraunternehmen, das Samen, kaltgepresste Öle und Spezialmehle an Lebensmittelhersteller in ganz Europa und darüber hinaus produziert und exportiert.</p>
+          <p class="intro__body">Gegründet 1994 und mit Hauptsitz in Suworowo, Provinz Warna, kontrollieren wir die gesamte Lieferkette — von der Kultivierung pestizidfreier Pflanzen auf eigenem Ackerland über die mechanische Kaltpressung bis hin zur endgültigen Verpackung und Exportdokumentation.</p>
+          <p class="intro__body" style="margin-bottom:0">Unsere Produktionsanlage in Suworowo verarbeitet Sonnenblumen, Koriander, Leinsamen, Kürbis und Walnüsse nach strengen Lebensmittelsicherheitsprotokollen. Jede Charge ist vom Feld bis zum Etikett rückverfolgbar.</p>
+        </div>
+        <div class="intro__pillars">
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">🌱</div>
+            <div class="intro__pillar-title">Eigenes Ackerland</div>
+            <div class="intro__pillar-text">Wir bewirtschaften unsere eigenen Felder in der Region Warna unter Niedrigpestizid-Protokollen.</div>
+          </div>
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">⚙️</div>
+            <div class="intro__pillar-title">Eigene Verarbeitung</div>
+            <div class="intro__pillar-text">Mechanische Kaltpressung erhält den Nährwert ohne Lösungsmittel.</div>
+          </div>
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">📦</div>
+            <div class="intro__pillar-title">Vollständige Integration</div>
+            <div class="intro__pillar-text">Feld → Reinigung → Pressung → Verpackung → Export — alles unter einem Dach.</div>
+          </div>
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">🔍</div>
+            <div class="intro__pillar-title">Vollständige Rückverfolgbarkeit</div>
+            <div class="intro__pillar-text">COA, Ursprungszeugnis und Pflanzenschutzdokumentation auf Anfrage.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS (homepage categories) ===== -->
+<section class="products-home" aria-labelledby="products-home-title">
+  <div class="container">
+    <div class="section__header section__header--center reveal">
+      <h2 class="section__title" id="products-home-title">Unsere Produkte</h2>
+    </div>
+    <div class="products-home__grid">
+      <!-- Seeds Card -->
+      <a href="products.html?cat=seeds" class="cat-card reveal reveal--delay-1">
+        <div class="cat-card__img-wrap">
+          <img src="../media/seeds.jpg" alt="Samen &amp; Kerne" class="cat-card__img">
+        </div>
+        <div class="cat-card__content">
+          <h3 class="cat-card__title">Samen &amp; Kerne</h3>
+          <ul class="cat-card__list">
+            <li class="cat-card__item">Geschälte Sonnenblumenkerne — Bäckereiqualität</li>
+            <li class="cat-card__item">Geschälte Sonnenblumenkerne — Süßwarenqualität</li>
+            <li class="cat-card__item">Zerbrochene Sonnenblumenkerne / Chips</li>
+            <li class="cat-card__item">Koriandersamen &amp; -hälften</li>
+            <li class="cat-card__item">Leinsamen — Braun &amp; Golden</li>
+          </ul>
+          <span class="cat-card__link">ALLE ANSEHEN →</span>
+        </div>
+      </a>
+
+      <!-- Oils Card -->
+      <a href="products.html?cat=oils" class="cat-card reveal reveal--delay-2">
+        <div class="cat-card__img-wrap">
+          <img src="../media/oil.jpg" alt="Kaltgepresste Öle" class="cat-card__img">
+        </div>
+        <div class="cat-card__content">
+          <h3 class="cat-card__title">Kaltgepresste Öle</h3>
+          <ul class="cat-card__list">
+            <li class="cat-card__item">Sonnenblumenöl — Hoch Linolsäure</li>
+            <li class="cat-card__item">Sonnenblumenöl — Hoch Ölsäure</li>
+            <li class="cat-card__item">Korianderöl</li>
+            <li class="cat-card__item">Leinöl</li>
+            <li class="cat-card__item">Kürbiskernöl &amp; Walnussöl</li>
+          </ul>
+          <span class="cat-card__link">ALLE ANSEHEN →</span>
+        </div>
+      </a>
+
+      <!-- Flours Card -->
+      <a href="products.html?cat=flours" class="cat-card reveal reveal--delay-3">
+        <div class="cat-card__img-wrap">
+          <img src="../media/flour.jpg" alt="Mehle &amp; Proteine" class="cat-card__img">
+        </div>
+        <div class="cat-card__content">
+          <h3 class="cat-card__title">Mehle &amp; Proteine</h3>
+          <ul class="cat-card__list">
+            <li class="cat-card__item">Sonnenblumenmehl (32%+ Protein)</li>
+            <li class="cat-card__item">Entfettetes Sonnenblumenprotein (45%+)</li>
+            <li class="cat-card__item">Koriandermehl</li>
+            <li class="cat-card__item">Leinmehl</li>
+            <li class="cat-card__item">Kürbismehl &amp; Walnussmehl</li>
+          </ul>
+          <span class="cat-card__link">ALLE ANSEHEN →</span>
+        </div>
+      </a>
+
+      <!-- Tahinis Card -->
+      <a href="products.html?cat=tahinis" class="cat-card reveal reveal--delay-4">
+        <div class="cat-card__img-wrap">
+          <img src="../Media/products/tahini.png" alt="Tahinis &amp; Butters" class="cat-card__img">
+        </div>
+        <div class="cat-card__content">
+          <h3 class="cat-card__title">Tahinis &amp; Butters</h3>
+          <ul class="cat-card__list">
+            <li class="cat-card__item">Sonnenblumen-Tahini Cremig</li>
+            <li class="cat-card__item">Leinsamen-Tahini Cremig</li>
+            <li class="cat-card__item">Kürbis-Tahini Cremig</li>
+            <li class="cat-card__item">Walnuss-Tahini Cremig</li>
+          </ul>
+          <span class="cat-card__link">ALLE ANSEHEN →</span>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem" class="reveal">
+      <a href="products.html" class="btn btn--outline">Vollständigen Produktkatalog ansehen →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section class="certs" aria-label="Unsere Zertifizierungen">
+  <div class="container">
+    <div class="certs__bar">
+      <div class="certs__label">Unsere Zertifizierungen</div>
+      <div class="certs__logos">
+        <div class="cert-logo">
+          <picture>
+            <source srcset="../Media/certs/fssc22000.webp" type="image/webp">
+            <img src="../Media/certs/fssc22000.png" alt="FSSC 22000" class="cert-logo__img">
+          </picture>
+          <div class="cert-logo__name">FSSC 22000</div>
+          <div class="cert-logo__sub">Lebensmittelsicherheit</div>
+        </div>
+        <div class="cert-logo">
+          <picture>
+            <source srcset="../Media/certs/eu-organic.webp" type="image/webp">
+            <img src="../Media/certs/eu-organic.png" alt="EU Organic" class="cert-logo__img">
+          </picture>
+          <div class="cert-logo__name">EU Organic</div>
+          <div class="cert-logo__sub">Zertifiziert</div>
+        </div>
+        <div class="cert-logo">
+          <picture>
+            <source srcset="../Media/certs/kosher.webp" type="image/webp">
+            <img src="../Media/certs/kosher.png" alt="Kosher" class="cert-logo__img">
+          </picture>
+          <div class="cert-logo__name">Kosher</div>
+          <div class="cert-logo__sub">Zertifiziert</div>
+        </div>
+        <div class="cert-logo">
+          <picture>
+            <source srcset="../Media/certs/halal.webp" type="image/webp">
+            <img src="../Media/certs/halal.png" alt="Halal" class="cert-logo__img">
+          </picture>
+          <div class="cert-logo__name">Halal</div>
+          <div class="cert-logo__sub">Zertifiziert</div>
+        </div>
+        <div class="cert-logo">
+          <picture>
+            <source srcset="../Media/certs/kiwa.webp" type="image/webp">
+            <img src="../Media/certs/kiwa.png" alt="KIWA" class="cert-logo__img">
+          </picture>
+          <div class="cert-logo__name">KIWA</div>
+          <div class="cert-logo__sub">Drittprüfung</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="why-us section--cream section" aria-labelledby="why-title">
+  <div class="container">
+    <div class="section__header section__header--center reveal">
+      <h2 class="section__title" id="why-title">Wir handeln nicht. Wir produzieren.</h2>
+    </div>
+    <div class="why-us__grid">
+      <div class="why-card reveal reveal--delay-1">
+        <div class="why-card__icon">🌱</div>
+        <h3 class="why-card__title">Eigenes Ackerland</h3>
+        <p class="why-card__text">Wir kultivieren Sonnenblumen, Koriander, Leinsamen und andere Kulturen auf Land in der Region Warna — keine Drittbeschaffung, vollständige Rückverfolgbarkeit vom Samen bis zur Lieferung.</p>
+      </div>
+      <div class="why-card reveal reveal--delay-2">
+        <div class="why-card__icon">🌿</div>
+        <h3 class="why-card__title">Niedrig-Pestizid</h3>
+        <p class="why-card__text">Unser Anbauprogram verwendet minimale Pestizidmengen und folgt integrierten Schädlingsmanagementpraktiken, was saubereres Rohmaterial für Lebensmittelanwendungen produziert.</p>
+      </div>
+      <div class="why-card reveal reveal--delay-3">
+        <div class="why-card__icon">⚙️</div>
+        <h3 class="why-card__title">Vollständige Integration</h3>
+        <p class="why-card__text">Von der Reinigung und Kaltpressung bis zur Verpackung und Etikettierung findet jeder Schritt der Wertschöpfungskette in unserer eigenen Anlage in Suworowo statt — keine ausgelagerte Verarbeitung.</p>
+      </div>
+      <div class="why-card reveal reveal--delay-4">
+        <div class="why-card__icon">✅</div>
+        <h3 class="why-card__title">Lebensmittelsicherheitsdokumente</h3>
+        <p class="why-card__text">Wir liefern vollständige Dokumentation: COA, Ursprungszeugnis, Pflanzenschutzzertifikate und EUR.1-Präferenzursprungsdokumente für jede Lieferung an EU-Käufer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="cta-band" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="cta-title">Bereit für eine Partnerschaft?</h2>
+        <p class="cta-band__subtitle">Lassen Sie uns Ihre Anforderungen besprechen — Mengen, Verpackung, Spezifikationen und Lieferbedingungen.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="contact.html" class="btn btn--gold">Kontakt aufnehmen</a>
+        <a href="products.html" class="btn btn--outline-light">Produkte durchsuchen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <!-- Brand -->
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo"><img src="../media/agros-logo.png" alt="Agros-98 AD" class="footer__logo-img" /></a>
+        <p class="footer__tagline">Vom Feld bis zur endgültigen Verpackung — Qualität, die Sie verfolgen können. Suworowo &amp; Warna, Bulgarien.</p>
+        <p class="footer__vat" style="font-size:0.75rem;margin-top:0.5rem">Registriert in Bulgarien · USt-IdNr. BG208709219</p>
+      </div>
+      <!-- Products -->
+      <div>
+        <p class="footer__heading">Produkte</p>
+        <ul class="footer__links">
+          <li><a href="products.html?cat=seeds" class="footer__link">Samen &amp; Kerne</a></li>
+          <li><a href="products.html?cat=oils" class="footer__link">Kaltgepresste Öle</a></li>
+          <li><a href="products.html?cat=flours" class="footer__link">Mehle &amp; Proteine</a></li>
+          <li><a href="products.html" class="footer__link">Alle Produkte →</a></li>
+        </ul>
+      </div>
+      <!-- Company -->
+      <div>
+        <p class="footer__heading">Unternehmen</p>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Startseite</a></li>
+          <li><a href="contact.html" class="footer__link">Kontakt</a></li>
+          <li><a href="contact.html" class="footer__link">Muster anfragen</a></li>
+          <li><a href="contact.html" class="footer__link">Angebot anfragen</a></li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div>
+        <p class="footer__heading">Kontakt</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div>
+            <strong>Vertrieb</strong>
+            Georgi Berbenkov<br>
+            <a href="mailto:g.berbenkov@agros.net" class="footer__contact-link">g.berbenkov@agros.net</a><br>
+            <a href="tel:+359879127112" class="footer__contact-link">+359 879 127 112</a>
+          </div>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <strong>Buchhaltung</strong>
+            <a href="mailto:agros98@abv.bg" class="footer__contact-link">agros98@abv.bg</a><br>
+            <a href="mailto:office@agros.net" class="footer__contact-link">office@agros.net</a>
+          </div>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <strong>Standort</strong>
+            Suworowo &amp; Warna, Bulgarien
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+      <p class="footer__copy">&copy; 2025 Agros-98 AD. Alle Rechte vorbehalten.</p>
+      <div class="footer__bottom-links">
+        <a href="contact.html" class="footer__bottom-link">Kontakt</a>
+        <a href="products.html" class="footer__bottom-link">Produkte</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/products-data-de.js"></script>
+<script src="../js/main.js"></script>
+<script>renderNavDropdown({ allLabel: 'Alle Produkte →', locationLabel: 'Bulgarien | Suworowo &amp; Warna' });</script>
+</body>
+</html>

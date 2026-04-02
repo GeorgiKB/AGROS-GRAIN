@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="../media/flavicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alle Produkte — Agros-98 AD Bulgarien</title>
+  <meta name="description" content="Entdecken Sie alle 19 Produkte von Agros-98 AD: Sonnenblumenkerne, kaltgepresste Öle, Leinsamen, Koriander und Spezialmehle aus Bulgarien." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/products.css" />
+  <link rel="alternate" hreflang="en" href="https://www.agros.net/products.html" />
+  <link rel="alternate" hreflang="bg" href="https://www.agros.net/bg/products.html" />
+  <link rel="alternate" hreflang="de" href="https://www.agros.net/de/products.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.agros.net/products.html" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Agros-98 AD Home"><img src="../media/agros-logo.png" alt="Agros-98 AD" class="nav__logo-img" /></a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Startseite</a></li>
+        <li class="nav__item--has-dropdown">
+          <a href="products.html" class="nav__link">
+            Produkte
+            <svg class="nav__dropdown-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+          </a>
+          <div class="nav__mega-dropdown" id="nav-dropdown"></div>
+        </li>
+        <li><a href="contact.html" class="nav__link">Kontakt</a></li>
+      </ul>
+      <a href="contact.html" class="nav__cta">Angebot anfragen</a>
+      <div class="nav__lang">
+        <a href="../products.html" class="nav__lang-link" hreflang="en">EN</a>
+        <a href="../bg/products.html" class="nav__lang-link" hreflang="bg">BG</a>
+        <a href="products.html" class="nav__lang-link nav__lang-link--active" hreflang="de" aria-current="true">DE</a>
+      </div>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+  <nav class="nav__mobile-links">
+    <a href="index.html" class="nav__mobile-link">Startseite</a>
+    <a href="products.html" class="nav__mobile-link">Produkte</a>
+    <a href="contact.html" class="nav__mobile-link">Kontakt</a>
+  </nav>
+  <a href="contact.html" class="nav__mobile-cta">Angebot anfragen</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero" aria-labelledby="page-hero-title">
+  <div class="page-hero__pattern" aria-hidden="true"></div>
+  <div class="container">
+    <div class="page-hero__content">
+      <p class="page-hero__eyebrow">Produktkatalog</p>
+      <h1 class="page-hero__title" id="page-hero-title">Samen, Öle &amp; Mehle</h1>
+      <p class="page-hero__subtitle">Alle Produkte werden in unserer integrierten Anlage in Suworowo, Bulgarien, bezogen, verarbeitet und verpackt.</p>
+      <div class="page-hero__stats">
+        <div>
+          <span class="page-hero__stat-num">19</span>
+          <span class="page-hero__stat-label">Produkte</span>
+        </div>
+        <div>
+          <span class="page-hero__stat-num">4</span>
+          <span class="page-hero__stat-label">Kategorien</span>
+        </div>
+        <div>
+          <span class="page-hero__stat-num">BG</span>
+          <span class="page-hero__stat-label">Herkunft Bulgarien</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item"><a href="index.html">Startseite</a></li>
+      <li class="breadcrumb__sep" aria-hidden="true">›</li>
+      <li class="breadcrumb__item" aria-current="page">Produkte</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ===== CATEGORY TABS ===== -->
+<div class="cat-tabs" role="tablist" aria-label="Filter by category">
+  <div class="container">
+    <div class="cat-tabs__list">
+      <button class="cat-tab is-active" data-cat="all" role="tab" aria-selected="true">Alle Produkte</button>
+      <button class="cat-tab" data-cat="seeds" role="tab" aria-selected="false">Samen &amp; Kerne</button>
+      <button class="cat-tab" data-cat="oils" role="tab" aria-selected="false">Kaltgepresste Öle</button>
+      <button class="cat-tab" data-cat="flours" role="tab" aria-selected="false">Mehle &amp; Proteine</button>
+      <button class="cat-tab" data-cat="tahinis" role="tab" aria-selected="false">Tahinis &amp; Aufstriche</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRODUCTS GRID ===== -->
+<section class="products-section" id="products-list" aria-label="Products grid">
+  <div class="container">
+    <div class="products-grid" id="products-grid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-band" aria-labelledby="cta-products-title">
+  <div class="container">
+    <div class="cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="cta-products-title">Nicht das Richtige gefunden?</h2>
+        <p class="cta-band__subtitle">Kontaktieren Sie unser Vertriebsteam für individuelle Spezifikationen, Mengen oder nicht gelistete Produkte.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="contact.html" class="btn btn--gold">Vertrieb kontaktieren</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo"><img src="../media/agros-logo.png" alt="Agros-98 AD" class="footer__logo-img" /></a>
+        <p class="footer__tagline">Vom Feld bis zur Endverpackung — Qualität, die Sie nachverfolgen können. Suworowo &amp; Varna, Bulgarien.</p>
+        <p class="footer__vat">Registriert in Bulgarien &middot; USt-IdNr. BG208709219</p>
+      </div>
+      <div>
+        <p class="footer__heading">Produkte</p>
+        <ul class="footer__links">
+          <li><a href="products.html?cat=seeds" class="footer__link">Samen &amp; Kerne</a></li>
+          <li><a href="products.html?cat=oils" class="footer__link">Kaltgepresste Öle</a></li>
+          <li><a href="products.html?cat=flours" class="footer__link">Mehle &amp; Proteine</a></li>
+          <li><a href="products.html?cat=tahinis" class="footer__link">Tahinis &amp; Aufstriche</a></li>
+          <li><a href="products.html" class="footer__link">Alle Produkte →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Unternehmen</p>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Startseite</a></li>
+          <li><a href="contact.html" class="footer__link">Kontakt</a></li>
+          <li><a href="contact.html" class="footer__link">Angebot anfragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Kontakt</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div>
+            <strong>Vertrieb</strong>
+            Georgi Berbenkov<br>
+            <a href="mailto:g.berbenkov@agros.net" class="footer__contact-link">g.berbenkov@agros.net</a><br>
+            <a href="tel:+359879127112" class="footer__contact-link">+359 879 127 112</a>
+          </div>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <strong>Standort</strong>
+            Suworowo &amp; Varna, Bulgarien
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+      <p class="footer__copy">&copy; 2025 Agros-98 AD. Alle Rechte vorbehalten.</p>
+      <div class="footer__bottom-links">
+        <a href="contact.html" class="footer__bottom-link">Kontakt</a>
+        <a href="products.html" class="footer__bottom-link">Produkte</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/products-data-de.js"></script>
+<script src="../js/main.js"></script>
+<script>
+  renderNavDropdown();
+
+  // Render product cards
+  (function() {
+    var grid = document.getElementById('products-grid');
+    if (!grid || !window.AGROS_PRODUCTS) return;
+
+    function cardHtml(p, i) {
+      var catClass = p.category;
+      var specsHtml = p.specs.slice(0, 3).map(function(s) {
+        return '<div class="prod-card__spec-row"><span class="prod-card__spec-key">' + s.key + '</span><span class="prod-card__spec-val">' + s.val + '</span></div>';
+      }).join('');
+      var tagsHtml = p.tags.slice(0, 3).map(function(t) {
+        return '<span class="prod-card__tag">' + t + '</span>';
+      }).join('');
+      return '<a href="' + p.slug + '.html" class="prod-card" data-category="' + p.category + '" style="transition-delay:' + (i * 55) + 'ms">' +
+        '<div class="prod-card__cat-bar prod-card__cat-bar--' + catClass + '"><span>' + p.categoryLabel + '</span></div>' +
+        '<div class="prod-card__img-wrap"><img src="' + p.image + '" alt="' + p.name + '" loading="lazy" width="84" height="84" /></div>' +
+        '<div class="prod-card__body">' +
+        '<h2 class="prod-card__name">' + p.name + '</h2>' +
+        '<p class="prod-card__tagline">' + p.tagline + '</p>' +
+        '<div class="prod-card__specs-mini">' + specsHtml + '</div>' +
+        '<div class="prod-card__meta">' +
+        '<div class="prod-card__origins"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Bulgarien</div>' +
+        '<div class="prod-card__tags">' + tagsHtml + '</div>' +
+        '</div>' +
+        '</div>' +
+        '<div class="prod-card__footer">' +
+        '<span class="prod-card__cta">Vollständige Spezifikation →</span>' +
+        '<span class="prod-card__packaging">' + p.packaging.split('/')[0].trim() + '</span>' +
+        '</div></a>';
+    }
+
+    function renderCards(prods) {
+      if (!prods.length) {
+        grid.innerHTML = '<div class="products-empty"><div class="products-empty__icon">🌾</div><p class="products-empty__text">Keine Produkte gefunden.</p></div>';
+        return;
+      }
+      var catOrder = ['seeds', 'oils', 'flours', 'tahinis'];
+      var html = '';
+      var idx = 0;
+      catOrder.forEach(function(cat) {
+        var catProds = prods.filter(function(p) { return p.category === cat; });
+        if (!catProds.length) return;
+        html += '<div class="products-cat-heading"><span class="products-cat-label">' + window.AGROS_CATEGORIES[cat].label + '</span></div>';
+        catProds.forEach(function(p) { html += cardHtml(p, idx++); });
+      });
+      grid.innerHTML = html;
+    }
+
+    // Staggered fade-in
+    function animateCards() {
+      var cards = grid.querySelectorAll('.prod-card');
+      if ('IntersectionObserver' in window) {
+        var obs = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('prod-card--visible'); obs.unobserve(e.target); } });
+        }, { threshold: 0.08 });
+        cards.forEach(function(c) { obs.observe(c); });
+      } else {
+        cards.forEach(function(c) { c.classList.add('prod-card--visible'); });
+      }
+    }
+
+    renderCards(window.AGROS_PRODUCTS);
+    animateCards();
+
+    // Handle URL param
+    var params = new URLSearchParams(window.location.search);
+    var catParam = params.get('cat');
+    if (catParam && ['seeds','oils','flours','tahinis'].includes(catParam)) {
+      var tab = document.querySelector('.cat-tab[data-cat="' + catParam + '"]');
+      if (tab) {
+        document.querySelectorAll('.cat-tab').forEach(function(t) { t.classList.remove('is-active'); });
+        tab.classList.add('is-active');
+        renderCards(window.AGROS_PRODUCTS.filter(function(p) { return p.category === catParam; }));
+        animateCards();
+      }
+    }
+
+    // Override filter function
+    window._renderCards = renderCards;
+    document.querySelectorAll('.cat-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var cat = tab.getAttribute('data-cat');
+        var filtered = cat === 'all' ? window.AGROS_PRODUCTS : window.AGROS_PRODUCTS.filter(function(p) { return p.category === cat; });
+        renderCards(filtered);
+        animateCards();
+      });
+    });
+  })();
+</script>
+</body>
+</html>

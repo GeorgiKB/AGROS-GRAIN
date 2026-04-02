@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="media/flavicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coriander Seeds — Agros-98 AD Bulgaria</title>
+  <meta name="description" content="Bulgarian coriander seeds in two forms: Whole and Splits. For spice, confectionery, and essential oil extraction. Produced by Agros-98 AD, Suvorovo & Varna." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/products.css" />
+  <link rel="alternate" hreflang="en" href="https://www.agros.net/coriander.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.agros.net/coriander.html" />
+  <style>
+    /* ── Grade Selector Bar ─────────────────────────────────── */
+    .grade-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 64px;
+      z-index: 100;
+      padding: 0;
+    }
+    .grade-bar__inner {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .grade-bar__inner::-webkit-scrollbar { display: none; }
+    .grade-tab {
+      flex-shrink: 0;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      padding: 1.1rem 1.75rem;
+      border: none;
+      border-bottom: 3px solid transparent;
+      background: transparent;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .grade-tab:hover { color: var(--brand-amber); }
+    .grade-tab:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+    .grade-tab.is-active {
+      color: var(--brand-amber);
+      border-bottom-color: var(--brand-amber);
+      background: rgba(184,114,58,0.04);
+    }
+
+    /* ── Grade Panel ────────────────────────────────────────── */
+    .grade-panel { display: none; }
+    .grade-panel.is-active { display: contents; }
+
+    /* ── Applications Section ───────────────────────────────── */
+    .apps-section {
+      padding: 4.5rem 0;
+      background: var(--white);
+    }
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 1024px) { .apps-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px)  { .apps-grid { grid-template-columns: 1fr; } }
+    .app-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1.25rem;
+      transition: transform var(--transition-spring), box-shadow var(--transition-base);
+    }
+    .app-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(30,22,10,0.08); }
+    .app-card__icon { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
+    .app-card__title {
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.35rem;
+    }
+    .app-card__sub { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* ── Spec table animation ───────────────────────────────── */
+    #spec-tbody tr { animation: rowFadeIn 0.25s ease both; }
+    @keyframes rowFadeIn {
+      from { opacity: 0; transform: translateX(-6px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    #grade-desc-wrap { transition: opacity 0.2s; }
+    #grade-desc-wrap.is-fading { opacity: 0; }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container"><div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Agros-98 AD Home">
+      <img src="media/agros-logo.png" alt="Agros-98 AD" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html" class="nav__link">Home</a></li>
+      <li class="nav__item--has-dropdown">
+        <a href="products.html" class="nav__link">Products <svg class="nav__dropdown-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></a>
+        <div class="nav__mega-dropdown" id="nav-dropdown"></div>
+      </li>
+      <li><a href="contact.html" class="nav__link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav__cta">Request a Quote</a>
+    <div class="nav__lang">
+      <a href="coriander.html" class="nav__lang-link nav__lang-link--active" hreflang="en" aria-current="true">EN</a>
+      <a href="bg/coriander.html" class="nav__lang-link" hreflang="bg">BG</a>
+      <a href="de/coriander.html" class="nav__lang-link" hreflang="de">DE</a>
+    </div>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div></div>
+</nav>
+<div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+  <nav class="nav__mobile-links">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="products.html" class="nav__mobile-link">Products</a>
+    <a href="contact.html" class="nav__mobile-link">Contact</a>
+  </nav>
+  <a href="contact.html" class="nav__mobile-cta">Request a Quote</a>
+</div>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb__sep" aria-hidden="true">›</li>
+      <li class="breadcrumb__item"><a href="products.html">Products</a></li>
+      <li class="breadcrumb__sep" aria-hidden="true">›</li>
+      <li class="breadcrumb__item"><a href="products.html?cat=seeds">Seeds &amp; Kernels</a></li>
+      <li class="breadcrumb__sep" aria-hidden="true">›</li>
+      <li class="breadcrumb__item" aria-current="page">Coriander Seeds</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="prod-hero prod-hero--has-bg" style="background-image: url('Media/products/coriander-seeds-bg.webp');" aria-labelledby="prod-title">
+  <div class="prod-hero__pattern" aria-hidden="true"></div>
+  <div class="container">
+    <div class="prod-hero__content">
+      <div>
+        <p class="prod-hero__cat-label">Seeds &amp; Kernels</p>
+        <h1 class="prod-hero__title" id="prod-title">Coriander Seeds</h1>
+        <p class="prod-hero__tagline" style="font-style:italic;font-size:0.95rem;margin-bottom:1rem;color:rgba(255,255,255,0.45)">Coriandrum sativum — available Whole or as Splits</p>
+        <p class="prod-hero__tagline">Dual-purpose Bulgarian coriander for the spice trade and essential oil extraction. Grown in the Varna and Dobrich regions, cleaned and calibrated to customer specification.</p>
+        <div class="prod-hero__certs">
+          <span class="prod-hero__cert">Halal &amp; Kosher</span>
+          <span class="prod-hero__cert">ISO22000</span>
+          <span class="prod-hero__cert">FSSC22000</span>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+          <a href="contact.html" class="btn btn--primary">Request a Price</a>
+          <a href="contact.html" class="btn btn--outline-light">Request a Sample</a>
+        </div>
+      </div>
+      <div class="prod-hero__moq">
+        <p class="prod-hero__moq-heading">Order Details</p>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">MOQ</span>
+          <span class="prod-hero__moq-val">1 × 40ft container</span>
+        </div>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">Origin</span>
+          <span class="prod-hero__moq-val">Bulgaria (Varna Region)</span>
+        </div>
+        <hr class="prod-hero__moq-divider" />
+        <p class="prod-hero__moq-heading" style="margin-bottom:0.75rem">Packaging Options</p>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">Option</span>
+          <span class="prod-hero__moq-val">25 kg paper bags</span>
+        </div>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">Option</span>
+          <span class="prod-hero__moq-val">50 kg PP bags</span>
+        </div>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">Option</span>
+          <span class="prod-hero__moq-val">500 kg big bags</span>
+        </div>
+        <div class="prod-hero__moq-row">
+          <span class="prod-hero__moq-label">Option</span>
+          <span class="prod-hero__moq-val">1 000 kg big bags</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GRADE SELECTOR BAR ===== -->
+<div class="grade-bar" role="tablist" aria-label="Select form">
+  <div class="container">
+    <div class="grade-bar__inner">
+      <button class="grade-tab is-active" data-grade="whole" role="tab" aria-selected="true" aria-controls="panel-whole">
+        Whole
+      </button>
+      <button class="grade-tab" data-grade="splits" role="tab" aria-selected="false" aria-controls="panel-splits">
+        Splits
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRODUCT BODY ===== -->
+<section class="prod-body section" aria-label="Product details">
+  <div class="container">
+    <div class="prod-body__grid">
+
+      <!-- LEFT: Description (grade-specific) -->
+      <div class="prod-body__desc reveal reveal--left" id="grade-desc-wrap">
+
+        <!-- WHOLE -->
+        <div class="grade-panel is-active" id="panel-whole-desc">
+          <h2 class="prod-body__desc-title">Whole Coriander Seeds</h2>
+          <p>Agros-98 AD sources and processes whole coriander seeds (Coriandrum sativum) grown in the Varna and Dobrich regions of northeastern Bulgaria. The continental climate and light soils of this area produce seeds with high essential oil content — typically above 0.4 ml/100g — and a balanced aromatic profile prized by both the spice and fragrance industries.</p>
+          <p>Our whole coriander is cleaned, calibrated, and graded to customer specification. The primary application is the spice trade — whole seeds for seasoning blends, pickling, sausage seasoning, and confectionery — but a significant share supplies essential oil distillers who require consistent oil yield and low foreign matter.</p>
+          <p>We supply both machine-cleaned and hand-sorted grades. Colour, size uniformity, and moisture are controlled per batch and supported by a full Certificate of Analysis issued with every shipment.</p>
+        </div>
+
+        <!-- SPLITS -->
+        <div class="grade-panel" id="panel-splits-desc">
+          <h2 class="prod-body__desc-title">Coriander Splits</h2>
+          <p>Coriander splits are produced by mechanically splitting whole seeds along their natural equatorial seam, separating the two cotyledons. This significantly increases the surface area exposed, releasing flavour and essential oil faster during cooking, infusion, or industrial processing.</p>
+          <p>Splits are particularly valued by spice blend manufacturers, marinades producers, and pickle brine operations where rapid flavour release is more important than whole-seed visual presentation. The split ratio is maintained at a minimum of 95%, ensuring a consistently broken product rather than a mixture of whole and split seeds.</p>
+          <p>Foreign matter tolerance is tighter for splits than for whole — max 0.3% — because any residual husks or foreign particles are more conspicuous in a split product. All material is sourced from the same Bulgarian-grown coriander crop as our whole seeds.</p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Spec Table -->
+      <div class="reveal reveal--right">
+        <h2 class="prod-body__desc-title">Technical Specifications</h2>
+        <table class="spec-table" aria-label="Product specifications" id="spec-table">
+          <thead class="spec-table__head">
+            <tr><th scope="col">Parameter</th><th scope="col">Specification</th></tr>
+          </thead>
+          <tbody id="spec-tbody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+        <p style="font-size:0.72rem;color:var(--text-muted);margin-top:0.75rem;line-height:1.5">
+          Specifications are typical values. Actual COA provided with each shipment.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPLICATIONS ===== -->
+<section class="apps-section" aria-labelledby="apps-title">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="section__eyebrow">Common Applications</p>
+      <h2 class="section__title" id="apps-title">Where Our Coriander Is Used</h2>
+    </div>
+    <div class="apps-grid reveal">
+      <div class="app-card">
+        <span class="app-card__icon">🌶️</span>
+        <p class="app-card__title">Spice &amp; Seasoning Blends</p>
+        <p class="app-card__sub">Curry powders, masalas, sausage seasonings, and dry rubs</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🥒</span>
+        <p class="app-card__title">Pickling &amp; Brines</p>
+        <p class="app-card__sub">Whole and split seeds in vegetable pickles and vinegar brines</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🍞</span>
+        <p class="app-card__title">Bakery</p>
+        <p class="app-card__sub">Rye breads, crackers, and artisan loaves with whole seed topping</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🫙</span>
+        <p class="app-card__title">Marinades &amp; Sauces</p>
+        <p class="app-card__sub">Splits deliver faster infusion in liquid marinades and hot sauces</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🧴</span>
+        <p class="app-card__title">Essential Oil Distillation</p>
+        <p class="app-card__sub">High essential oil yield for fragrance, cosmetics, and flavouring</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🍺</span>
+        <p class="app-card__title">Craft Brewing</p>
+        <p class="app-card__sub">Belgian witbier and farmhouse ales using whole or cracked coriander</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">💊</span>
+        <p class="app-card__title">Herbal &amp; Nutraceutical</p>
+        <p class="app-card__sub">Digestive blends, herbal teas, and dietary supplement formulations</p>
+      </div>
+      <div class="app-card">
+        <span class="app-card__icon">🥩</span>
+        <p class="app-card__title">Meat Processing</p>
+        <p class="app-card__sub">Cured meats, charcuterie, and traditional sausage recipes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOCUMENTATION ===== -->
+<section class="docs-section section" aria-labelledby="docs-title">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="section__eyebrow">Documentation</p>
+      <h2 class="section__title" id="docs-title">Available with Every Shipment</h2>
+    </div>
+    <div class="docs-grid reveal">
+      <div class="doc-card">
+        <div class="doc-card__icon">📋</div>
+        <div>
+          <p class="doc-card__title">Certificate of Analysis</p>
+          <p class="doc-card__sub">Full parameter analysis per batch</p>
+          <span class="doc-card__status doc-card__status--available">Standard</span>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card__icon">🌍</div>
+        <div>
+          <p class="doc-card__title">Certificate of Origin</p>
+          <p class="doc-card__sub">Bulgarian origin, EUR.1 for EU shipments</p>
+          <span class="doc-card__status doc-card__status--available">Standard</span>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card__icon">🌿</div>
+        <div>
+          <p class="doc-card__title">Phytosanitary Certificate</p>
+          <p class="doc-card__sub">Issued by Bulgarian BFSA</p>
+          <span class="doc-card__status doc-card__status--on-request">On Request</span>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card__icon">🔬</div>
+        <div>
+          <p class="doc-card__title">Third-Party Lab Report</p>
+          <p class="doc-card__sub">Accredited laboratory testing</p>
+          <span class="doc-card__status doc-card__status--on-request">On Request</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section section" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section__header section__header--center reveal">
+      <p class="section__eyebrow">FAQ</p>
+      <h2 class="section__title" id="faq-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question">What is the difference between Whole and Splits?<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer__inner">Whole seeds are cleaned and calibrated intact seeds suited for seasoning blends, pickling, and baking where visual presentation matters. Splits are mechanically halved (min 95% split ratio), releasing flavour faster — preferred for industrial processing, marinades, and applications where rapid infusion is needed.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you supply both food-grade and distillation-grade coriander?<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer__inner">Yes. Food-grade is cleaned to a higher purity standard with lower foreign matter tolerance. Distillation-grade may allow slightly higher admixture. Please specify the intended use when enquiring so we can quote the appropriate grade.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What is the minimum order quantity?<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer__inner">Our MOQ is one 20-foot container. Smaller trial quantities (1–5 MT) can be arranged for new customers subject to availability. Contact our sales team to discuss.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can you supply to a specific sieve size?<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer__inner">Yes — whole seeds can be calibrated to specific sieve mesh sizes. Please state your sieve requirement (e.g., 1.6 mm, 1.8 mm round hole) at the enquiry stage and we will confirm availability and any applicable premium.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is organic certification available?<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer__inner">We do not currently hold organic certification for coriander. All material is conventional and traceable to source farms in the Varna and Dobrich regions.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-band__inner">
+      <div>
+        <h2 class="cta-band__title">Interested in Coriander Seeds?</h2>
+        <p class="cta-band__subtitle">Contact our sales team to discuss whole vs. splits, pricing, samples, and shipping terms.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="contact.html" class="btn btn--gold">Request a Price</a>
+        <a href="products.html" class="btn btn--outline-light">All Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo"><img src="media/agros-logo.png" alt="Agros-98 AD" class="footer__logo-img" /></a>
+        <p class="footer__tagline">From field to final packaging — quality you can trace. Suvorovo &amp; Varna, Bulgaria.</p>
+        <p class="footer__vat">Registered in Bulgaria &middot; VAT BG208709219</p>
+      </div>
+      <div>
+        <p class="footer__heading">Products</p>
+        <ul class="footer__links">
+          <li><a href="products.html?cat=seeds" class="footer__link">Seeds &amp; Kernels</a></li>
+          <li><a href="products.html?cat=oils" class="footer__link">Cold-Pressed Oils</a></li>
+          <li><a href="products.html?cat=flours" class="footer__link">Flours &amp; Proteins</a></li>
+          <li><a href="products.html" class="footer__link">All Products →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Company</p>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Home</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+          <li><a href="contact.html" class="footer__link">Request a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Contact</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div>
+            <strong>Sales</strong> Georgi Berbenkov<br>
+            <a href="mailto:g.berbenkov@agros.net" class="footer__contact-link">g.berbenkov@agros.net</a><br>
+            <a href="tel:+359879127112" class="footer__contact-link">+359 879 127 112</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+      <p class="footer__copy">&copy; 2025 Agros-98 AD. All rights reserved.</p>
+      <div class="footer__bottom-links">
+        <a href="contact.html" class="footer__bottom-link">Contact</a>
+        <a href="products.html" class="footer__bottom-link">Products</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/products-data.js"></script>
+<script src="js/main.js"></script>
+<script>
+renderNavDropdown();
+
+/* ── Grade data ─────────────────────────────────────────────── */
+var GRADES = {
+  whole: {
+    specs: [
+      ['Moisture',           'max 8%'],
+      ['Essential Oil',      'min 1.1 ml/100g'],
+      ['Purity',             'min 99.5%'],
+      ['Foreign Matter',     'max 0.5%'],
+      ['Admixture',          'max 1%'],
+      ['Splits',             'max 2%'],
+      ['Color',              'Yellowish-brown'],
+      ['Volatile Oil',       'min 0.3%'],
+    ]
+  },
+  splits: {
+    specs: [
+      ['Moisture',           'max 10%'],
+      ['Split Ratio',        'min 95%'],
+      ['Essential Oil',      'min 0.4 ml/100g'],
+      ['Purity',             'min 99%'],
+      ['Foreign Matter',     'max 0.3%'],
+      ['Admixture',          'max 0.5%'],
+      ['Color',              'Yellowish-brown'],
+      ['Volatile Oil',       'min 0.3%'],
+    ]
+  }
+};
+
+/* ── Render spec table ──────────────────────────────────────── */
+function renderSpecs(grade) {
+  var tbody = document.getElementById('spec-tbody');
+  tbody.innerHTML = GRADES[grade].specs.map(function(row) {
+    return '<tr><td>' + row[0] + '</td><td>' + row[1] + '</td></tr>';
+  }).join('');
+}
+
+/* ── Show description panel ─────────────────────────────────── */
+function showDesc(grade) {
+  document.querySelectorAll('.grade-panel').forEach(function(p) {
+    p.classList.remove('is-active');
+  });
+  var panel = document.getElementById('panel-' + grade + '-desc');
+  if (panel) panel.classList.add('is-active');
+}
+
+/* ── Tab switching ──────────────────────────────────────────── */
+renderSpecs('whole');
+
+document.querySelectorAll('.grade-tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    var grade = tab.getAttribute('data-grade');
+
+    document.querySelectorAll('.grade-tab').forEach(function(t) {
+      t.classList.remove('is-active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('is-active');
+    tab.setAttribute('aria-selected', 'true');
+
+    var wrap = document.getElementById('grade-desc-wrap');
+    wrap.classList.add('is-fading');
+    setTimeout(function() {
+      showDesc(grade);
+      renderSpecs(grade);
+      wrap.classList.remove('is-fading');
+    }, 180);
+  });
+});
+</script>
+</body>
+</html>
