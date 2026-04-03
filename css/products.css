@@ -319,7 +319,7 @@
 .prod-hero--has-bg::before {
   width: 100%;
   top: 0;
-  background: rgba(0,0,0,0.45);
+  background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.10) 100%);
 }
 .prod-hero__pattern {
   display: none;
