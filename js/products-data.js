@@ -52,7 +52,7 @@ window.AGROS_PRODUCTS = [
   },
   {
     slug: 'flaxseed-brown',
-    name: 'Flaxseed – Brown',
+    name: 'Brown Flaxseed',
     category: 'seeds',
     categoryLabel: 'Seeds & Kernels',
     tagline: 'Whole brown flaxseed, rich in omega-3 and dietary fibre, grown on own farmland.',
@@ -72,10 +72,10 @@ window.AGROS_PRODUCTS = [
   },
   {
     slug: 'flaxseed-golden',
-    name: 'Flaxseed – Golden',
+    name: 'Yellow Flaxseed',
     category: 'seeds',
     categoryLabel: 'Seeds & Kernels',
-    tagline: 'Premium golden flaxseed with bright colour and mild nutty flavour.',
+    tagline: 'Premium yellow flaxseed with bright colour and mild nutty flavour.',
     specs: [
       { key: 'Moisture', val: 'max 8%' },
       { key: 'Purity', val: 'min 99.9%' },
