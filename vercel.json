@@ -1,4 +1,21 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/flaxseed-golden",
+      "destination": "/flaxseed-yellow",
+      "permanent": true
+    },
+    {
+      "source": "/bg/flaxseed-golden",
+      "destination": "/bg/flaxseed-yellow",
+      "permanent": true
+    },
+    {
+      "source": "/de/flaxseed-golden",
+      "destination": "/de/flaxseed-yellow",
+      "permanent": true
+    }
+  ]
 }
