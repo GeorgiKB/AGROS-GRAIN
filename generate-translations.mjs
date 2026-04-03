@@ -6,7 +6,7 @@ const pages = [
   'index.html', 'products.html', 'contact.html',
   'hulled-sunflower-kernels-bakery.html', 'hulled-sunflower-kernels-confectionery.html',
   'broken-sunflower-kernels.html', 'coriander-seeds.html', 'coriander-splits.html',
-  'flaxseed-brown.html', 'flaxseed-golden.html',
+  'flaxseed-brown.html', 'flaxseed-yellow.html',
   'sunflower-oil-linoleic.html', 'sunflower-oil-oleic.html', 'coriander-oil.html',
   'flaxseed-oil.html', 'pumpkin-oil.html', 'walnut-oil.html',
   'sunflower-flour.html', 'sunflower-protein.html', 'coriander-flour.html',

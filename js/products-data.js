@@ -67,11 +67,11 @@ window.AGROS_PRODUCTS = [
     packaging: '25 kg paper bags / 25 kg PP bags / 50 lb paper bags / 1 000 kg Big Bags',
     moq: '1 × 40ft container',
     tags: ['Halal & Kosher', 'ISO22000', 'FSSC22000'],
-    relatedSlugs: ['flaxseed-golden', 'flaxseed-oil', 'flaxseed-flour'],
+    relatedSlugs: ['flaxseed-yellow', 'flaxseed-oil', 'flaxseed-flour'],
     image: 'Media/products/brown-flaxseed.webp',
   },
   {
-    slug: 'flaxseed-golden',
+    slug: 'flaxseed-yellow',
     name: 'Yellow Flaxseed',
     category: 'seeds',
     categoryLabel: 'Seeds & Kernels',
@@ -189,7 +189,7 @@ window.AGROS_PRODUCTS = [
     packaging: '5 L tins / 25L drums / 200L drums / IBC 1000L',
     moq: '500 kg',
     tags: ['Omega-3 Rich', 'Cold-Pressed', 'Bulgarian Origin'],
-    relatedSlugs: ['flaxseed-brown', 'flaxseed-golden', 'flaxseed-flour'],
+    relatedSlugs: ['flaxseed-brown', 'flaxseed-yellow', 'flaxseed-flour'],
     image: 'Media/products/flaxseed-oil.webp',
   },
   {
@@ -311,7 +311,7 @@ window.AGROS_PRODUCTS = [
     packaging: '25 kg paper bags / Big bags 500–1000 kg',
     moq: '1 × 20ft container',
     tags: ['Omega-3 Rich', 'High Fibre', 'Bulgarian Origin'],
-    relatedSlugs: ['flaxseed-brown', 'flaxseed-golden', 'flaxseed-oil'],
+    relatedSlugs: ['flaxseed-brown', 'flaxseed-yellow', 'flaxseed-oil'],
     image: 'Media/products/flaxseed-flour.webp',
   },
   {

@@ -67,11 +67,11 @@ window.AGROS_PRODUCTS = [
     packaging: '25-kg-Papiersäcke / 25-kg-PP-Säcke / 50-lb-Papiersäcke / 1000-kg-Big-Bags',
     moq: '1 × 20-Fuß-Container',
     tags: ['Reich an Omega-3', 'Nicht-GVO', 'Bulgarische Herkunft'],
-    relatedSlugs: ['flaxseed-golden', 'flaxseed-oil', 'flaxseed-flour'],
+    relatedSlugs: ['flaxseed-yellow', 'flaxseed-oil', 'flaxseed-flour'],
     image: '../Media/products/brown-flaxseed.webp',
   },
   {
-    slug: 'flaxseed-golden',
+    slug: 'flaxseed-yellow',
     name: 'Leinsamen – Golden',
     category: 'seeds',
     categoryLabel: 'Samen & Kerne',
@@ -189,7 +189,7 @@ window.AGROS_PRODUCTS = [
     packaging: '5-L-Kanister / 25-L-Fässer / 200-L-Fässer / IBC 1000 L',
     moq: '500 kg',
     tags: ['Reich an Omega-3', 'Kaltgepresst', 'Bulgarische Herkunft'],
-    relatedSlugs: ['flaxseed-brown', 'flaxseed-golden', 'flaxseed-flour'],
+    relatedSlugs: ['flaxseed-brown', 'flaxseed-yellow', 'flaxseed-flour'],
     image: '../Media/products/flaxseed-oil.webp',
   },
   {
@@ -311,7 +311,7 @@ window.AGROS_PRODUCTS = [
     packaging: '25-kg-Papiersäcke / Big Bags 500–1000 kg',
     moq: '1 × 20-Fuß-Container',
     tags: ['Reich an Omega-3', 'Hoher Ballaststoffgehalt', 'Bulgarische Herkunft'],
-    relatedSlugs: ['flaxseed-brown', 'flaxseed-golden', 'flaxseed-oil'],
+    relatedSlugs: ['flaxseed-brown', 'flaxseed-yellow', 'flaxseed-oil'],
     image: '../Media/products/flaxseed-flour.webp',
   },
   {

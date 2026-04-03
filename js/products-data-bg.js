@@ -67,11 +67,11 @@ window.AGROS_PRODUCTS = [
     packaging: '25 кг хартиени чували / 25 кг PP чували / 50 lb хартиени чували / 1 000 кг Биг Бег',
     moq: '1 × 20ft контейнер',
     tags: ['Богато на омега-3', 'Без ГМО', 'Българско производство'],
-    relatedSlugs: ['flaxseed-golden', 'flaxseed-oil', 'flaxseed-flour'],
+    relatedSlugs: ['flaxseed-yellow', 'flaxseed-oil', 'flaxseed-flour'],
     image: '../Media/products/brown-flaxseed.webp',
   },
   {
-    slug: 'flaxseed-golden',
+    slug: 'flaxseed-yellow',
     name: 'Ленено семе — Златно',
     category: 'seeds',
     categoryLabel: 'Семена и ядки',
@@ -189,7 +189,7 @@ window.AGROS_PRODUCTS = [
     packaging: '5 л кутии / 25 л бидони / 200 л бидони / IBC 1000 л',
     moq: '500 кг',
     tags: ['Богато на омега-3', 'Студено пресовано', 'Българско производство'],
-    relatedSlugs: ['flaxseed-brown', 'flaxseed-golden', 'flaxseed-flour'],
+    relatedSlugs: ['flaxseed-brown', 'flaxseed-yellow', 'flaxseed-flour'],
     image: '../Media/products/flaxseed-oil.webp',
   },
   {
@@ -311,7 +311,7 @@ window.AGROS_PRODUCTS = [
     packaging: '25 кг хартиени чували / Биг бег 500–1000 кг',
     moq: '1 × 20ft контейнер',
     tags: ['Богато на омега-3', 'Високо фибри', 'Българско производство'],
-    relatedSlugs: ['flaxseed-brown', 'flaxseed-golden', 'flaxseed-oil'],
+    relatedSlugs: ['flaxseed-brown', 'flaxseed-yellow', 'flaxseed-oil'],
     image: '../Media/products/flaxseed-flour.webp',
   },
   {

@@ -83,11 +83,11 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.agros-grain.com/flaxseed-golden</loc>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/flaxseed-golden"/>
-    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/flaxseed-golden"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/flaxseed-golden"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/flaxseed-golden"/>
+    <loc>https://www.agros-grain.com/flaxseed-yellow</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/flaxseed-yellow"/>
+    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/flaxseed-yellow"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/flaxseed-yellow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/flaxseed-yellow"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
