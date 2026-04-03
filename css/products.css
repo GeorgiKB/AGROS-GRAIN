@@ -319,14 +319,10 @@
 .prod-hero--has-bg::before {
   width: 100%;
   top: 0;
-  background: linear-gradient(135deg, rgba(15,8,2,0.90) 0%, rgba(30,22,10,0.85) 55%, rgba(74,45,20,0.76) 100%);
+  background: rgba(0,0,0,0.45);
 }
 .prod-hero__pattern {
-  position: absolute;
-  inset: 0;
-  opacity: 0.04;
-  background-image: repeating-linear-gradient(45deg, var(--brand-amber) 0, var(--brand-amber) 1px, transparent 0, transparent 50%);
-  background-size: 40px 40px;
+  display: none;
 }
 .prod-hero__content {
   position: relative;
