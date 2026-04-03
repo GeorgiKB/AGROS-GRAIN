@@ -128,7 +128,7 @@ for (const dir of HTML_DIRS) {
   try {
     const entries = await readdir(dir);
     for (const f of entries) {
-      if (f.endsWith('.html')) htmlFiles.push(join(dir, f));
+      if (f.endsWith('')) htmlFiles.push(join(dir, f));
     }
   } catch { /* dir may not exist */ }
 }
