@@ -53,6 +53,24 @@
         hamburger.setAttribute('aria-expanded', 'false');
       }
     });
+
+    // Inject language switcher into mobile nav from desktop nav
+    var desktopLangLinks = document.querySelectorAll('.nav__lang .nav__lang-link');
+    if (desktopLangLinks.length) {
+      var langDiv = document.createElement('div');
+      langDiv.className = 'nav__mobile-lang';
+      desktopLangLinks.forEach(function (link) {
+        var a = document.createElement('a');
+        a.href = link.getAttribute('href');
+        a.textContent = link.textContent.trim();
+        a.className = 'nav__mobile-lang-link' + (link.classList.contains('nav__lang-link--active') ? ' nav__mobile-lang-link--active' : '');
+        var hl = link.getAttribute('hreflang');
+        if (hl) a.setAttribute('hreflang', hl);
+        if (link.getAttribute('aria-current')) a.setAttribute('aria-current', link.getAttribute('aria-current'));
+        langDiv.appendChild(a);
+      });
+      mobileNav.appendChild(langDiv);
+    }
   }
 
   /* --- Reveal Animations (IntersectionObserver) --- */
