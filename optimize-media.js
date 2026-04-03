@@ -11,8 +11,8 @@ const require = createRequire(import.meta.url);
 const ffmpegPath = (await import('ffmpeg-static')).default;
 
 const MEDIA_DIR = './Media';
-const MAX_WIDTH = 800;
-const WEBP_QUALITY = 80;
+const MAX_WIDTH = 1400;
+const WEBP_QUALITY = 90;
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
@@ -89,9 +89,9 @@ const videoBeforeSize = await fileSize(videoIn);
 const ffmpegCmd = [
   `"${ffmpegPath}"`,
   `-i "${videoIn}"`,
-  `-vf "scale=-2:720"`,   // downscale to 720p, keep aspect ratio
+  `-vf "scale=-2:1080"`,   // downscale to 1080p, keep aspect ratio
   `-c:v libx264`,
-  `-crf 28`,              // quality factor (18=lossless, 28=aggressive, 32=very small)
+  `-crf 23`,              // quality factor (18=lossless, 28=aggressive, 32=very small)
   `-preset slow`,         // better compression at cost of encode time
   `-an`,                  // strip audio
   `-movflags +faststart`, // web optimisation (moov atom at start)
