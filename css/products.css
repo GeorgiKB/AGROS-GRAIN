@@ -386,7 +386,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: rgba(255,255,255,0.9);
   margin-bottom: 0.75rem;
 }
 .prod-hero__moq-row {
@@ -399,7 +399,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.82);
   margin-bottom: 0.1rem;
 }
 .prod-hero__moq-val {
