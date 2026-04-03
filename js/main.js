@@ -269,19 +269,7 @@
       html += '</div>';
     });
     html += '</div>';
-    var certs = [
-      { src: '/Media/certs/fssc22000.png', alt: 'FSSC 22000' },
-      { src: '/Media/certs/eu-organic.png', alt: 'EU Organic' },
-      { src: '/Media/certs/halal.png',      alt: 'Halal' },
-      { src: '/Media/certs/kiwa.png',        alt: 'Kiwa' },
-      { src: '/Media/certs/kosher.png',      alt: 'Kosher' },
-    ];
-    var certsHtml = '<div class="nav__dropdown-certs">';
-    certs.forEach(function (c) {
-      certsHtml += '<img src="' + c.src + '" alt="' + c.alt + '" class="nav__dropdown-cert-logo">';
-    });
-    certsHtml += '</div>';
-    html += '<div class="nav__dropdown-footer">' + certsHtml + '<a href="' + pathPrefix + 'products.html" class="nav__dropdown-all">' + allLabel + '</a></div>';
+    html += '<div class="nav__dropdown-footer"><a href="' + pathPrefix + 'products.html" class="nav__dropdown-all">' + allLabel + '</a></div>';
     dd.innerHTML = html;
   }
   window.renderNavDropdown = renderNavDropdown;

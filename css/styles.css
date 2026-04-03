@@ -729,7 +729,7 @@ p { line-height: 1.7; }
 .intro__bg {
   position: absolute;
   inset: 0;
-  background-image: url('../Media/factory.jpg');
+  background-image: url('../Media/factory.webp');
   background-size: cover;
   background-position: center;
   z-index: 0;
