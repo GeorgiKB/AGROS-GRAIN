@@ -232,61 +232,6 @@
   </div>
 </section>
 
-<!-- ===== INQUIRY FORM ===== -->
-<section class="contact-page" style="padding-top:0" aria-label="Inquiry form">
-  <div class="container">
-    <div style="max-width:720px;margin:0 auto">
-      <div style="margin-bottom:2rem">
-        <p class="section__eyebrow">Get in Touch</p>
-        <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--text-dark);letter-spacing:-0.02em;margin-bottom:0.75rem">Send Us an Inquiry</h2>
-        <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7">Fill in the form below and we'll respond within one business day.</p>
-      </div>
-      <!-- Replace YOUR_FORM_ID with your Formspree form ID — sign up free at https://formspree.io -->
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="form__row form__row--2col">
-          <div>
-            <label class="form__label" for="inq-name">Full Name <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="text" id="inq-name" name="name" required autocomplete="name" placeholder="Your name">
-          </div>
-          <div>
-            <label class="form__label" for="inq-company">Company</label>
-            <input class="form__input" type="text" id="inq-company" name="company" autocomplete="organization" placeholder="Company name">
-          </div>
-        </div>
-        <div class="form__row form__row--2col">
-          <div>
-            <label class="form__label" for="inq-email">Email Address <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="email" id="inq-email" name="email" required autocomplete="email" placeholder="you@company.com">
-          </div>
-          <div>
-            <label class="form__label" for="inq-phone">Phone / WhatsApp</label>
-            <input class="form__input" type="tel" id="inq-phone" name="phone" autocomplete="tel" placeholder="+1 234 567 8900">
-          </div>
-        </div>
-        <div class="form__row">
-          <label class="form__label" for="inq-subject">Subject <span aria-hidden="true">*</span></label>
-          <select class="form__select" id="inq-subject" name="subject" required>
-            <option value="" disabled selected>Select a subject…</option>
-            <option value="Request a Quote">Request a Quote</option>
-            <option value="Request a Sample">Request a Sample</option>
-            <option value="Export Partnership">Export Partnership Inquiry</option>
-            <option value="Product Question">Product Question</option>
-            <option value="General Inquiry">General Inquiry</option>
-          </select>
-        </div>
-        <div class="form__row">
-          <label class="form__label" for="inq-products">Products of Interest</label>
-          <input class="form__input" type="text" id="inq-products" name="products" placeholder="e.g. Hulled Sunflower Kernels, Coriander Oil…">
-        </div>
-        <div class="form__row">
-          <label class="form__label" for="inq-message">Message <span aria-hidden="true">*</span></label>
-          <textarea class="form__textarea" id="inq-message" name="message" required placeholder="Please include quantities, target specs, or any other relevant details…"></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary form__submit">Send Inquiry</button>
-      </form>
-    </div>
-  </div>
-</section>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer" role="contentinfo">

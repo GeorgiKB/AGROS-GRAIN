@@ -232,62 +232,6 @@
   </div>
 </section>
 
-<!-- ===== INQUIRY FORM ===== -->
-<section class="contact-page" style="padding-top:0" aria-label="Форма за запитване">
-  <div class="container">
-    <div style="max-width:720px;margin:0 auto">
-      <div style="margin-bottom:2rem">
-        <p class="section__eyebrow">Свържете се с нас</p>
-        <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--text-dark);letter-spacing:-0.02em;margin-bottom:0.75rem">Изпратете запитване</h2>
-        <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7">Попълнете формата по-долу и ще отговорим до един работен ден.</p>
-      </div>
-      <!-- Replace YOUR_FORM_ID with your Formspree form ID — sign up free at https://formspree.io -->
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="hidden" name="_language" value="bg">
-        <div class="form__row form__row--2col">
-          <div>
-            <label class="form__label" for="inq-name">Пълно Ime <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="text" id="inq-name" name="name" required autocomplete="name" placeholder="Вашето Ime">
-          </div>
-          <div>
-            <label class="form__label" for="inq-company">Компания</label>
-            <input class="form__input" type="text" id="inq-company" name="company" autocomplete="organization" placeholder="Наименование на фирмата">
-          </div>
-        </div>
-        <div class="form__row form__row--2col">
-          <div>
-            <label class="form__label" for="inq-email">Имейл адрес <span aria-hidden="true">*</span></label>
-            <input class="form__input" type="email" id="inq-email" name="email" required autocomplete="email" placeholder="вие@фирма.com">
-          </div>
-          <div>
-            <label class="form__label" for="inq-phone">Телефон / WhatsApp</label>
-            <input class="form__input" type="tel" id="inq-phone" name="phone" autocomplete="tel" placeholder="+359 879 127 112">
-          </div>
-        </div>
-        <div class="form__row">
-          <label class="form__label" for="inq-subject">Тема <span aria-hidden="true">*</span></label>
-          <select class="form__select" id="inq-subject" name="subject" required>
-            <option value="" disabled selected>Изберете тема…</option>
-            <option value="Запитване за цена">Запитване за цена</option>
-            <option value="Заявка за мостра">Заявка за мостра</option>
-            <option value="Партньорство за износ">Партньорство за износ</option>
-            <option value="Въпрос за продукт">Въпрос за продукт</option>
-            <option value="Общо запитване">Общо запитване</option>
-          </select>
-        </div>
-        <div class="form__row">
-          <label class="form__label" for="inq-products">Продукти от интерес</label>
-          <input class="form__input" type="text" id="inq-products" name="products" placeholder="напр. Белени слънчогледови ядки, Кориандрово масло…">
-        </div>
-        <div class="form__row">
-          <label class="form__label" for="inq-message">Съобщение <span aria-hidden="true">*</span></label>
-          <textarea class="form__textarea" id="inq-message" name="message" required placeholder="Моля, включете количества, целеви спецификации или друга важна информация…"></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary form__submit">Изпрати запитване</button>
-      </form>
-    </div>
-  </div>
-</section>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer" role="contentinfo">
