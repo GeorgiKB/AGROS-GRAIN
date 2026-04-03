@@ -463,11 +463,19 @@
 }
 .prod-body__desc p {
   font-size: 0.95rem;
+  font-weight: 500;
   color: var(--text-body);
   line-height: 1.8;
   margin-bottom: 1rem;
 }
 .prod-body__desc p:last-child { margin-bottom: 0; }
+.prod-body__desc li {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 0.4rem;
+}
 
 /* Spec Table */
 .spec-table {
