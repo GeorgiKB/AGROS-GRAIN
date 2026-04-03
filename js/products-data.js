@@ -29,7 +29,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 40ft container',
     tags: ['Halal & Kosher', 'ISO22000', 'FSSC22000'],
     relatedSlugs: ['sunflower-oil-linoleic', 'sunflower-flour', 'sunflower-protein'],
-    image: 'Media/products/sunflower-kernel.jpg',
+    image: 'Media/products/sunflower-kernel.webp',
   },
   {
     slug: 'coriander',
@@ -48,7 +48,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 40ft container',
     tags: ['Halal & Kosher', 'ISO22000', 'FSSC22000'],
     relatedSlugs: ['coriander-oil', 'coriander-flour', 'hulled-sunflower-kernels'],
-    image: 'Media/products/coriander-seed.jpg',
+    image: 'Media/products/coriander-seed.webp',
   },
   {
     slug: 'flaxseed-brown',
@@ -68,7 +68,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 40ft container',
     tags: ['Halal & Kosher', 'ISO22000', 'FSSC22000'],
     relatedSlugs: ['flaxseed-golden', 'flaxseed-oil', 'flaxseed-flour'],
-    image: 'Media/products/brown-flaxseed.jpg',
+    image: 'Media/products/brown-flaxseed.webp',
   },
   {
     slug: 'flaxseed-golden',
@@ -88,7 +88,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 40ft container',
     tags: ['Halal & Kosher', 'ISO22000', 'FSSC22000'],
     relatedSlugs: ['flaxseed-brown', 'flaxseed-oil', 'flaxseed-flour'],
-    image: 'Media/products/golden-flaxseed.jpg',
+    image: 'Media/products/golden-flaxseed.webp',
   },
 
   /* ---- COLD-PRESSED OILS ---- */
@@ -110,7 +110,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 kg',
     tags: ['Cold-Pressed', 'Non-GMO', 'Bulgarian Origin'],
     relatedSlugs: ['sunflower-oil-oleic', 'sunflower-flour', 'sunflower-protein'],
-    image: 'Media/products/sunflower-oil.png',
+    image: 'Media/products/sunflower-oil.webp',
   },
   {
     slug: 'sunflower-oil-oleic',
@@ -130,7 +130,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 kg',
     tags: ['High Oleic', 'Cold-Pressed', 'Bulgarian Origin'],
     relatedSlugs: ['sunflower-oil-linoleic', 'sunflower-flour', 'sunflower-protein'],
-    image: 'Media/products/sunflower-oil.png',
+    image: 'Media/products/sunflower-oil.webp',
   },
   {
     slug: 'coriander-oil',
@@ -150,7 +150,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 kg',
     tags: ['Specialty Oil', 'Cold-Pressed', 'Bulgarian Origin'],
     relatedSlugs: ['coriander-seeds', 'coriander-flour', 'walnut-oil'],
-    image: 'Media/products/coriander-oil.png',
+    image: 'Media/products/coriander-oil.webp',
   },
   {
     slug: 'flaxseed-oil',
@@ -170,7 +170,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 kg',
     tags: ['Omega-3 Rich', 'Cold-Pressed', 'Bulgarian Origin'],
     relatedSlugs: ['flaxseed-brown', 'flaxseed-golden', 'flaxseed-flour'],
-    image: 'Media/products/flaxseed-oil.png',
+    image: 'Media/products/flaxseed-oil.webp',
   },
   {
     slug: 'pumpkin-oil',
@@ -190,7 +190,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 kg',
     tags: ['Specialty Oil', 'Cold-Pressed', 'Bulgarian Origin'],
     relatedSlugs: ['pumpkin-flour', 'walnut-oil', 'coriander-oil'],
-    image: 'Media/products/pumpkin-oil.png',
+    image: 'Media/products/pumpkin-oil.webp',
   },
   {
     slug: 'walnut-oil',
@@ -210,7 +210,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 kg',
     tags: ['Specialty Oil', 'Cold-Pressed', 'Bulgarian Origin'],
     relatedSlugs: ['walnut-flour', 'pumpkin-oil', 'coriander-oil'],
-    image: 'Media/products/walnut-oil.png',
+    image: 'Media/products/walnut-oil.webp',
   },
 
   /* ---- FLOURS & PROTEINS ---- */
@@ -232,7 +232,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft container',
     tags: ['High Protein', 'Non-GMO', 'Bulgarian Origin'],
     relatedSlugs: ['sunflower-protein', 'sunflower-oil-linoleic', 'broken-sunflower-kernels'],
-    image: 'Media/products/sunflower-flour.png',
+    image: 'Media/products/sunflower-flour.webp',
   },
   {
     slug: 'sunflower-protein',
@@ -252,7 +252,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft container',
     tags: ['45%+ Protein', 'Non-GMO', 'Bulgarian Origin'],
     relatedSlugs: ['sunflower-flour', 'sunflower-oil-linoleic', 'sunflower-oil-oleic'],
-    image: 'Media/products/sunflower-flour.png',
+    image: 'Media/products/sunflower-flour.webp',
   },
   {
     slug: 'coriander-flour',
@@ -272,7 +272,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft container',
     tags: ['Aromatic', 'Non-GMO', 'Bulgarian Origin'],
     relatedSlugs: ['coriander-seeds', 'coriander-splits', 'coriander-oil'],
-    image: 'Media/products/coriander-flour.png',
+    image: 'Media/products/coriander-flour.webp',
   },
   {
     slug: 'flaxseed-flour',
@@ -292,7 +292,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft container',
     tags: ['Omega-3 Rich', 'High Fibre', 'Bulgarian Origin'],
     relatedSlugs: ['flaxseed-brown', 'flaxseed-golden', 'flaxseed-oil'],
-    image: 'Media/products/flaxseed-flour.png',
+    image: 'Media/products/flaxseed-flour.webp',
   },
   {
     slug: 'pumpkin-flour',
@@ -312,7 +312,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft container',
     tags: ['Specialty', 'Non-GMO', 'Bulgarian Origin'],
     relatedSlugs: ['pumpkin-oil', 'walnut-flour', 'sunflower-flour'],
-    image: 'Media/products/pumpkin-flour.png',
+    image: 'Media/products/pumpkin-flour.webp',
   },
   {
     slug: 'walnut-flour',
@@ -332,7 +332,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft container',
     tags: ['Premium', 'Keto-Friendly', 'Bulgarian Origin'],
     relatedSlugs: ['walnut-oil', 'pumpkin-flour', 'sunflower-flour'],
-    image: 'Media/products/walnut-flour.png',
+    image: 'Media/products/walnut-flour.webp',
   },
 
   /* ---- TAHINIS & BUTTERS ---- */
@@ -354,7 +354,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 kg',
     tags: ['Non-GMO', 'Bulgarian Origin', 'No Additives'],
     relatedSlugs: ['hulled-sunflower-kernels', 'sunflower-flour', 'pumpkin-tahini'],
-    image: 'Media/products/tahini.png',
+    image: 'Media/products/tahini.webp',
   },
   {
     slug: 'flaxseed-tahini',
@@ -374,7 +374,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 kg',
     tags: ['Omega-3 Rich', 'Non-GMO', 'Bulgarian Origin'],
     relatedSlugs: ['flaxseed-brown', 'flaxseed-oil', 'sunflower-tahini'],
-    image: 'Media/products/flaxseed-tahini.png',
+    image: 'Media/products/flaxseed-tahini.webp',
   },
   {
     slug: 'pumpkin-tahini',
@@ -394,7 +394,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 kg',
     tags: ['Zinc-Rich', 'Non-GMO', 'Bulgarian Origin'],
     relatedSlugs: ['pumpkin-seed', 'pumpkin-oil', 'sunflower-tahini'],
-    image: 'Media/products/pumpkin-tahini.png',
+    image: 'Media/products/pumpkin-tahini.webp',
   },
   {
     slug: 'walnut-tahini',
@@ -414,6 +414,6 @@ window.AGROS_PRODUCTS = [
     moq: '500 kg',
     tags: ['Premium', 'Non-GMO', 'Bulgarian Origin'],
     relatedSlugs: ['walnut-oil', 'walnut-flour', 'sunflower-tahini'],
-    image: 'Media/products/tahini.png',
+    image: 'Media/products/tahini.webp',
   },
 ];

@@ -1031,7 +1031,7 @@ p { line-height: 1.7; }
    PAGE HERO (inner pages)
    ============================================================ */
 .page-hero {
-  background: linear-gradient(135deg, rgba(15,8,2,0.82) 0%, rgba(30,22,10,0.78) 60%, rgba(74,45,20,0.72) 100%), url('../Media/warehouse.png') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(15,8,2,0.82) 0%, rgba(30,22,10,0.78) 60%, rgba(74,45,20,0.72) 100%), url('../Media/warehouse.webp') center/cover no-repeat;
   padding: 8rem 0 5rem;
   position: relative;
   overflow: hidden;

@@ -29,7 +29,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 40ft контейнер',
     tags: ['Халал и Кошер', 'ISO22000', 'FSSC22000'],
     relatedSlugs: ['sunflower-oil-linoleic', 'sunflower-flour', 'sunflower-protein'],
-    image: '../Media/products/sunflower-kernel.jpg',
+    image: '../Media/products/sunflower-kernel.webp',
   },
   {
     slug: 'coriander-seeds',
@@ -48,7 +48,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 40ft контейнер',
     tags: ['Халал и Кошер', 'ISO22000', 'FSSC22000'],
     relatedSlugs: ['coriander-oil', 'coriander-flour', 'hulled-sunflower-kernels'],
-    image: '../Media/products/coriander-seed.jpg',
+    image: '../Media/products/coriander-seed.webp',
   },
   {
     slug: 'flaxseed-brown',
@@ -68,7 +68,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft контейнер',
     tags: ['Богато на омега-3', 'Без ГМО', 'Българско производство'],
     relatedSlugs: ['flaxseed-golden', 'flaxseed-oil', 'flaxseed-flour'],
-    image: '../Media/products/brown-flaxseed.jpg',
+    image: '../Media/products/brown-flaxseed.webp',
   },
   {
     slug: 'flaxseed-golden',
@@ -88,7 +88,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft контейнер',
     tags: ['Премиум клас', 'Без ГМО', 'Българско производство'],
     relatedSlugs: ['flaxseed-brown', 'flaxseed-oil', 'flaxseed-flour'],
-    image: '../Media/products/golden-flaxseed.jpg',
+    image: '../Media/products/golden-flaxseed.webp',
   },
 
   /* ---- СТУДЕНО ПРЕСОВАНИ МАСЛА ---- */
@@ -110,7 +110,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 кг',
     tags: ['Студено пресовано', 'Без ГМО', 'Българско производство'],
     relatedSlugs: ['sunflower-oil-oleic', 'sunflower-flour', 'sunflower-protein'],
-    image: '../Media/products/sunflower-oil.png',
+    image: '../Media/products/sunflower-oil.webp',
   },
   {
     slug: 'sunflower-oil-oleic',
@@ -130,7 +130,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 кг',
     tags: ['Високоолеиново', 'Студено пресовано', 'Българско производство'],
     relatedSlugs: ['sunflower-oil-linoleic', 'sunflower-flour', 'sunflower-protein'],
-    image: '../Media/products/sunflower-oil.png',
+    image: '../Media/products/sunflower-oil.webp',
   },
   {
     slug: 'coriander-oil',
@@ -150,7 +150,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 кг',
     tags: ['Специализирано масло', 'Студено пресовано', 'Българско производство'],
     relatedSlugs: ['coriander-seeds', 'coriander-flour', 'walnut-oil'],
-    image: '../Media/products/coriander-oil.png',
+    image: '../Media/products/coriander-oil.webp',
   },
   {
     slug: 'flaxseed-oil',
@@ -170,7 +170,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 кг',
     tags: ['Богато на омега-3', 'Студено пресовано', 'Българско производство'],
     relatedSlugs: ['flaxseed-brown', 'flaxseed-golden', 'flaxseed-flour'],
-    image: '../Media/products/flaxseed-oil.png',
+    image: '../Media/products/flaxseed-oil.webp',
   },
   {
     slug: 'pumpkin-oil',
@@ -190,7 +190,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 кг',
     tags: ['Специализирано масло', 'Студено пресовано', 'Българско производство'],
     relatedSlugs: ['pumpkin-flour', 'walnut-oil', 'coriander-oil'],
-    image: '../Media/products/pumpkin-oil.png',
+    image: '../Media/products/pumpkin-oil.webp',
   },
   {
     slug: 'walnut-oil',
@@ -210,7 +210,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 кг',
     tags: ['Специализирано масло', 'Студено пресовано', 'Българско производство'],
     relatedSlugs: ['walnut-flour', 'pumpkin-oil', 'coriander-oil'],
-    image: '../Media/products/walnut-oil.png',
+    image: '../Media/products/walnut-oil.webp',
   },
 
   /* ---- БРАШНА И ПРОТЕИНИ ---- */
@@ -232,7 +232,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft контейнер',
     tags: ['Високо протеиново', 'Без ГМО', 'Българско производство'],
     relatedSlugs: ['sunflower-protein', 'sunflower-oil-linoleic', 'broken-sunflower-kernels'],
-    image: '../Media/products/sunflower-flour.png',
+    image: '../Media/products/sunflower-flour.webp',
   },
   {
     slug: 'sunflower-protein',
@@ -252,7 +252,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft контейнер',
     tags: ['45%+ протеин', 'Без ГМО', 'Българско производство'],
     relatedSlugs: ['sunflower-flour', 'sunflower-oil-linoleic', 'sunflower-oil-oleic'],
-    image: '../Media/products/sunflower-flour.png',
+    image: '../Media/products/sunflower-flour.webp',
   },
   {
     slug: 'coriander-flour',
@@ -272,7 +272,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft контейнер',
     tags: ['Ароматно', 'Без ГМО', 'Българско производство'],
     relatedSlugs: ['coriander-seeds', 'coriander-splits', 'coriander-oil'],
-    image: '../Media/products/coriander-flour.png',
+    image: '../Media/products/coriander-flour.webp',
   },
   {
     slug: 'flaxseed-flour',
@@ -292,7 +292,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft контейнер',
     tags: ['Богато на омега-3', 'Високо фибри', 'Българско производство'],
     relatedSlugs: ['flaxseed-brown', 'flaxseed-golden', 'flaxseed-oil'],
-    image: '../Media/products/flaxseed-flour.png',
+    image: '../Media/products/flaxseed-flour.webp',
   },
   {
     slug: 'pumpkin-flour',
@@ -312,7 +312,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft контейнер',
     tags: ['Специализирано', 'Без ГМО', 'Българско производство'],
     relatedSlugs: ['pumpkin-oil', 'walnut-flour', 'sunflower-flour'],
-    image: '../Media/products/pumpkin-flour.png',
+    image: '../Media/products/pumpkin-flour.webp',
   },
   {
     slug: 'walnut-flour',
@@ -332,7 +332,7 @@ window.AGROS_PRODUCTS = [
     moq: '1 × 20ft контейнер',
     tags: ['Премиум', 'Кето приятелско', 'Българско производство'],
     relatedSlugs: ['walnut-oil', 'pumpkin-flour', 'sunflower-flour'],
-    image: '../Media/products/walnut-flour.png',
+    image: '../Media/products/walnut-flour.webp',
   },
 
   /* ---- ТАХАНИ И ПАСТИ ---- */
@@ -354,7 +354,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 кг',
     tags: ['Без ГМО', 'Българско производство', 'Без добавки'],
     relatedSlugs: ['hulled-sunflower-kernels', 'sunflower-flour', 'pumpkin-tahini'],
-    image: '../Media/products/tahini.png',
+    image: '../Media/products/tahini.webp',
   },
   {
     slug: 'flaxseed-tahini',
@@ -374,7 +374,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 кг',
     tags: ['Богато на омега-3', 'Без ГМО', 'Българско производство'],
     relatedSlugs: ['flaxseed-brown', 'flaxseed-oil', 'sunflower-tahini'],
-    image: '../Media/products/flaxseed-tahini.png',
+    image: '../Media/products/flaxseed-tahini.webp',
   },
   {
     slug: 'pumpkin-tahini',
@@ -394,7 +394,7 @@ window.AGROS_PRODUCTS = [
     moq: '500 кг',
     tags: ['Богато на цинк', 'Без ГМО', 'Българско производство'],
     relatedSlugs: ['pumpkin-oil', 'pumpkin-flour', 'sunflower-tahini'],
-    image: '../Media/products/pumpkin-tahini.png',
+    image: '../Media/products/pumpkin-tahini.webp',
   },
   {
     slug: 'walnut-tahini',
@@ -414,6 +414,6 @@ window.AGROS_PRODUCTS = [
     moq: '500 кг',
     tags: ['Премиум', 'Без ГМО', 'Българско производство'],
     relatedSlugs: ['walnut-oil', 'walnut-flour', 'sunflower-tahini'],
-    image: '../Media/products/tahini.png',
+    image: '../Media/products/tahini.webp',
   },
 ];
