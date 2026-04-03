@@ -104,7 +104,7 @@
       var progress = Math.min((timestamp - startTime) / duration, 1);
       var eased = 1 - Math.pow(1 - progress, 3);
       var current = Math.round(eased * target);
-      el.textContent = current + suffix;
+      if (current > 0) el.textContent = current + suffix;
       if (progress < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
@@ -264,7 +264,7 @@
       var prods = window.AGROS_PRODUCTS.filter(function (p) { return p.category === key; });
       html += '<div class="nav__dropdown-col"><div class="nav__dropdown-heading">' + meta.label + '</div>';
       prods.forEach(function (p) {
-        html += '<a href="' + pathPrefix + p.slug + '" class="nav__dropdown-link">' + p.name + '</a>';
+        html += '<a href="' + pathPrefix + p.slug + '.html" class="nav__dropdown-link">' + p.name + '</a>';
       });
       html += '</div>';
     });
@@ -281,7 +281,7 @@
       certsHtml += '<img src="' + c.src + '" alt="' + c.alt + '" class="nav__dropdown-cert-logo">';
     });
     certsHtml += '</div>';
-    html += '<div class="nav__dropdown-footer">' + certsHtml + '<a href="' + pathPrefix + 'products" class="nav__dropdown-all">' + allLabel + '</a></div>';
+    html += '<div class="nav__dropdown-footer">' + certsHtml + '<a href="' + pathPrefix + 'products.html" class="nav__dropdown-all">' + allLabel + '</a></div>';
     dd.innerHTML = html;
   }
   window.renderNavDropdown = renderNavDropdown;

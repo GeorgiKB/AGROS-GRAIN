@@ -12,7 +12,7 @@ window.AGROS_CATEGORIES = {
 window.AGROS_PRODUCTS = [
   /* ---- СЕМЕНА И ЯДКИ ---- */
   {
-    slug: 'hulled-sunflower-kernels-bakery',
+    slug: 'hulled-sunflower-kernels',
     name: 'Обелени слънчогледови ядки',
     category: 'seeds',
     categoryLabel: 'Семена и ядки',
@@ -47,7 +47,7 @@ window.AGROS_PRODUCTS = [
     packaging: '25 кг хартиени чували / 25 кг PP чували / 50 lb хартиени чували / 1 000 кг Биг Бег',
     moq: '1 × 40ft контейнер',
     tags: ['Халал и Кошер', 'ISO22000', 'FSSC22000'],
-    relatedSlugs: ['coriander-oil', 'coriander-flour', 'hulled-sunflower-kernels-bakery'],
+    relatedSlugs: ['coriander-oil', 'coriander-flour', 'hulled-sunflower-kernels'],
     image: '../Media/products/coriander-seed.jpg',
   },
   {
@@ -353,7 +353,7 @@ window.AGROS_PRODUCTS = [
     packaging: '300 г буркани / 1 кг кофи / 5 кг кофи / 25 кг варели',
     moq: '500 кг',
     tags: ['Без ГМО', 'Българско производство', 'Без добавки'],
-    relatedSlugs: ['hulled-sunflower-kernels-bakery', 'sunflower-flour', 'pumpkin-tahini'],
+    relatedSlugs: ['hulled-sunflower-kernels', 'sunflower-flour', 'pumpkin-tahini'],
     image: '../Media/products/tahini.png',
   },
   {
