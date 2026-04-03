@@ -196,21 +196,22 @@
   /* --- Active nav link --- */
   (function () {
     var path = window.location.pathname;
-    var filename = path.split('/').pop() || 'index.html';
-    if (!filename || filename === '') filename = 'index.html';
+    // Get the last non-empty segment as the slug (clean URLs, no .html)
+    var segments = path.replace(/\/$/, '').split('/').filter(Boolean);
+    var slug = segments.pop() || '';
 
-    function isProductPage(f) {
-      return f !== 'index.html' && f !== 'contact.html' && f !== 'products.html';
+    function isProductPage(s) {
+      return s !== '' && s !== 'contact' && s !== 'products';
     }
 
     document.querySelectorAll('.nav__link').forEach(function (link) {
       var href = link.getAttribute('href');
       if (!href) return;
-      var linkFile = href.split('/').pop();
+      var linkSlug = href.replace(/\/$/, '').split('/').filter(Boolean).pop() || '';
       var active = false;
-      if (linkFile === filename) {
+      if (linkSlug === slug) {
         active = true;
-      } else if (linkFile === 'products.html' && (filename === 'products.html' || isProductPage(filename))) {
+      } else if (linkSlug === 'products' && (slug === 'products' || isProductPage(slug))) {
         active = true;
       }
       if (active) link.classList.add('nav__link--active');
@@ -219,11 +220,11 @@
     document.querySelectorAll('.nav__mobile-link').forEach(function (link) {
       var href = link.getAttribute('href');
       if (!href) return;
-      var linkFile = href.split('/').pop();
+      var linkSlug = href.replace(/\/$/, '').split('/').filter(Boolean).pop() || '';
       var active = false;
-      if (linkFile === filename) {
+      if (linkSlug === slug) {
         active = true;
-      } else if (linkFile === 'products.html' && (filename === 'products.html' || isProductPage(filename))) {
+      } else if (linkSlug === 'products' && (slug === 'products' || isProductPage(slug))) {
         active = true;
       }
       if (active) link.classList.add('nav__mobile-link--active');
@@ -245,7 +246,7 @@
       var prods = window.AGROS_PRODUCTS.filter(function (p) { return p.category === key; });
       html += '<div class="nav__dropdown-col"><div class="nav__dropdown-heading">' + meta.label + '</div>';
       prods.forEach(function (p) {
-        html += '<a href="' + pathPrefix + p.slug + '.html" class="nav__dropdown-link">' + p.name + '</a>';
+        html += '<a href="' + pathPrefix + p.slug + '" class="nav__dropdown-link">' + p.name + '</a>';
       });
       html += '</div>';
     });
@@ -262,7 +263,7 @@
       certsHtml += '<img src="' + c.src + '" alt="' + c.alt + '" class="nav__dropdown-cert-logo">';
     });
     certsHtml += '</div>';
-    html += '<div class="nav__dropdown-footer">' + certsHtml + '<a href="' + pathPrefix + 'products.html" class="nav__dropdown-all">' + allLabel + '</a></div>';
+    html += '<div class="nav__dropdown-footer">' + certsHtml + '<a href="' + pathPrefix + 'products" class="nav__dropdown-all">' + allLabel + '</a></div>';
     dd.innerHTML = html;
   }
   window.renderNavDropdown = renderNavDropdown;
