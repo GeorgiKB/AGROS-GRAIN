@@ -1115,6 +1115,7 @@ p { line-height: 1.7; }
   padding: 1rem 0;
   border-bottom: 1px solid var(--border);
   background: var(--white);
+  margin-top: 76px;
 }
 .breadcrumb__list {
   display: flex;

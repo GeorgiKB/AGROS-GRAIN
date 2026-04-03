@@ -299,7 +299,7 @@
    ============================================================ */
 .prod-hero {
   background: linear-gradient(135deg, #0f0802 0%, #1e160a 55%, #4a2d14 100%);
-  padding: 8rem 0 5rem;
+  padding: 5rem 0 5rem;
   position: relative;
   overflow: hidden;
 }
@@ -701,7 +701,7 @@
   .products-section { padding: 2.5rem 0 4rem; }
 
   /* Product detail hero */
-  .prod-hero { padding: 5.5rem 0 3.5rem; }
+  .prod-hero { padding: 3.5rem 0 3.5rem; }
   .prod-hero__title { font-size: clamp(1.75rem, 6.5vw, 2.5rem); }
   .prod-hero__tagline { font-size: 0.95rem; margin-bottom: 1.25rem; }
 
@@ -740,7 +740,7 @@
   .spec-table__head th { padding: 0.75rem 1rem; font-size: 0.65rem; }
 
   /* Product hero — reduce padding */
-  .prod-hero { padding: 4.5rem 0 3rem; }
+  .prod-hero { padding: 3rem 0 3rem; }
   .prod-hero__moq { padding: 1rem 1.25rem; min-width: unset; }
   .prod-hero__certs { gap: 0.35rem; }
   .prod-hero__cert { font-size: 0.58rem; padding: 0.25rem 0.6rem; }
