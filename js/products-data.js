@@ -75,7 +75,7 @@ window.AGROS_PRODUCTS = [
     name: 'Yellow Flaxseed',
     category: 'seeds',
     categoryLabel: 'Seeds & Kernels',
-    tagline: 'Premium yellow flaxseed with bright colour and mild nutty flavour.',
+    tagline: 'Fresh yellow flaxseed cleaned to perfection.',
     specs: [
       { key: 'Moisture', val: 'max 8%' },
       { key: 'Purity', val: 'min 99.9%' },
