@@ -729,7 +729,7 @@ p { line-height: 1.7; }
 .intro__bg {
   position: absolute;
   inset: 0;
-  background-image: url('../media/factory.jpg');
+  background-image: url('../Media/factory.jpg');
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -914,7 +914,7 @@ p { line-height: 1.7; }
    ============================================================ */
 .why-us {
   padding: 7rem 0;
-  background-image: url('../media/sunflower-field.jpg');
+  background-image: url('../Media/sunflower-field.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1031,7 +1031,7 @@ p { line-height: 1.7; }
    PAGE HERO (inner pages)
    ============================================================ */
 .page-hero {
-  background: linear-gradient(135deg, rgba(15,8,2,0.82) 0%, rgba(30,22,10,0.78) 60%, rgba(74,45,20,0.72) 100%), url('../media/warehouse.png') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(15,8,2,0.82) 0%, rgba(30,22,10,0.78) 60%, rgba(74,45,20,0.72) 100%), url('../Media/warehouse.png') center/cover no-repeat;
   padding: 8rem 0 5rem;
   position: relative;
   overflow: hidden;
