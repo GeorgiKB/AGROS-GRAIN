@@ -2,6 +2,21 @@
    Agros-98 AD — Main JavaScript
    ============================================================ */
 
+/* --- Cookie Consent Banner --- */
+(function () {
+  if (localStorage.getItem('agros_cookie_ok')) return;
+  var banner = document.createElement('div');
+  banner.setAttribute('role', 'region');
+  banner.setAttribute('aria-label', 'Cookie notice');
+  banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1e160a;color:#e8c870;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;font-family:system-ui,sans-serif;font-size:0.875rem;line-height:1.5;box-shadow:0 -2px 16px rgba(0,0,0,0.3);';
+  banner.innerHTML = '<p style="margin:0;flex:1 1 280px;">This site uses functional cookies and map tiles from CARTO/OpenStreetMap. No tracking or advertising cookies are used. <a href="/privacy" style="color:#d4a843;text-decoration:underline;">Privacy Policy</a></p><button id="agros-cookie-ok" style="background:#d4a843;color:#1e160a;border:none;border-radius:6px;padding:0.5rem 1.25rem;font-weight:700;font-size:0.875rem;cursor:pointer;flex-shrink:0;">OK, got it</button>';
+  document.body.appendChild(banner);
+  document.getElementById('agros-cookie-ok').addEventListener('click', function () {
+    localStorage.setItem('agros_cookie_ok', '1');
+    banner.remove();
+  });
+})();
+
 (function () {
   'use strict';
 
@@ -285,5 +300,25 @@
     dd.innerHTML = html;
   }
   window.renderNavDropdown = renderNavDropdown;
+
+  /* --- Hero Scroll Indicator --- */
+  var heroScroll = document.querySelector('.hero__scroll');
+  if (heroScroll) {
+    function triggerHeroScroll() {
+      var target = document.querySelector('.stats-bar') || document.querySelector('section:not(.hero)');
+      if (target) {
+        var navH = nav ? nav.offsetHeight : 0;
+        var top = target.getBoundingClientRect().top + window.scrollY - navH;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    }
+    heroScroll.addEventListener('click', triggerHeroScroll);
+    heroScroll.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        triggerHeroScroll();
+      }
+    });
+  }
 
 })();

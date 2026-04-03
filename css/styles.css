@@ -535,6 +535,12 @@ p { line-height: 1.7; }
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  cursor: pointer;
+}
+.hero__scroll:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.7);
+  outline-offset: 6px;
+  border-radius: 4px;
 }
 .hero__scroll-line {
   width: 1px; height: 40px;
