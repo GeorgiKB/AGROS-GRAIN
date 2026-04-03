@@ -391,40 +391,40 @@
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: var(--radius-lg);
-  padding: 2rem;
-  min-width: 240px;
+  padding: 1.25rem 1.5rem;
+  min-width: 220px;
   flex-shrink: 0;
 }
 .prod-hero__moq-heading {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 .prod-hero__moq-row {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 0.55rem;
 }
 .prod-hero__moq-label {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.45);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
 }
 .prod-hero__moq-val {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--white);
 }
 .prod-hero__moq-divider {
   border: none;
   border-top: 1px solid rgba(255,255,255,0.1);
-  margin: 1rem 0;
+  margin: 0.65rem 0;
 }
 
 @media (max-width: 900px) {
@@ -731,7 +731,7 @@
 
   /* Product hero — reduce padding */
   .prod-hero { padding: 4.5rem 0 3rem; }
-  .prod-hero__moq { padding: 1.5rem; min-width: unset; }
+  .prod-hero__moq { padding: 1rem 1.25rem; min-width: unset; }
   .prod-hero__certs { gap: 0.35rem; }
   .prod-hero__cert { font-size: 0.58rem; padding: 0.25rem 0.6rem; }
 
