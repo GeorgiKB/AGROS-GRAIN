@@ -427,6 +427,30 @@
   margin: 0.65rem 0;
 }
 
+/* Packaging option rows after the divider — display as inline pills */
+.prod-hero__moq-divider ~ .prod-hero__moq-row {
+  display: inline-flex;
+  margin: 0 0.3rem 0.3rem 0;
+}
+.prod-hero__moq-divider ~ .prod-hero__moq-row .prod-hero__moq-label {
+  display: none;
+}
+.prod-hero__moq-divider ~ .prod-hero__moq-row .prod-hero__moq-val {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.88);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 4px;
+  padding: 0.2rem 0.55rem;
+}
+/* Tighten the "Packaging Options" heading after the divider */
+.prod-hero__moq-divider ~ .prod-hero__moq-heading {
+  display: block;
+  margin-bottom: 0.45rem !important;
+  margin-top: 0;
+}
+
 @media (max-width: 900px) {
   .prod-hero__content { grid-template-columns: 1fr; }
   .prod-hero__moq { min-width: unset; }
