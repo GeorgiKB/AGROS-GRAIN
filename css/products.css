@@ -25,9 +25,11 @@
   letter-spacing: 0.04em;
   color: var(--text-muted);
   padding: 0.6rem 1.25rem;
-  border-radius: 100px;
+  border-radius: 6px;
   border: 1.5px solid var(--border);
   background: transparent;
+  flex: 1;
+  text-align: center;
   transition: color var(--transition-base), background var(--transition-base), border-color var(--transition-base), transform var(--transition-spring);
   cursor: pointer;
 }
