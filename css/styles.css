@@ -1123,6 +1123,7 @@ p { line-height: 1.7; }
   background: var(--white);
   margin-top: 76px;
 }
+.page-hero + .breadcrumb { margin-top: 0; }
 .breadcrumb__list {
   display: flex;
   align-items: center;
