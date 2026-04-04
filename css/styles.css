@@ -1426,7 +1426,6 @@ p { line-height: 1.7; }
   font-size: 0.9rem;
   color: var(--text-body);
   margin-bottom: 0.5rem;
-  min-height: 44px;
 }
 .contact-info__row svg { color: var(--brand-amber); flex-shrink: 0; }
 .contact-info__row a { transition: color var(--transition-base); }
@@ -1632,6 +1631,9 @@ p { line-height: 1.7; }
 
   /* Contact map */
   .contact-map-col__map { height: 320px; }
+
+  /* Contact info rows — 44px touch target on mobile only */
+  .contact-info__row { min-height: 44px; }
 }
 
 /* ≤ 480px — small phone */
