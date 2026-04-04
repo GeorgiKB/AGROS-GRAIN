@@ -1252,9 +1252,6 @@ p { line-height: 1.7; }
 .footer__contact-link {
   color: #1a1a1a;
   transition: color var(--transition-base);
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
 }
 .footer__contact-link:hover { color: var(--brand-amber); }
 .footer__contact-icon { color: var(--brand-amber); flex-shrink: 0; margin-top: 0.2rem; }
@@ -1690,6 +1687,7 @@ p { line-height: 1.7; }
   .footer { padding: 3rem 0 0; }
   .footer__tagline { max-width: 100%; }
   .footer__grid { gap: 1.5rem; }
+  .footer__contact-link { display: inline-flex; align-items: center; min-height: 44px; }
 
   /* Contact map */
   .contact-map-col__map { height: 260px; }
