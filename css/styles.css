@@ -1606,10 +1606,14 @@ p { line-height: 1.7; }
   .section--lg { padding: 4rem 0; }
   .section__header { margin-bottom: 2rem; }
   .intro { padding: 4rem 0; }
-  .intro__text { padding: 1.5rem; }
-  .intro__lead { font-size: 1.1rem; }
-  .intro__pillars { grid-template-columns: 1fr; }
-  .intro__pillar { padding: 1.25rem; }
+  .intro__text { padding: 1rem; }
+  .intro__lead { font-size: 0.875rem; line-height: 1.6; margin-bottom: 0.75rem; }
+  .intro__body { font-size: 0.8125rem; line-height: 1.65; margin-bottom: 0.75rem; }
+  .intro__pillars { grid-template-columns: 1fr 1fr; gap: 0.625rem; }
+  .intro__pillar { padding: 0.75rem; }
+  .intro__pillar-icon { width: 28px; height: 28px; font-size: 0.875rem; margin-bottom: 0.5rem; }
+  .intro__pillar-title { font-size: 0.8125rem; margin-bottom: 0.25rem; }
+  .intro__pillar-text { font-size: 0.75rem; line-height: 1.5; }
 
   /* Homepage product category cards */
   .products-home { padding: 3.5rem 0; }
