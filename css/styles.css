@@ -194,15 +194,15 @@ p { line-height: 1.7; }
   width: 28px;
   height: 28px;
   margin-left: 0.5rem;
-  color: rgba(255,255,255,0.45);
+  color: #0A66C2;
   border-radius: 4px;
   flex-shrink: 0;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
-.nav__linkedin:hover { color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.08); }
+.nav__linkedin:hover { color: #fff; background: #0A66C2; }
 .nav__linkedin:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-.nav--scrolled .nav__linkedin { color: rgba(30,22,10,0.45); }
-.nav--scrolled .nav__linkedin:hover { color: var(--brand-deep); background: rgba(30,22,10,0.06); }
+.nav--scrolled .nav__linkedin { color: #0A66C2; }
+.nav--scrolled .nav__linkedin:hover { color: #fff; background: #0A66C2; }
 
 /* LinkedIn Icon — Footer */
 .footer__social { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0; }
@@ -214,10 +214,10 @@ p { line-height: 1.7; }
   height: 32px;
   border-radius: 6px;
   background: rgba(30,22,10,0.07);
-  color: rgba(30,22,10,0.5);
+  color: #0A66C2;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
-.footer__social-link:hover { background: var(--brand-amber); color: #fff; }
+.footer__social-link:hover { background: #0A66C2; color: #fff; }
 .footer__social-link:focus-visible { outline: 2px solid var(--brand-amber); outline-offset: 2px; }
 
 /* Hamburger */
@@ -1618,9 +1618,12 @@ p { line-height: 1.7; }
   .section--lg { padding: 4rem 0; }
   .section__header { margin-bottom: 2rem; }
   .intro { padding: 4rem 0; }
+  .intro { padding: 2.5rem 0; }
   .intro__text { padding: 1rem; }
-  .intro__lead { font-size: 0.875rem; line-height: 1.6; margin-bottom: 0.75rem; }
-  .intro__body { font-size: 0.8125rem; line-height: 1.65; margin-bottom: 0.75rem; }
+  .intro__lead { font-size: 0.875rem; line-height: 1.6; margin-bottom: 0; }
+  .intro__body { display: none; }
+  .intro__title { margin-bottom: 1.25rem; }
+  .intro__content { gap: 0.75rem; }
   .intro__pillars { grid-template-columns: 1fr 1fr; gap: 0.625rem; }
   .intro__pillar { padding: 0.75rem; }
   .intro__pillar-icon { width: 28px; height: 28px; font-size: 0.875rem; margin-bottom: 0.5rem; }
