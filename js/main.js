@@ -2,6 +2,20 @@
    Agros-98 AD — Main JavaScript
    ============================================================ */
 
+/* --- Skip Navigation Link --- */
+(function () {
+  var skip = document.createElement('a');
+  skip.href = '#main-content';
+  skip.className = 'skip-link';
+  skip.textContent = 'Skip to main content';
+  document.body.insertBefore(skip, document.body.firstChild);
+  // Tag the first meaningful landmark as the skip target
+  var main = document.querySelector('main') ||
+             document.querySelector('[role="main"]') ||
+             document.querySelector('.hero, .page-hero, .prod-hero, .contact-page, .products-section');
+  if (main && !main.id) main.id = 'main-content';
+})();
+
 /* --- Cookie Consent Banner --- */
 (function () {
   if (localStorage.getItem('agros_cookie_ok')) return;

@@ -51,6 +51,23 @@ a { color: inherit; text-decoration: none; }
 button { cursor: pointer; font-family: inherit; border: none; background: none; }
 ul, ol { list-style: none; }
 
+/* Skip navigation link — hidden until focused */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  background: var(--brand-amber);
+  color: var(--white);
+  padding: 0.6rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  transition: top 0.15s;
+  white-space: nowrap;
+}
+.skip-link:focus { top: 1rem; outline: 3px solid var(--gold); outline-offset: 2px; }
+
 /* --- Typography --- */
 h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
@@ -169,14 +186,19 @@ p { line-height: 1.7; }
 }
 .nav__lang-link {
   font-family: var(--font-body);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.45);
-  padding: 0.2rem 0.35rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 3px;
   transition: color 0.2s ease, background-color 0.2s ease;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav__lang-link:hover { color: rgba(255,255,255,0.9); }
 .nav__lang-link--active { color: var(--gold); background: rgba(212,168,67,0.14); }
@@ -316,7 +338,7 @@ p { line-height: 1.7; }
   filter: grayscale(0%);
 }
 .nav__dropdown-all {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--brand-amber);
   letter-spacing: 0.04em;
@@ -366,6 +388,9 @@ p { line-height: 1.7; }
 @media (max-width: 1024px) {
   .nav__links, .nav__cta { display: none; }
   .nav__hamburger { display: flex; }
+  .nav__inner { gap: 1rem; }
+  /* Lang switcher moves into hamburger menu on mobile */
+  .nav__lang { display: none; }
 }
 
 /* ============================================================
@@ -666,7 +691,7 @@ p { line-height: 1.7; }
   display: block;
 }
 .stats-bar__label {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -902,7 +927,7 @@ p { line-height: 1.7; }
 .cat-card__link {
   display: inline-block;
   margin-top: 1.5rem;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1062,7 +1087,7 @@ p { line-height: 1.7; }
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1105,7 +1130,7 @@ p { line-height: 1.7; }
   line-height: 1;
 }
 .page-hero__stat-label {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1185,13 +1210,13 @@ p { line-height: 1.7; }
   max-width: 240px;
 }
 .footer__vat {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   color: rgba(30,22,10,0.40);
   margin-top: 0.5rem;
   line-height: 1.5;
 }
 .footer__heading {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1217,7 +1242,7 @@ p { line-height: 1.7; }
 }
 .footer__contact-item strong {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1227,6 +1252,9 @@ p { line-height: 1.7; }
 .footer__contact-link {
   color: #1a1a1a;
   transition: color var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 .footer__contact-link:hover { color: var(--brand-amber); }
 .footer__contact-icon { color: var(--brand-amber); flex-shrink: 0; margin-top: 0.2rem; }
@@ -1303,7 +1331,7 @@ p { line-height: 1.7; }
   gap: 4rem;
 }
 .certs__label {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1334,7 +1362,7 @@ p { line-height: 1.7; }
   object-fit: contain;
 }
 .cert-logo__name {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -1342,7 +1370,7 @@ p { line-height: 1.7; }
   line-height: 1.2;
 }
 .cert-logo__sub {
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1355,11 +1383,11 @@ p { line-height: 1.7; }
 @media (max-width: 540px) {
   .certs { padding: 1.25rem 0; }
   .certs__bar { flex-direction: column; gap: 0.75rem; align-items: center; }
-  .certs__label { min-width: unset; font-size: 0.6rem; }
+  .certs__label { min-width: unset; font-size: 0.75rem; }
   .certs__logos { flex-wrap: nowrap; justify-content: space-between; gap: 0; width: 100%; }
   .cert-logo { gap: 0.25rem; flex: 1; }
   .cert-logo__img { height: 28px; }
-  .cert-logo__name { font-size: 0.55rem; }
+  .cert-logo__name { font-size: 0.75rem; }
   .cert-logo__sub { display: none; }
 }
 
@@ -1380,7 +1408,7 @@ p { line-height: 1.7; }
 }
 .contact-info__block:last-child { border-bottom: none; }
 .contact-info__role {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1401,6 +1429,7 @@ p { line-height: 1.7; }
   font-size: 0.9rem;
   color: var(--text-body);
   margin-bottom: 0.5rem;
+  min-height: 44px;
 }
 .contact-info__row svg { color: var(--brand-amber); flex-shrink: 0; }
 .contact-info__row a { transition: color var(--transition-base); }
@@ -1544,7 +1573,7 @@ p { line-height: 1.7; }
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 .nav__mobile-lang-link {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1568,6 +1597,9 @@ p { line-height: 1.7; }
 
 /* ≤ 768px — tablet & large phone */
 @media (max-width: 768px) {
+  /* Hero — hide video on mobile (no mobile source), show poster as bg */
+  .hero__video { display: none; }
+  .hero { background-image: url('../Media/hero-poster.jpg'); background-size: cover; background-position: center; }
   /* Hero */
   .hero__content { padding: 5.5rem 0 3.5rem; }
   .hero__flaxseed-badge { flex-wrap: wrap; gap: 10px; }
