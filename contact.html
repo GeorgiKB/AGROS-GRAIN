@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="Media/flavicon.webp" />
+  <link rel="icon" type="image/webp" href="Media/favicon.webp" />
+  <link rel="apple-touch-icon" href="Media/favicon.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Agros-98 AD Bulgaria</title>
   <meta name="description" content="Contact Agros-98 AD for product inquiries, samples, and export quotes. Sales: Georgi Berbenkov. Based in Suvorovo &amp; Varna, Bulgaria." />
@@ -324,10 +325,10 @@
   </div>
 </footer>
 
-<script src="js/products-data.js"></script>
-<script src="js/main.js"></script>
+<script src="js/products-data.js" defer></script>
+<script src="js/main.js" defer></script>
 <script>renderNavDropdown({ pathPrefix: '/' });</script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 <script>
 (function () {
   var map = L.map('contact-map', { scrollWheelZoom: false, zoomSnap: 0.5 });

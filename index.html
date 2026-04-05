@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="Media/flavicon.webp" />
+  <link rel="icon" type="image/webp" href="Media/favicon.webp" />
+  <link rel="apple-touch-icon" href="Media/favicon.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agros-98 AD — Seeds, Oils &amp; Flours from Bulgaria</title>
   <meta name="description" content="Agros-98 AD is a Bulgarian producer and exporter of sunflower kernels, cold-pressed oils, flaxseed, coriander, and specialty flours. From field to final packaging." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="Media/hero-poster.jpg" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="alternate" hreflang="en" href="https://www.agros-grain.com/" />
   <link rel="alternate" hreflang="bg" href="https://www.agros-grain.com/bg/" />
@@ -484,8 +486,8 @@
   </div>
 </footer>
 
-<script src="js/products-data.js"></script>
-<script src="js/main.js"></script>
+<script src="js/products-data.js" defer></script>
+<script src="js/main.js" defer></script>
 <script>renderNavDropdown({ pathPrefix: '/' });</script>
 </body>
 </html>
