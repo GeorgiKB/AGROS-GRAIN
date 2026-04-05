@@ -327,10 +327,10 @@
 
 <script src="js/products-data.js" defer></script>
 <script src="js/main.js" defer></script>
-<script>renderNavDropdown({ pathPrefix: '/' });</script>
+<script>document.addEventListener('DOMContentLoaded',function(){renderNavDropdown({ pathPrefix: '/' });});</script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 <script>
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
   var map = L.map('contact-map', { scrollWheelZoom: false, zoomSnap: 0.5 });
 
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -355,7 +355,7 @@
     .bindTooltip('Head Office', { permanent: true, direction: 'right', offset: [6, -18], className: 'map-label' });
 
   map.fitBounds(L.featureGroup([factory, office]).getBounds().pad(0.55));
-})();
+});
 </script>
 </body>
 </html>

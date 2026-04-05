@@ -239,6 +239,7 @@
 <script src="../js/products-data-bg.js" defer></script>
 <script src="../js/main.js" defer></script>
 <script>
+document.addEventListener('DOMContentLoaded', function() {
   renderNavDropdown({ pathPrefix: '/bg/' });
 
   // Render product cards
@@ -329,6 +330,7 @@
       });
     });
   })();
+}); // DOMContentLoaded
 </script>
 </body>
 </html>
