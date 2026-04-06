@@ -552,6 +552,7 @@
 <script src="js/products-data.js" defer></script>
 <script src="js/main.js" defer></script>
 <script>
+document.addEventListener('DOMContentLoaded', function() {
 renderNavDropdown({ pathPrefix: '/' });
 
 /* ── Grade data ─────────────────────────────────────────────── */
@@ -622,6 +623,7 @@ document.querySelectorAll('.grade-tab').forEach(function(tab) {
     }, 180);
   });
 });
+}); // DOMContentLoaded
 </script>
 </body>
 </html>
