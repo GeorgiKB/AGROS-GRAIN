@@ -6,7 +6,7 @@
   <link rel="apple-touch-icon" href="../Media/favicon.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Geschälte Sonnenblumenkerne — Agros-98 AD Bulgarien</title>
-  <meta name="description" content="Bulgarische geschälte Sonnenblumenkerne in vier Qualitäten: Bäckerei, Premium Bäckerei, Konditorei und Chips. Produziert von Agros-98 AD, Suworowo &amp; Warna, Bulgarien." />
+  <meta name="description" content="Bulgarische geschälte Sonnenblumenkerne in vier Qualitäten: Bakery, Premium Bakery, Confectionery und Chips. Produziert von Agros-98 AD, Suworowo &amp; Warna, Bulgarien." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -21,7 +21,7 @@
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://www.agros-grain.com/de/hulled-sunflower-kernels" />
   <meta property="og:title"       content="Geschälte Sonnenblumenkerne — Agros-98 AD Bulgarien" />
-  <meta property="og:description" content="Bulgarische geschälte Sonnenblumenkerne in vier Qualitäten: Bäckerei, Premium Bäckerei, Konditorei und Chips. Produziert von Agros-98 AD, Suworowo & Warna, Bulgarien." />
+  <meta property="og:description" content="Bulgarische geschälte Sonnenblumenkerne in vier Qualitäten: Bakery, Premium Bakery, Confectionery und Chips. Produziert von Agros-98 AD, Suworowo & Warna, Bulgarien." />
   <meta property="og:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -29,14 +29,27 @@
   <meta property="og:locale"      content="de_DE" />
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Geschälte Sonnenblumenkerne — Agros-98 AD Bulgarien" />
-  <meta name="twitter:description" content="Bulgarische geschälte Sonnenblumenkerne in vier Qualitäten: Bäckerei, Premium Bäckerei, Konditorei und Chips. Produziert von Agros-98 AD, Suworowo & Warna, Bulgarien." />
+  <meta name="twitter:description" content="Bulgarische geschälte Sonnenblumenkerne in vier Qualitäten: Bakery, Premium Bakery, Confectionery und Chips. Produziert von Agros-98 AD, Suworowo & Warna, Bulgarien." />
   <meta name="twitter:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
+  <style>
+    .grade-bar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 64px; z-index: 100; padding: 0; }
+    .grade-bar__inner { display: flex; align-items: stretch; gap: 0; overflow-x: auto; scrollbar-width: none; }
+    .grade-bar__inner::-webkit-scrollbar { display: none; }
+    .grade-tab { flex-shrink: 0; font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; color: var(--text-muted); padding: 1.1rem 1.75rem; border: none; border-bottom: 3px solid transparent; background: transparent; cursor: pointer; position: relative; transition: color 0.2s, border-color 0.2s; white-space: nowrap; }
+    .grade-tab:hover { color: var(--brand-amber); }
+    .grade-tab:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+    .grade-tab.is-active { color: var(--brand-amber); border-bottom-color: var(--brand-amber); background: rgba(184,114,58,0.04); }
+    .grade-tab__badge { display: inline-block; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 6px; border-radius: 100px; margin-left: 7px; vertical-align: middle; background: rgba(184,114,58,0.12); color: var(--brand-amber); transition: background 0.2s; }
+    .grade-tab.is-active .grade-tab__badge { background: var(--brand-amber); color: var(--white); }
+    .grade-panel { display: none; }
+    .grade-panel.is-active { display: contents; }
+  </style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Geschälte Sonnenblumenkerne",
-  "description": "Bulgarische geschälte Sonnenblumenkerne in vier Qualitäten: Bäckerei, Premium Bäckerei, Konditorei und Chips. Produziert von Agros-98 AD, Suworowo & Warna, Bulgarien.",
+  "description": "Bulgarische geschälte Sonnenblumenkerne in vier Qualitäten: Bakery, Premium Bakery, Confectionery und Chips. Produziert von Agros-98 AD, Suworowo & Warna, Bulgarien.",
   "url": "https://www.agros-grain.com/de/hulled-sunflower-kernels",
   "image": "https://www.agros-grain.com/Media/og-image.webp",
   "brand": {
@@ -50,7 +63,7 @@
   },
   "countryOfOrigin": {
     "@type": "Country",
-    "name": "Bulgaria"
+    "name": "Bulgarien"
   },
   "category": "Seeds & Kernels"
 }
@@ -145,8 +158,8 @@
       <div>
         <p class="prod-hero__cat-label">Samen &amp; Kerne</p>
         <h1 class="prod-hero__title" id="prod-title">Geschälte Sonnenblumenkerne</h1>
-        <p class="prod-hero__tagline" style="font-style:italic;font-size:0.95rem;margin-bottom:1rem;color:rgba(255,255,255,0.45)">Geschälte Sonnenblumensamen — vier Qualitäten erhältlich</p>
-        <p class="prod-hero__tagline">Bulgarische Sonnenblumenkerne, verarbeitet in unserer integrierten Anlage in Suworowo. Erhältlich in den Qualitäten Bäckerei, Premium Bäckerei, Konditorei und Chips — passend für jede Anwendung.</p>
+        <p class="prod-hero__tagline" style="font-style:italic;font-size:0.95rem;margin-bottom:1rem;color:rgba(255,255,255,0.45)">Geschälte Sonnenblumensamen — Bakery, Premium Bakery, Confectionery, Chips</p>
+        <p class="prod-hero__tagline">Bulgarische Sonnenblumenkerne, verarbeitet in unserer integrierten Anlage in Suworowo. Erhältlich in den Qualitäten Bakery, Premium Bakery, Confectionery und Chips — passend für jede Anwendung.</p>
         <div class="prod-hero__certs">
           <span class="prod-hero__cert">Halal &amp; Kosher</span>
           <span class="prod-hero__cert">ISO22000</span>
@@ -172,34 +185,76 @@
   </div>
 </section>
 
+<!-- ===== GRADE SELECTOR BAR ===== -->
+<div class="grade-bar" role="tablist" aria-label="Qualität wählen">
+  <div class="container">
+    <div class="grade-bar__inner">
+      <button class="grade-tab is-active" data-grade="bakery" role="tab" aria-selected="true">
+        Bakery
+      </button>
+      <button class="grade-tab" data-grade="premium" role="tab" aria-selected="false">
+        Premium Bakery <span class="grade-tab__badge">Neu</span>
+      </button>
+      <button class="grade-tab" data-grade="confectionery" role="tab" aria-selected="false">
+        Confectionery
+      </button>
+      <button class="grade-tab" data-grade="chips" role="tab" aria-selected="false">
+        Chips
+      </button>
+    </div>
+  </div>
+</div>
+
 <section class="prod-body section" aria-labelledby="prod-desc-title">
   <div class="container">
     <div class="prod-body__grid">
-      <div class="prod-body__desc reveal reveal--left">
-        <h2 class="prod-body__desc-title" id="prod-desc-title">Produktbeschreibung</h2>
-        <p>Die geschälten Sonnenblumenkerne von Agros-98 werden aus Sonnenblumensorten hergestellt, die auf unserem eigenen Ackerland in der Region Warna im Rahmen eines pestizidreduzierten Anbausystems angebaut werden. Nach der Ernte durchlaufen die Samen mehrere Reinigungs- und Schwerkraftseparationsstufen, um eine hohe Reinheit zu erreichen.</p>
-        <p>Wir bieten vier Qualitäten an: <strong>Bäckerei</strong> (550–600 Stk/oz) für gleichmäßiges Rösten und Einarbeitung in Backwaren; <strong>Premium Bäckerei</strong> (500–550 Stk/oz) mit größerem Korn und strengeren Feuchtigkeitsanforderungen; <strong>Konditorei</strong> (450–500 Stk/oz) mit optischer Wirkung und max. 2 % gebrochenen Kernen; und <strong>Chips</strong> — gebrochene Kerne für Vogelfutter, Energieriegel und industrielle Anwendungen.</p>
-        <p>Die Verarbeitung erfolgt in unserer integrierten Anlage in Suworowo mit lebensmittelechter Ausrüstung. Vollständige Dokumentation einschließlich COA, Ursprungszeugnis und phytosanitärem Zertifikat wird jeder Lieferung beigelegt.</p>
+      <div class="prod-body__desc reveal reveal--left" id="grade-desc-wrap">
+
+        <!-- BAKERY -->
+        <div class="grade-panel is-active" id="panel-bakery-desc">
+          <h2 class="prod-body__desc-title">Bakery — Geschälte Sonnenblumenkerne</h2>
+          <p>Die Bakery-Qualität von Agros-98 wird aus Sonnenblumensorten hergestellt, die auf unserem eigenen Ackerland in der Region Warna im Rahmen eines streng überwachten pestizidreduzierten Anbausystems angebaut werden. Nach der Ernte durchlaufen die Samen mechanisches Schälen, Aspiration und Schwerkraftseparation, um eine außergewöhnliche <strong>Mindestreinheit von 99,98 %</strong> zu erreichen.</p>
+          <p>Der Standard-Bakery-Größenbereich — kalibriert auf <strong>650 bis 700 Stück pro Unze (Stk/oz)</strong> — liefert ein sehr gleichmäßiges Kornprofil, das gleichmäßig röstet und sich homogen in gewerbliche Brotteige, Brötchen, Cracker und Granolaklumpen einarbeitet. Die natürliche weiß-bis-hellgraue Kernfarbe bietet einen ausgezeichneten visuellen Kontrast in fertigen Backwaren.</p>
+          <p>Die Verarbeitung erfolgt in unserer FSSC 22000-zertifizierten integrierten Anlage in Suworowo. Vollständige Dokumentation einschließlich COA, Ursprungszeugnis und EUR.1 wird jeder Containerlieferung beigefügt.</p>
+        </div>
+
+        <!-- PREMIUM BAKERY -->
+        <div class="grade-panel" id="panel-premium-desc">
+          <h2 class="prod-body__desc-title">Premium Bakery</h2>
+          <p>Unsere Premium Bakery-Qualität stellt die feinste Auswahl aus unserem Sonnenblumenkern-Sortiment dar — handverlesen für extra große Korngröße, außergewöhnliche Weiße und die strengsten Reinheitstoleranzen, die wir anbieten. Jede Charge durchläuft einen zusätzlichen optischen Sortiervorgang, um farbabweichende oder zu kleine Kerne zu entfernen.</p>
+          <p>Bei 550 bis 600 Stk/oz sind diese Kerne sichtbar größer als die Standard-Bakery-Qualität und liefern eine Premium-Optik in Handwerksbroten, Patisserie-Toppings und Gesundheitsprodukten, bei denen das Erscheinungsbild zählt.</p>
+          <p>Die Feuchtigkeit wird auf ein Maximum von 8 % begrenzt, um das Ranzigkeitsrisiko während der Lagerung zu reduzieren. Kosher-Dokumentation auf Anfrage erhältlich.</p>
+        </div>
+
+        <!-- CONFECTIONERY -->
+        <div class="grade-panel" id="panel-confectionery-desc">
+          <h2 class="prod-body__desc-title">Confectionery — Geschälte Sonnenblumenkerne</h2>
+          <p>Die Confectionery-Qualität stellt die größte und visuell makelloseste Fraktion ganzer Kerne aus unserem mehrstufigen Schälbetrieb dar. Handverlesen für ultimative Formeinheitlichkeit und ein reines, makelloses weißes Erscheinungsbild, sind diese Premium-Kerne präzise auf <strong>500 bis 550 Stk/oz</strong> kalibriert. Ihr erheblicher visueller und textureller Einfluss macht sie zum Industriestandard für Einzelhandels-Snackmischungen, Premium-Trailmixe und Schokoladenkonditoreiwaren.</p>
+          <p>Der Gehalt an gebrochenen Kernen wird auf ein außergewöhnlich strenges <strong>Maximum von 6 %</strong> begrenzt. Wir erreichen eine nahezu makellose <strong>99,99 % Reinheit</strong> durch sekundäre optische Sortierlinien.</p>
+          <p>Kosher- und Halal-Dokumentation auf Anfrage erhältlich. Lieferung in 25-kg-Papiersäcken oder 1.000-kg-Big-Bags.</p>
+        </div>
+
+        <!-- CHIPS -->
+        <div class="grade-panel" id="panel-chips-desc">
+          <h2 class="prod-body__desc-title">Sonnenblumenkern-Chips (Bruchkerne)</h2>
+          <p>Sonnenblumenkern-Chips sind ein natürliches Nebenprodukt unseres Schäl- und Sortierprozesses — Stücke, die außerhalb der Ganzkorn-Größenfraktionen fallen. Trotz ihrer unregelmäßigen Form behalten Chips dasselbe Nährwertprofil wie ganze Kerne: hoher Ölgehalt (42–48 %), gute Proteinwerte und sauberer Geschmack.</p>
+          <p>Der Ganzkerngehalt ist auf maximal 5 % begrenzt, was bedeutet, dass der überwiegende Teil des Produkts echte Bruchstücke sind — eine Anforderung für Kunden, die Vogelfutter, Energieriegel oder Granola formulieren.</p>
+          <p>Lieferung in 500-kg- oder 1.000-kg-Big-Bags für Futter- und Industriekunden oder in 25-kg-Papiersäcken. Non-GMO- und Bulgarien-Herkunftsdokumentation sind Standard.</p>
+        </div>
+
       </div>
       <div class="reveal reveal--right">
-        <h2 class="prod-body__desc-title">Technische Spezifikationen — Bäckereiqualität</h2>
-        <table class="spec-table" aria-label="Produktspezifikationen">
+        <h2 class="prod-body__desc-title" id="spec-title-de">Technische Spezifikationen — Bakery</h2>
+        <table class="spec-table" aria-label="Produktspezifikationen" id="spec-table-de">
           <thead class="spec-table__head">
             <tr><th scope="col">Parameter</th><th scope="col">Spezifikation</th></tr>
           </thead>
-          <tbody>
-            <tr><td>Feuchtigkeit</td><td>max 8 %</td></tr>
-            <tr><td>Reinheit</td><td>min 99,98 %</td></tr>
-            <tr><td>Größe</td><td>650–700 Stk/oz</td></tr>
-            <tr><td>Ölgehalt</td><td>45–50 %</td></tr>
-            <tr><td>Farbe</td><td>Weiß/grau gestreift</td></tr>
-            <tr><td>Freie Fettsäuren</td><td>max 0,5 %</td></tr>
-            <tr><td>Schalen</td><td>max 0,1 %</td></tr>
-            <tr><td>Gebrochene Kerne</td><td>max 8 %</td></tr>
+          <tbody id="spec-tbody-de">
+            <!-- Populated by JS -->
           </tbody>
         </table>
         <p style="font-size:0.72rem;color:var(--text-muted);margin-top:0.75rem;line-height:1.5">
-          Spezifikationen für weitere Qualitäten auf Anfrage beim Vertriebsteam.
+          Werte sind Richtwerte. Tatsächliches COA wird mit jeder Lieferung bereitgestellt.
         </p>
       </div>
     </div>
@@ -222,10 +277,10 @@
   <div class="container">
     <div class="section__header section__header--center reveal"><p class="section__eyebrow">FAQ</p><h2 class="section__title" id="faq-title">Häufig gestellte Fragen</h2></div>
     <div class="faq-list reveal">
-      <div class="faq-item"><button class="faq-question">Was ist der Unterschied zwischen Bäckerei- und Konditoreiqualität?<span class="faq-icon" aria-hidden="true"></span></button><div class="faq-answer"><div class="faq-answer__inner">Konditoreikerne sind größer (450–500 Stk/oz) und werden für ein einheitliches Erscheinungsbild mit einem strengeren Grenzwert für gebrochene Kerne (max. 2 %) ausgewählt. Bäckereiqualität (550–600 Stk/oz) ist etwas kleiner und ideal zum Rösten und Einarbeiten in Teige. Premium Bäckerei liegt dazwischen — 500–550 Stk/oz mit engeren Reinheits- und Feuchtigkeitsvorgaben.</div></div></div>
+      <div class="faq-item"><button class="faq-question">Was ist der Unterschied zwischen Bäckerei- und Konditoreiqualität?<span class="faq-icon" aria-hidden="true"></span></button><div class="faq-answer"><div class="faq-answer__inner">Konditoreikerne sind größer (500–550 Stk/oz) und werden für ein einheitliches Erscheinungsbild mit einem strengeren Grenzwert für gebrochene Kerne (max. 6 %) ausgewählt. Bäckereiqualität (650–700 Stk/oz) ist etwas kleiner und ideal zum Rösten und Einarbeiten in Teige. Premium Bäckerei liegt dazwischen — 550–600 Stk/oz mit engeren Reinheitsvorgaben.</div></div></div>
       <div class="faq-item"><button class="faq-question">Wie hoch ist die Mindestbestellmenge?<span class="faq-icon" aria-hidden="true"></span></button><div class="faq-answer"><div class="faq-answer__inner">Unsere Mindestbestellmenge beträgt einen 20-Fuß-Container, in der Regel 18–20 Tonnen, abhängig von der Verpackungskonfiguration. Kleinere Testbestellungen (1–5 t) können für Neukunden nach Verfügbarkeit arrangiert werden.</div></div></div>
-      <div class="faq-item"><button class="faq-question">Sind die Kerne roh oder geröstet?<span class="faq-icon" aria-hidden="true"></span></button><div class="faq-answer"><div class="faq-answer__inner">Wir liefern ausschließlich rohe geschälte Kerne. Rösten ist kein Teil unseres aktuellen Prozesses. Viele unserer Bäckerei- und Konditoreikunden rösten inline oder über Partnerröstereien.</div></div></div>
-      <div class="faq-item"><button class="faq-question">Ist eine Kosher-Zertifizierung verfügbar?<span class="faq-icon" aria-hidden="true"></span></button><div class="faq-answer"><div class="faq-answer__inner">Kosher-Dokumentation ist auf Anfrage für Bäckerei-, Premium Bäckerei- und Konditoreiqualität verfügbar. Bitte geben Sie diese Anforderung bei der Anfrage an, damit wir sie in das Angebot aufnehmen können.</div></div></div>
+      <div class="faq-item"><button class="faq-question">Sind die Kerne roh oder geröstet?<span class="faq-icon" aria-hidden="true"></span></button><div class="faq-answer"><div class="faq-answer__inner">Wir liefern ausschließlich rohe geschälte Kerne. Rösten ist kein Teil unseres aktuellen Prozesses. Viele unserer Bakery- und Confectionery-Kunden rösten inline oder über Partnerröstereien.</div></div></div>
+      <div class="faq-item"><button class="faq-question">Ist eine Kosher-Zertifizierung verfügbar?<span class="faq-icon" aria-hidden="true"></span></button><div class="faq-answer"><div class="faq-answer__inner">Kosher-Dokumentation ist auf Anfrage für Bakery-, Premium Bakery- und Confectionery-Qualität verfügbar. Bitte geben Sie diese Anforderung bei der Anfrage an, damit wir sie in das Angebot aufnehmen können.</div></div></div>
       <div class="faq-item"><button class="faq-question">Welche Dokumente erhalte ich mit jeder Lieferung?<span class="faq-icon" aria-hidden="true"></span></button><div class="faq-answer"><div class="faq-answer__inner">Jede Lieferung enthält ein Analysezertifikat (COA) und ein Ursprungszeugnis. EUR.1-Warenverkehrsbescheinigungen sind für EU-Lieferungen verfügbar. Phytosanitäre Zertifikate und Drittlaborberichte können auf Anfrage arrangiert werden.</div></div></div>
     </div>
   </div>
@@ -253,11 +308,104 @@
       <div><p class="footer__heading">Kontakt</p><div class="footer__contact-item"><svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div><strong>Vertrieb</strong> Georgi Berbenkov<br><a href="mailto:g.berbenkov@agros.net" class="footer__contact-link">g.berbenkov@agros.net</a><br><a href="tel:+359879127112" class="footer__contact-link">+359 879 127 112</a></div></div><div class="footer__contact-item"><svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div><strong>Buchhaltung</strong><a href="mailto:agros98@abv.bg" class="footer__contact-link">agros98@abv.bg</a><br><a href="mailto:office@agros.net" class="footer__contact-link">office@agros.net</a></div></div><div class="footer__contact-item"><svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong>Standort</strong>Suworowo &amp; Warna, Bulgarien</div></div></div>
     </div>
   </div>
-  <div class="footer__bottom"><div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;"><p class="footer__copy">&copy; 2026 Agros-98 AD. All rights reserved.</p><div class="footer__bottom-links"><a href="https://www.linkedin.com/company/agros-98/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Agros-98 on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="/privacy" class="footer__bottom-link">Privacy Policy</a><a href="/de/contact" class="footer__bottom-link">Kontakt</a><a href="/de/products" class="footer__bottom-link">Produkte</a></div></div></div>
+  <div class="footer__bottom"><div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;"><p class="footer__copy">&copy; 2026 Agros-98 AD. Alle Rechte vorbehalten.</p><div class="footer__bottom-links"><a href="https://www.linkedin.com/company/agros-98/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Agros-98 on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="/de/privacy" class="footer__bottom-link">Datenschutz</a><a href="/de/contact" class="footer__bottom-link">Kontakt</a><a href="/de/products" class="footer__bottom-link">Produkte</a></div></div></div>
 </footer>
 
-<script src="../js/products-data-de.js" defer></script>
-<script src="../js/main.js" defer></script>
-<script>document.addEventListener('DOMContentLoaded',function(){renderNavDropdown({ pathPrefix: '/de/', allLabel: 'Alle Produkte →', locationLabel: 'Bulgarien | Suworowo &amp; Warna' });});</script>
+<script src="../js/products-data-de.js"></script>
+<script src="../js/main.js"></script>
+<script>
+renderNavDropdown({ pathPrefix: '/de/', allLabel: 'Alle Produkte →', locationLabel: 'Bulgarien | Suworowo &amp; Warna' });
+
+var GRADES_DE = {
+  bakery: {
+    title: 'Technische Spezifikationen — Bakery',
+    specs: [
+      ['Feuchtigkeit',    'max 8 %'],
+      ['Reinheit',        'min 99,98 %'],
+      ['Größe',           '650–700 Stk/oz'],
+      ['Ölgehalt',        '45–50 %'],
+      ['Farbe',           'Weiß/grau gestreift'],
+      ['Freie Fettsäuren','max 0,5 %'],
+      ['Schalen',         'max 0,1 %'],
+      ['Bruchkerne',      'max 8 %'],
+    ]
+  },
+  premium: {
+    title: 'Technische Spezifikationen — Premium Bakery',
+    specs: [
+      ['Feuchtigkeit',    'max 8 %'],
+      ['Reinheit',        'min 99,98 %'],
+      ['Größe',           '550–600 Stk/oz'],
+      ['Ölgehalt',        '45–50 %'],
+      ['Farbe',           'Weiß/grau gestreift'],
+      ['Freie Fettsäuren','max 0,5 %'],
+      ['Schalen',         'max 0,1 %'],
+      ['Bruchkerne',      'max 8 %'],
+    ]
+  },
+  confectionery: {
+    title: 'Technische Spezifikationen — Confectionery',
+    specs: [
+      ['Feuchtigkeit',    'max 8 %'],
+      ['Reinheit',        'min 99,99 %'],
+      ['Größe',           '500–550 Stk/oz'],
+      ['Ölgehalt',        '40–45 %'],
+      ['Farbe',           'Weiß/grau gestreift'],
+      ['Freie Fettsäuren','max 0,5 %'],
+      ['Schalen',         'max 0,1 %'],
+      ['Bruchkerne',      'max 6 %'],
+    ]
+  },
+  chips: {
+    title: 'Technische Spezifikationen — Chips',
+    specs: [
+      ['Feuchtigkeit',    'max 8 %'],
+      ['Ganze Kerne',     'max 5 %'],
+      ['Schalen',         'max 1 %'],
+      ['Ölgehalt',        '42–48 %'],
+      ['Reinheit',        'min 99 %'],
+      ['Farbe',           'Weiß/grau'],
+      ['Protein',         '20–24 %'],
+      ['Freie Fettsäuren','max 1,0 %'],
+    ]
+  }
+};
+
+function renderSpecsDe(grade) {
+  var tbody = document.getElementById('spec-tbody-de');
+  var title = document.getElementById('spec-title-de');
+  title.textContent = GRADES_DE[grade].title;
+  tbody.innerHTML = GRADES_DE[grade].specs.map(function(row) {
+    return '<tr><td>' + row[0] + '</td><td>' + row[1] + '</td></tr>';
+  }).join('');
+}
+
+function showDescDe(grade) {
+  document.querySelectorAll('.grade-panel').forEach(function(p) { p.classList.remove('is-active'); });
+  var panel = document.getElementById('panel-' + grade + '-desc');
+  if (panel) panel.classList.add('is-active');
+}
+
+renderSpecsDe('bakery');
+
+document.querySelectorAll('.grade-tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    var grade = tab.getAttribute('data-grade');
+    document.querySelectorAll('.grade-tab').forEach(function(t) {
+      t.classList.remove('is-active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('is-active');
+    tab.setAttribute('aria-selected', 'true');
+    var wrap = document.getElementById('grade-desc-wrap');
+    if (wrap) wrap.classList.add('is-fading');
+    setTimeout(function() {
+      showDescDe(grade);
+      renderSpecsDe(grade);
+      if (wrap) wrap.classList.remove('is-fading');
+    }, 180);
+  });
+});
+</script>
 </body>
 </html>
