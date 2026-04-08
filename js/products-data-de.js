@@ -169,7 +169,7 @@ window.AGROS_PRODUCTS = [
     packaging: '5-L-Kanister / 25-L-Fässer / 200-L-Fässer / IBC 1000 L',
     moq: '500 kg',
     tags: ['Spezialöl', 'Kaltgepresst', 'Bulgarische Herkunft'],
-    relatedSlugs: ['coriander-seeds', 'coriander-flour', 'walnut-oil'],
+    relatedSlugs: ['coriander', 'coriander-flour', 'walnut-oil'],
     image: '../Media/products/coriander-oil.webp',
   },
   {
@@ -251,7 +251,7 @@ window.AGROS_PRODUCTS = [
     packaging: '25-kg-Papiersäcke / Big Bags 500–1000 kg',
     moq: '1 × 20-Fuß-Container',
     tags: ['Hoher Proteingehalt', 'Nicht-GVO', 'Bulgarische Herkunft'],
-    relatedSlugs: ['sunflower-protein', 'sunflower-oil-linoleic', 'broken-sunflower-kernels'],
+    relatedSlugs: ['sunflower-protein', 'sunflower-oil-linoleic', 'hulled-sunflower-kernels'],
     image: '../Media/products/sunflower-flour.webp',
   },
   {
@@ -291,7 +291,7 @@ window.AGROS_PRODUCTS = [
     packaging: '25-kg-Papiersäcke / Big Bags 500–1000 kg',
     moq: '1 × 20-Fuß-Container',
     tags: ['Aromatisch', 'Nicht-GVO', 'Bulgarische Herkunft'],
-    relatedSlugs: ['coriander-seeds', 'coriander-splits', 'coriander-oil'],
+    relatedSlugs: ['coriander', 'coriander-oil', 'walnut-flour'],
     image: '../Media/products/coriander-flour.webp',
   },
   {

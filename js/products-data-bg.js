@@ -169,7 +169,7 @@ window.AGROS_PRODUCTS = [
     packaging: '5 л кутии / 25 л бидони / 200 л бидони / IBC 1000 л',
     moq: '500 кг',
     tags: ['Специализирано масло', 'Студено пресовано', 'Българско производство'],
-    relatedSlugs: ['coriander-seeds', 'coriander-flour', 'walnut-oil'],
+    relatedSlugs: ['coriander', 'coriander-flour', 'walnut-oil'],
     image: '../Media/products/coriander-oil.webp',
   },
   {
@@ -251,7 +251,7 @@ window.AGROS_PRODUCTS = [
     packaging: '25 кг хартиени чували / Биг бег 500–1000 кг',
     moq: '1 × 20ft контейнер',
     tags: ['Високо протеиново', 'Без ГМО', 'Българско производство'],
-    relatedSlugs: ['sunflower-protein', 'sunflower-oil-linoleic', 'broken-sunflower-kernels'],
+    relatedSlugs: ['sunflower-protein', 'sunflower-oil-linoleic', 'hulled-sunflower-kernels'],
     image: '../Media/products/sunflower-flour.webp',
   },
   {
@@ -291,7 +291,7 @@ window.AGROS_PRODUCTS = [
     packaging: '25 кг хартиени чували / Биг бег 500–1000 кг',
     moq: '1 × 20ft контейнер',
     tags: ['Ароматно', 'Без ГМО', 'Българско производство'],
-    relatedSlugs: ['coriander-seeds', 'coriander-splits', 'coriander-oil'],
+    relatedSlugs: ['coriander', 'coriander-oil', 'walnut-flour'],
     image: '../Media/products/coriander-flour.webp',
   },
   {

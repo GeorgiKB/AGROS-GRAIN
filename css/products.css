@@ -328,6 +328,23 @@
   top: 0;
   background: linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.68) 35%, rgba(0,0,0,0.30) 65%, rgba(0,0,0,0.08) 100%);
 }
+
+.prod-hero__bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.prod-hero--has-bg::before {
+  z-index: 1;
+}
+.prod-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
 .prod-hero__pattern {
   display: none;
 }

@@ -6,7 +6,7 @@
   <link rel="apple-touch-icon" href="Media/favicon.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hulled Sunflower Kernels — Agros-98 AD Bulgaria</title>
-  <meta name="description" content="Bulgarian hulled sunflower kernels in four grades: Bakery, Premium Bakery, Confectionery, and Chips. Produced by Agros-98 AD, Suvorovo & Varna." />
+  <meta name="description" content="Wholesale hulled sunflower kernels from Bulgaria in four grades: Bakery, Premium Bakery, Confectionery, and Chips. B2B supplier Agros-98 AD — MOQ 1×20ft." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -22,7 +22,7 @@
   <meta property="og:url"         content="https://www.agros-grain.com/hulled-sunflower-kernels" />
   <meta property="og:title"       content="Hulled Sunflower Kernels — Agros-98 AD Bulgaria" />
   <meta property="og:description" content="Bulgarian hulled sunflower kernels in four grades: Bakery, Premium Bakery, Confectionery, and Chips. Produced by Agros-98 AD, Suvorovo & Varna." />
-  <meta property="og:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
+  <meta property="og:image"       content="https://www.agros-grain.com/Media/products/sunflower-kernels-bg.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name"   content="Agros-98 AD" />
@@ -30,7 +30,7 @@
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Hulled Sunflower Kernels — Agros-98 AD Bulgaria" />
   <meta name="twitter:description" content="Bulgarian hulled sunflower kernels in four grades: Bakery, Premium Bakery, Confectionery, and Chips. Produced by Agros-98 AD, Suvorovo & Varna." />
-  <meta name="twitter:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
+  <meta name="twitter:image"       content="https://www.agros-grain.com/Media/products/sunflower-kernels-bg.webp" />
   <style>
     /* ── Grade Selector Bar ─────────────────────────────────── */
     .grade-bar {
@@ -156,7 +156,7 @@
       "name": "Bulgarian Hulled Sunflower Kernels",
       "description": "Premium bulk wholesale hulled sunflower kernels from Bulgaria. Available in Bakery, Premium Bakery, Confectionery, and Chips grades. FSSC 22000 certified, low-pesticide, direct from producer.",
       "url": "https://www.agros-grain.com/hulled-sunflower-kernels",
-      "image": "https://www.agros-grain.com/Media/og-image.webp",
+      "image": "https://www.agros-grain.com/Media/products/sunflower-kernels-bg.webp",
       "brand": {
         "@type": "Brand",
         "name": "Agros-98 AD"
@@ -298,7 +298,8 @@
 </div>
 
 <!-- ===== HERO ===== -->
-<section class="prod-hero prod-hero--has-bg" style="background-image: url('Media/products/sunflower-kernels-bg.webp');" aria-labelledby="prod-title">
+<section class="prod-hero prod-hero--has-bg"  aria-labelledby="prod-title">
+  <img src="Media/products/sunflower-kernels-bg.webp" alt="Hulled sunflower kernels" class="prod-hero__bg-img" loading="eager" />
   <div class="prod-hero__pattern" aria-hidden="true"></div>
   <div class="container">
     <div class="prod-hero__content">
@@ -586,7 +587,7 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="/" class="footer__logo"><img src="Media/agros-logo.webp" alt="Agros-98 AD" class="footer__logo-img" /></a>
+        <a href="/" class="footer__logo"><img src="Media/agros-logo.webp" alt="Agros-98 AD" class="footer__logo-img" loading="lazy" /></a>
         <p class="footer__tagline">From field to final packaging — quality you can trace. Suvorovo &amp; Varna, Bulgaria.</p>
         <p class="footer__vat">Registered in Bulgaria &middot; VAT BG208709219</p>
       </div>
@@ -651,6 +652,7 @@
 <script src="js/main.js"></script>
 <script>
 renderNavDropdown({ pathPrefix: '/' });
+renderRelatedProducts();
 
 /* ── Grade data ─────────────────────────────────────────────── */
 var GRADES = {

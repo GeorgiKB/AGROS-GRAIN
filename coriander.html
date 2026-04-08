@@ -22,7 +22,7 @@
   <meta property="og:url"         content="https://www.agros-grain.com/coriander" />
   <meta property="og:title"       content="Coriander Seeds — Agros-98 AD Bulgaria" />
   <meta property="og:description" content="Bulgarian coriander seeds in two forms: Whole and Splits. For spice, confectionery, and essential oil extraction. Produced by Agros-98 AD, Suvorovo & Varna." />
-  <meta property="og:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
+  <meta property="og:image"       content="https://www.agros-grain.com/Media/products/coriander-seeds-bg.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name"   content="Agros-98 AD" />
@@ -30,7 +30,7 @@
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Coriander Seeds — Agros-98 AD Bulgaria" />
   <meta name="twitter:description" content="Bulgarian coriander seeds in two forms: Whole and Splits. For spice, confectionery, and essential oil extraction. Produced by Agros-98 AD, Suvorovo & Varna." />
-  <meta name="twitter:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
+  <meta name="twitter:image"       content="https://www.agros-grain.com/Media/products/coriander-seeds-bg.webp" />
   <style>
     /* ── Grade Selector Bar ─────────────────────────────────── */
     .grade-bar {
@@ -123,7 +123,7 @@
   "name": "Coriander Seeds",
   "description": "Bulgarian coriander seeds in two forms: Whole and Splits. For spice, confectionery, and essential oil extraction. Produced by Agros-98 AD, Suvorovo & Varna.",
   "url": "https://www.agros-grain.com/coriander",
-  "image": "https://www.agros-grain.com/Media/og-image.webp",
+  "image": "https://www.agros-grain.com/Media/products/coriander-seeds-bg.webp",
   "brand": {
     "@type": "Brand",
     "name": "Agros-98 AD"
@@ -168,6 +168,55 @@
       "position": 4,
       "name": "Coriander Seeds",
       "item": "https://www.agros-grain.com/coriander"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between Whole and Splits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whole seeds are cleaned and calibrated intact seeds suited for seasoning blends, pickling, and baking where visual presentation matters. Splits are mechanically halved (min 95% split ratio), releasing flavour faster — preferred for industrial processing, marinades, and applications where rapid infusion is needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you supply both food-grade and distillation-grade coriander?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Food-grade is cleaned to a higher purity standard with lower foreign matter tolerance. Distillation-grade may allow slightly higher admixture. Please specify the intended use when enquiring so we can quote the appropriate grade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order quantity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our MOQ is one 20-foot container. Smaller trial quantities (1–5 MT) can be arranged for new customers subject to availability. Contact our sales team to discuss."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you supply to a specific sieve size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — whole seeds can be calibrated to specific sieve mesh sizes. Please state your sieve requirement (e.g., 1.6 mm, 1.8 mm round hole) at the enquiry stage and we will confirm availability and any applicable premium."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is organic certification available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We do not currently hold organic certification for coriander. All material is conventional and traceable to source farms in the Varna and Dobrich regions."
+      }
     }
   ]
 }
@@ -226,7 +275,8 @@
 </div>
 
 <!-- ===== HERO ===== -->
-<section class="prod-hero prod-hero--has-bg" style="background-image: url('Media/products/coriander-seeds-bg.webp');" aria-labelledby="prod-title">
+<section class="prod-hero prod-hero--has-bg"  aria-labelledby="prod-title">
+  <img src="Media/products/coriander-seeds-bg.webp" alt="Coriander seeds" class="prod-hero__bg-img" loading="eager" />
   <div class="prod-hero__pattern" aria-hidden="true"></div>
   <div class="container">
     <div class="prod-hero__content">
@@ -488,7 +538,7 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="/" class="footer__logo"><img src="Media/agros-logo.webp" alt="Agros-98 AD" class="footer__logo-img" /></a>
+        <a href="/" class="footer__logo"><img src="Media/agros-logo.webp" alt="Agros-98 AD" class="footer__logo-img" loading="lazy" /></a>
         <p class="footer__tagline">From field to final packaging — quality you can trace. Suvorovo &amp; Varna, Bulgaria.</p>
         <p class="footer__vat">Registered in Bulgaria &middot; VAT BG208709219</p>
       </div>
@@ -623,6 +673,7 @@ document.querySelectorAll('.grade-tab').forEach(function(tab) {
     }, 180);
   });
 });
+renderRelatedProducts();
 }); // DOMContentLoaded
 </script>
 </body>

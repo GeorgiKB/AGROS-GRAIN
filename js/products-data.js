@@ -169,7 +169,7 @@ window.AGROS_PRODUCTS = [
     packaging: '5 L tins / 25L drums / 200L drums / IBC 1000L',
     moq: '500 kg',
     tags: ['Specialty Oil', 'Cold-Pressed', 'Bulgarian Origin'],
-    relatedSlugs: ['coriander-seeds', 'coriander-flour', 'walnut-oil'],
+    relatedSlugs: ['coriander', 'coriander-flour', 'walnut-oil'],
     image: 'Media/products/coriander-oil.webp',
   },
   {
@@ -251,7 +251,7 @@ window.AGROS_PRODUCTS = [
     packaging: '25 kg paper bags / Big bags 500–1000 kg',
     moq: '1 × 20ft container',
     tags: ['High Protein', 'Non-GMO', 'Bulgarian Origin'],
-    relatedSlugs: ['sunflower-protein', 'sunflower-oil-linoleic', 'broken-sunflower-kernels'],
+    relatedSlugs: ['sunflower-protein', 'sunflower-oil-linoleic', 'hulled-sunflower-kernels'],
     image: 'Media/products/sunflower-flour.webp',
   },
   {
@@ -291,7 +291,7 @@ window.AGROS_PRODUCTS = [
     packaging: '25 kg paper bags / Big bags 500–1000 kg',
     moq: '1 × 20ft container',
     tags: ['Aromatic', 'Non-GMO', 'Bulgarian Origin'],
-    relatedSlugs: ['coriander-seeds', 'coriander-splits', 'coriander-oil'],
+    relatedSlugs: ['coriander', 'coriander-oil', 'walnut-flour'],
     image: 'Media/products/coriander-flour.webp',
   },
   {
@@ -434,7 +434,7 @@ window.AGROS_PRODUCTS = [
     packaging: '300g jars / 1 kg tubs / 5 kg pails / 25 kg drums',
     moq: '500 kg',
     tags: ['Zinc-Rich', 'Non-GMO', 'Bulgarian Origin'],
-    relatedSlugs: ['pumpkin-seed', 'pumpkin-oil', 'sunflower-tahini'],
+    relatedSlugs: ['pumpkin-oil', 'pumpkin-flour', 'sunflower-tahini'],
     image: 'Media/products/pumpkin-tahini.webp',
   },
   {

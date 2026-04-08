@@ -279,6 +279,82 @@
     });
   })();
 
+  /* --- Render related products section --- */
+  function renderRelatedProducts(opts) {
+    opts = opts || {};
+    if (!window.AGROS_PRODUCTS) return;
+
+    var pathPrefix = opts.pathPrefix || '/';
+
+    // Build slug → product map
+    var productMap = {};
+    window.AGROS_PRODUCTS.forEach(function (p) { productMap[p.slug] = p; });
+
+    // Determine related slugs
+    var relatedSlugs = opts.relatedSlugs;
+    if (!relatedSlugs) {
+      var path = window.location.pathname;
+      var segments = path.replace(/\/$/, '').split('/').filter(Boolean);
+      var currentSlug = segments[segments.length - 1] || '';
+      var currentProduct = productMap[currentSlug];
+      if (!currentProduct) return;
+      relatedSlugs = currentProduct.relatedSlugs || [];
+      relatedSlugs = relatedSlugs.filter(function (s) { return s !== currentSlug; });
+    }
+    relatedSlugs = relatedSlugs.slice(0, 3);
+    if (!relatedSlugs.length) return;
+
+    function slugToName(slug) {
+      return slug.replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+    }
+
+    var cardsHtml = relatedSlugs.map(function (slug) {
+      var p = productMap[slug];
+      if (p) {
+        var cat = p.category || 'seeds';
+        var specHtml = (p.specs || []).slice(0, 2).map(function (s) {
+          return '<div class="prod-card__spec-row"><span class="prod-card__spec-key">' + s.key + '</span><span class="prod-card__spec-val">' + s.val + '</span></div>';
+        }).join('');
+        return '<a href="' + pathPrefix + p.slug + '" class="prod-card prod-card--visible" data-category="' + cat + '">' +
+          '<div class="prod-card__cat-bar prod-card__cat-bar--' + cat + '"><span>' + p.categoryLabel + '</span></div>' +
+          '<div class="prod-card__img-wrap"><img src="/' + p.image.replace(/^\.\.\//, '') + '" alt="' + p.name + '" loading="lazy" width="84" height="84"/></div>' +
+          '<div class="prod-card__body">' +
+          '<h3 class="prod-card__name">' + p.name + '</h3>' +
+          '<p class="prod-card__tagline">' + p.tagline + '</p>' +
+          '<div class="prod-card__specs-mini">' + specHtml + '</div>' +
+          '</div>' +
+          '<div class="prod-card__footer"><span class="prod-card__cta">' + cta + '</span><span class="prod-card__packaging">MOQ: ' + (p.moq || '') + '</span></div>' +
+          '</a>';
+      } else {
+        var name = slugToName(slug);
+        return '<a href="' + pathPrefix + slug + '" class="prod-card prod-card--visible">' +
+          '<div class="prod-card__body"><h3 class="prod-card__name">' + name + '</h3></div>' +
+          '<div class="prod-card__footer"><span class="prod-card__cta">' + cta + '</span></div>' +
+          '</a>';
+      }
+    }).join('');
+
+    var eyebrow = opts.eyebrow || 'Related Products';
+    var label   = opts.label   || 'You May Also Need';
+    var cta     = opts.cta     || 'View Full Spec →';
+    var sectionHtml =
+      '<section class="related-section" aria-labelledby="related-title">' +
+      '<div class="container">' +
+      '<div class="section__header reveal"><p class="section__eyebrow">' + eyebrow + '</p>' +
+      '<h2 class="section__title" id="related-title">' + label + '</h2></div>' +
+      '<div class="related-grid reveal">' + cardsHtml + '</div>' +
+      '</div></section>';
+
+    var ctaBand = document.querySelector('.cta-band');
+    if (ctaBand) {
+      ctaBand.insertAdjacentHTML('beforebegin', sectionHtml);
+      // Trigger reveal observer on new elements
+      var newReveals = ctaBand.previousElementSibling.querySelectorAll('.reveal');
+      newReveals.forEach(function (el) { el.classList.add('is-visible'); });
+    }
+  }
+  window.renderRelatedProducts = renderRelatedProducts;
+
   /* --- Render nav dropdown --- */
   function renderNavDropdown(opts) {
     opts = opts || {};
