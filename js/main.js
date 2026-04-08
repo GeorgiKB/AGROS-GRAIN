@@ -248,7 +248,8 @@
     var slug = segments.pop() || '';
 
     function isProductPage(s) {
-      return s !== '' && s !== 'contact' && s !== 'products';
+      var nonProductSlugs = ['', 'contact', 'products', 'news', 'privacy'];
+      return nonProductSlugs.indexOf(s) === -1;
     }
 
     document.querySelectorAll('.nav__link').forEach(function (link) {
