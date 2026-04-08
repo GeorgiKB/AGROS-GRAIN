@@ -247,9 +247,11 @@
     var segments = path.replace(/\/$/, '').split('/').filter(Boolean);
     var slug = segments.pop() || '';
 
+    var nonProductSlugs = ['', 'contact', 'products', 'news', 'privacy', 'index', 'en', 'bg', 'de'];
+    var isUnderNews = segments.indexOf('news') !== -1;
+
     function isProductPage(s) {
-      var nonProductSlugs = ['', 'contact', 'products', 'news', 'privacy'];
-      return nonProductSlugs.indexOf(s) === -1;
+      return !isUnderNews && nonProductSlugs.indexOf(s) === -1;
     }
 
     document.querySelectorAll('.nav__link').forEach(function (link) {
