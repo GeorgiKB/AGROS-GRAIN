@@ -4,8 +4,8 @@
   <url>
     <loc>https://www.agros-grain.com/</loc>
     <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/"/>
-    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/"/>
     <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
