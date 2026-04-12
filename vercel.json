@@ -46,6 +46,11 @@
       "source": "/de/flaxseed-yellow",
       "destination": "/de/leinsamen-gelb",
       "permanent": true
+    },
+    {
+      "source": "/de/news/what-separates-good-flaxseed-from-cheap-flaxseed",
+      "destination": "/de/news/guter-leinsamen-vs-billig",
+      "permanent": true
     }
   ]
 }
