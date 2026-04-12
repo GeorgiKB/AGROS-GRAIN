@@ -39,7 +39,12 @@
     },
     {
       "source": "/de/flaxseed-golden",
-      "destination": "/de/flaxseed-yellow",
+      "destination": "/de/leinsamen-gelb",
+      "permanent": true
+    },
+    {
+      "source": "/de/flaxseed-yellow",
+      "destination": "/de/leinsamen-gelb",
       "permanent": true
     }
   ]
