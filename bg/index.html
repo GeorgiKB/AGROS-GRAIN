@@ -39,52 +39,209 @@
       <feBlend in="SourceGraphic" mode="multiply"/>
     </filter>
   </svg>
-  <script type="application/ld+json">
+  <!-- TODO SEO: Add to sameAs when company profiles are created:
+     Europages : https://www.europages.com/[slug]
+     Kompass   : https://www.kompass.com/[slug]
+     Wikidata  : https://www.wikidata.org/wiki/Q[ID]
+     Crunchbase: https://www.crunchbase.com/organization/[slug]
+-->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": [
-    "Organization",
-    "LocalBusiness"
-  ],
-  "name": "Agros-98 AD",
-  "url": "https://www.agros-grain.com/",
-  "logo": "https://www.agros-grain.com/Media/agros-logo.webp",
-  "image": "https://www.agros-grain.com/Media/og-image.webp",
-  "description": "Bulgarian producer and exporter of sunflower kernels, cold-pressed oils, flaxseed, coriander, and specialty flours. FSSC 22000, EU Organic, Halal & Kosher certified.",
-  "foundingDate": "1994",
-  "vatID": "BG208709219",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Industrial Zone",
-    "addressLocality": "Suvorovo",
-    "addressRegion": "Varna Province",
-    "postalCode": "9170",
-    "addressCountry": "BG"
-  },
-  "contactPoint": [
+  "@graph": [
     {
-      "@type": "ContactPoint",
-      "telephone": "+359-879-127-112",
-      "email": "g.berbenkov@agros.net",
-      "contactType": "sales",
-      "areaServed": "Worldwide",
-      "availableLanguage": [
-        "English",
-        "Bulgarian",
-        "German"
+      "@type": [
+        "Organization",
+        "Corporation",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.agros-grain.com/#organization",
+      "name": "Agros-98 AD",
+      "url": "https://www.agros-grain.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.agros-grain.com/Media/agros-logo.webp"
+      },
+      "image": "https://www.agros-grain.com/Media/og-image.webp",
+      "description": "Български производител и износител на слънчогледови ядки, студено пресовани масла, ленено семе, кориандър и специални брашна. Сертифициран по FSSC 22000, ЕС Биологично, Халал и Кошер.",
+      "slogan": "От полето до крайната опаковка — качество, което можете да проследите.",
+      "foundingDate": "1994",
+      "vatID": "BG208709219",
+      "naics": "311224",
+      "isicV4": "1040",
+      "additionalType": "https://www.wikidata.org/wiki/Q936971",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 50
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Industrial Zone",
+        "addressLocality": "Suvorovo",
+        "addressRegion": "Varna Province",
+        "postalCode": "9170",
+        "addressCountry": "BG"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+359-879-127-112",
+          "email": "g.berbenkov@agros.net",
+          "contactType": "sales",
+          "areaServed": "Worldwide",
+          "availableLanguage": [
+            "English",
+            "Bulgarian",
+            "German"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "office@agros.net",
+          "contactType": "customer service"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Europe"
+        },
+        {
+          "@type": "Place",
+          "name": "Middle East"
+        },
+        {
+          "@type": "Place",
+          "name": "North America"
+        }
+      ],
+      "knowsAbout": [
+        "flaxseed",
+        "sunflower kernels",
+        "cold-pressed oils",
+        "coriander seeds",
+        "specialty flours",
+        "sunflower protein",
+        "seed processing",
+        "oilseed crushing"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Продуктов каталог на Agros-98 AD",
+        "url": "https://www.agros-grain.com/bg/products",
+        "numberOfItems": 4,
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Семена и ядки",
+            "url": "https://www.agros-grain.com/bg/products"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Студено пресовани масла",
+            "url": "https://www.agros-grain.com/bg/products"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Брашна и протеини",
+            "url": "https://www.agros-grain.com/bg/products"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Тахани и масла",
+            "url": "https://www.agros-grain.com/bg/products"
+          }
+        ]
+      },
+      "hasCertification": [
+        {
+          "@type": "Certification",
+          "name": "FSSC 22000",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "FSSC"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "ISO 22000",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "ISO"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "EU Organic Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "European Commission"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "Halal Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Halal Certification Body"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "Kosher Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Kosher Certification Body"
+          }
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/agros-98/"
       ]
     },
     {
-      "@type": "ContactPoint",
-      "email": "office@agros.net",
-      "contactType": "customer service"
+      "@type": "Brand",
+      "@id": "https://www.agros-grain.com/#brand",
+      "name": "Agros-98 AD",
+      "url": "https://www.agros-grain.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.agros-grain.com/Media/agros-logo.webp"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.agros-grain.com/#website",
+      "url": "https://www.agros-grain.com/",
+      "name": "Agros-98 AD",
+      "inLanguage": "bg",
+      "publisher": {
+        "@id": "https://www.agros-grain.com/#organization"
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Начало",
+      "url": "https://www.agros-grain.com/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Продукти",
+      "url": "https://www.agros-grain.com/bg/products"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Новини",
+      "url": "https://www.agros-grain.com/bg/news"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Контакт",
+      "url": "https://www.agros-grain.com/bg/contact"
     }
-  ],
-  "sameAs": [
-    "https://www.linkedin.com/company/agros-98/"
   ]
 }
-  </script>
+</script>
 </head>
 <body>
 

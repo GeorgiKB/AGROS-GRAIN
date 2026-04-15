@@ -43,12 +43,11 @@
       "image": "https://www.agros-grain.com/Media/products/sunflower-flour.webp",
       "brand": {
         "@type": "Brand",
-        "name": "Agros-98 AD"
+        "@id": "https://www.agros-grain.com/#brand"
       },
       "manufacturer": {
         "@type": "Organization",
-        "name": "Agros-98 AD",
-        "url": "https://www.agros-grain.com/"
+        "@id": "https://www.agros-grain.com/#organization"
       },
       "countryOfOrigin": {
         "@type": "Country",
@@ -71,7 +70,22 @@
           "@type": "Organization",
           "name": "Agros-98 AD"
         }
-      }
+      },
+      "@id": "https://www.agros-grain.com/sunflower-protein#product",
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "@id": "https://www.agros-grain.com/sunflower-flour#product"
+        },
+        {
+          "@type": "Product",
+          "@id": "https://www.agros-grain.com/sunflower-oil-linoleic#product"
+        },
+        {
+          "@type": "Product",
+          "@id": "https://www.agros-grain.com/sunflower-oil-oleic#product"
+        }
+      ]
     },
     {
       "@type": "FAQPage",

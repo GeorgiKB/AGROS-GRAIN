@@ -43,12 +43,11 @@
       "image": "https://www.agros-grain.com/Media/products/yellow-flaxseed-bg.webp",
       "brand": {
         "@type": "Brand",
-        "name": "Agros-98 AD"
+        "@id": "https://www.agros-grain.com/#brand"
       },
       "manufacturer": {
         "@type": "Organization",
-        "name": "Agros-98 AD",
-        "url": "https://www.agros-grain.com/"
+        "@id": "https://www.agros-grain.com/#organization"
       },
       "countryOfOrigin": {
         "@type": "Country",
@@ -106,20 +105,98 @@
       },
       "sku": "AGR/YFS",
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Moisture", "value": "max 8%" },
-        { "@type": "PropertyValue", "name": "Oil Content", "value": "38–42%" },
-        { "@type": "PropertyValue", "name": "ALA (Omega-3)", "value": "min 50% of fatty acids" },
-        { "@type": "PropertyValue", "name": "Purity", "value": "min 99.95%" },
-        { "@type": "PropertyValue", "name": "Foreign Matter", "value": "max 0.05%" },
-        { "@type": "PropertyValue", "name": "Admixture", "value": "max 1%" },
-        { "@type": "PropertyValue", "name": "Color", "value": "Golden" }
+        {
+          "@type": "PropertyValue",
+          "name": "Moisture",
+          "value": "max 8%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Oil Content",
+          "value": "38–42%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ALA (Omega-3)",
+          "value": "min 50% of fatty acids"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Purity",
+          "value": "min 99.95%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Foreign Matter",
+          "value": "max 0.05%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Admixture",
+          "value": "max 1%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Color",
+          "value": "Golden"
+        }
       ],
       "hasCertification": [
-        { "@type": "Certification", "name": "FSSC 22000", "issuedBy": { "@type": "Organization", "name": "FSSC" } },
-        { "@type": "Certification", "name": "ISO 22000", "issuedBy": { "@type": "Organization", "name": "ISO" } },
-        { "@type": "Certification", "name": "EU Organic", "issuedBy": { "@type": "Organization", "name": "European Commission" } },
-        { "@type": "Certification", "name": "Halal", "issuedBy": { "@type": "Organization", "name": "Halal Certification Body" } },
-        { "@type": "Certification", "name": "Kosher", "issuedBy": { "@type": "Organization", "name": "Kosher Certification Body" } }
+        {
+          "@type": "Certification",
+          "name": "FSSC 22000",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "FSSC"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "ISO 22000",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "ISO"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "EU Organic",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "European Commission"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "Halal",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Halal Certification Body"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "Kosher",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Kosher Certification Body"
+          }
+        }
+      ],
+      "@id": "https://www.agros-grain.com/bg/flaxseed-yellow#product",
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "@id": "https://www.agros-grain.com/bg/flaxseed-brown#product"
+        },
+        {
+          "@type": "Product",
+          "@id": "https://www.agros-grain.com/bg/flaxseed-oil#product"
+        },
+        {
+          "@type": "Product",
+          "@id": "https://www.agros-grain.com/bg/flaxseed-flour#product"
+        }
       ]
     },
     {
