@@ -59,6 +59,7 @@
         "@type": "Offer",
         "availability": "https://schema.org/InStock",
         "url": "https://www.agros-grain.com/contact",
+        "price": "0",
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -114,11 +115,11 @@
         { "@type": "PropertyValue", "name": "Color", "value": "Golden" }
       ],
       "hasCertification": [
-        { "@type": "Certification", "name": "FSSC 22000" },
-        { "@type": "Certification", "name": "ISO 22000" },
-        { "@type": "Certification", "name": "EU Organic" },
-        { "@type": "Certification", "name": "Halal" },
-        { "@type": "Certification", "name": "Kosher" }
+        { "@type": "Certification", "name": "FSSC 22000", "issuedBy": { "@type": "Organization", "name": "FSSC" } },
+        { "@type": "Certification", "name": "ISO 22000", "issuedBy": { "@type": "Organization", "name": "ISO" } },
+        { "@type": "Certification", "name": "EU Organic", "issuedBy": { "@type": "Organization", "name": "European Commission" } },
+        { "@type": "Certification", "name": "Halal", "issuedBy": { "@type": "Organization", "name": "Halal Certification Body" } },
+        { "@type": "Certification", "name": "Kosher", "issuedBy": { "@type": "Organization", "name": "Kosher Certification Body" } }
       ]
     },
     {
