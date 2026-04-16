@@ -291,6 +291,27 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://www.agros-grain.com/coriander-seeds</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/coriander-seeds"/>
+    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/coriander-seeds"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/coriander-seeds"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/coriander-seeds"/>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.agros-grain.com/news/hcn-content-flaxseed-buyers-guide</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/news/hcn-content-flaxseed-buyers-guide"/>
+    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/news/hcn-sadarzhanie-leneno-seme-rakovodstvo"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/news/hcn-gehalt-leinsamen-kaeuferratgeber"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/news/hcn-content-flaxseed-buyers-guide"/>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.agros-grain.com/production-process</loc>
     <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/production-process"/>
