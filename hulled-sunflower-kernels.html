@@ -175,13 +175,15 @@
         "@type": "Offer",
         "availability": "https://schema.org/InStock",
         "url": "https://www.agros-grain.com/contact",
-        "price": "0",
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "0",
           "priceCurrency": "EUR",
-          "description": "Price available on request. Contact us for a quote."
+          "referenceQuantity": {
+            "@type": "QuantitativeValue",
+            "value": "1",
+            "unitCode": "TNE"
+          }
         },
         "seller": {
           "@type": "Organization",
