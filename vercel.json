@@ -8,6 +8,26 @@
       "permanent": true
     },
     {
+      "source": "/en/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8-products/:path*",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/en/%D0%BE%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BA%D0%B8-packages/:path*",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/en/fertilizers",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/en/fertilizers/:path*",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
       "source": "/en/:path*",
       "destination": "/:path*",
       "permanent": true
@@ -18,13 +38,53 @@
       "permanent": true
     },
     {
+      "source": "/bg/fertilizers/conatct-us",
+      "destination": "/bg/contact",
+      "permanent": true
+    },
+    {
       "source": "/bg/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8-products/%D0%B1%D0%B5%D0%BB%D0%B5%D0%BD-%D1%81%D0%BB%D1%8A%D0%BD%D1%87%D0%BE%D0%B3%D0%BB%D0%B5%D0%B4",
       "destination": "/bg/hulled-sunflower-kernels",
       "permanent": true
     },
     {
-      "source": "/bg/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8-products/%D1%81%D0%BB%D1%8A%D0%BD%D1%87%D0%BE%D0%B3%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2-%D1%87%D0%B8%D0%BF%D1%81",
-      "destination": "/bg/broken-sunflower-kernels",
+      "source": "/bg/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8-products/%D1%81%D0%BB%D1%8A%D0%BD%D1%87%D0%BE%D0%B3%D0%BB%D0%B5%D0%B2-%D1%87%D0%B8%D0%BF%D1%81",
+      "destination": "/bg/hulled-sunflower-kernels",
+      "permanent": true
+    },
+    {
+      "source": "/bg/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8-products/%D1%88%D0%B0%D1%80%D0%B5%D0%BD-%D1%81%D0%BB%D1%8A%D0%BD%D1%87%D0%BE%D0%B3%D0%BB%D0%B5%D0%B4",
+      "destination": "/bg/hulled-sunflower-kernels",
+      "permanent": true
+    },
+    {
+      "source": "/bg/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8-products/%D1%87%D0%B5%D1%80%D0%B5%D0%BD-%D1%81%D0%BB%D1%8A%D0%BD%D1%87%D0%BE%D0%B3%D0%BB%D0%B5%D0%B4",
+      "destination": "/bg/hulled-sunflower-kernels",
+      "permanent": true
+    },
+    {
+      "source": "/bg/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8-products/walnut-kernels",
+      "destination": "/bg/walnut-oil",
+      "permanent": true
+    },
+    {
+      "source": "/bg/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8-products/:path*",
+      "destination": "/bg/products",
+      "permanent": true
+    },
+    {
+      "source": "/bg/hulled-sunflower-kernels-bakery",
+      "destination": "/bg/hulled-sunflower-kernels",
+      "permanent": true
+    },
+    {
+      "source": "/:page.html",
+      "destination": "/:page",
+      "permanent": true
+    },
+    {
+      "source": "/:lang/:page.html",
+      "destination": "/:lang/:page",
       "permanent": true
     },
     {
