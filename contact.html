@@ -1,19 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/jpeg" href="Media/logo.jpg" />
-  <link rel="apple-touch-icon" href="Media/logo.jpg" />
+  <link rel="icon" type="image/webp" href="Media/favicon.webp" />
+  <link rel="apple-touch-icon" href="Media/favicon.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Stufiyan Agro Bulgaria</title>
-  <meta name="description" content="Contact Stufiyan Agro for wholesale inquiries, product samples &amp; export quotes. Fast response — direct sales contact. Neofit Bozveli 15, Varna, Bulgaria." />
+  <title>Contact — Agros-98 AD Bulgaria</title>
+  <meta name="description" content="Contact Agros-98 AD for wholesale inquiries, product samples &amp; export quotes. Fast response — direct sales contact. Suvorovo &amp; Varna, Bulgaria." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <style>
-    /* ---- Map tooltip ---- */
     .map-label {
       background: white;
       border: none !important;
@@ -27,494 +26,117 @@
       white-space: nowrap;
     }
     .map-label::before { display: none !important; }
-
-    /* ===================================================
-       CONTACT PAGE v2 — scoped with cp- prefix
-       =================================================== */
-
-    /* Hero pills */
-    .cp-hero-pills {
-      display: flex;
-      gap: 10px;
-      margin-top: 28px;
-      flex-wrap: wrap;
-    }
-    .cp-hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 9px 18px;
-      border-radius: 100px;
-      border: 1.5px solid rgba(255,255,255,0.22);
-      color: rgba(255,255,255,0.85);
-      background: rgba(255,255,255,0.07);
-      transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
-      white-space: nowrap;
-    }
-    .cp-hero-pill:hover {
-      background: rgba(255,255,255,0.14);
-      border-color: rgba(255,255,255,0.42);
-      color: #fff;
-    }
-    .cp-hero-pill:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
-    .cp-hero-pill--orange {
-      background: var(--orange);
-      border-color: var(--orange);
-      color: #fff;
-    }
-    .cp-hero-pill--orange:hover { background: var(--orange-dk); border-color: var(--orange-dk); }
-
-    /* Main contact section */
-    .cp-section {
-      padding: 60px 0 72px;
-      background: var(--white);
-    }
-    .cp-grid {
-      display: grid;
-      grid-template-columns: 380px 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    /* ---- Sales contact card (dark) ---- */
-    .cp-sales-card {
-      background: var(--navy);
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow:
-        0 2px 8px rgba(28,53,87,0.14),
-        0 8px 32px rgba(28,53,87,0.20);
-      margin-bottom: 14px;
-    }
-    .cp-sales-card__head {
-      padding: 26px 26px 22px;
-      border-bottom: 1px solid rgba(255,255,255,0.09);
-    }
-    .cp-sales-card__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 12px;
-    }
-    .cp-sales-card__badge-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--orange);
-      flex-shrink: 0;
-    }
-    .cp-sales-card__name {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #fff;
-      margin: 0 0 4px;
-      line-height: 1.15;
-    }
-    .cp-sales-card__company {
-      font-size: 12px;
-      color: rgba(255,255,255,0.42);
-      letter-spacing: 0.02em;
-    }
-    .cp-sales-card__actions { display: flex; flex-direction: column; }
-    .cp-sales-action {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 15px 22px;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-      transition: background 0.15s ease;
-      text-decoration: none;
-    }
-    .cp-sales-action:last-child { border-bottom: none; }
-    .cp-sales-action:hover { background: rgba(255,255,255,0.06); }
-    .cp-sales-action:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
-    .cp-sales-action__icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .cp-sales-action__icon--email  { background: rgba(217,119,6,0.22); color: var(--orange); }
-    .cp-sales-action__icon--phone  { background: rgba(255,255,255,0.09); color: rgba(255,255,255,0.75); }
-    .cp-sales-action__icon--wa     { background: rgba(37,211,102,0.14); color: #25d366; }
-    .cp-sales-action__label {
-      display: block;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.38);
-      margin-bottom: 2px;
-    }
-    .cp-sales-action__value {
-      display: block;
-      font-size: 13.5px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.88);
-    }
-
-    /* ---- Reception row ---- */
-    .cp-reception {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      background: var(--off-white);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 13px 16px;
-      margin-bottom: 12px;
-    }
-    .cp-reception__icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--navy);
-      flex-shrink: 0;
-    }
-    .cp-reception__label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 2px;
-    }
-    .cp-reception__value {
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--text);
-    }
-    .cp-reception__value a { transition: color 0.15s ease; }
-    .cp-reception__value a:hover { color: var(--navy); }
-
-    /* ---- Hours strip ---- */
-    .cp-hours {
-      display: flex;
-      align-items: flex-start;
-      gap: 11px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--navy);
-      border-radius: 0 6px 6px 0;
-      padding: 12px 16px;
-      margin-bottom: 12px;
-    }
-    .cp-hours__dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #22c55e;
-      flex-shrink: 0;
-      margin-top: 5px;
-    }
-    .cp-hours__text {
-      font-size: 13px;
-      color: var(--text-body);
-      line-height: 1.55;
-    }
-    .cp-hours__text strong { color: var(--text); }
-
-    /* ---- Company details grid ---- */
-    .cp-company {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    .cp-company__header {
-      padding: 9px 16px;
-      background: var(--off-white);
-      border-bottom: 1px solid var(--border);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-    .cp-company__grid { display: grid; grid-template-columns: 1fr 1fr; }
-    .cp-company__cell {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--border);
-      border-right: 1px solid var(--border);
-    }
-    .cp-company__cell:nth-child(even)       { border-right: none; }
-    .cp-company__cell:nth-last-child(-n+2)  { border-bottom: none; }
-    .cp-company__key {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 3px;
-    }
-    .cp-company__val {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.4;
-    }
-
-    /* ---- Map column ---- */
-    .cp-map-header { margin-bottom: 16px; }
-    .cp-map-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--text);
-      margin: 4px 0 0;
-    }
-    .cp-map-wrap {
-      border-radius: 6px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 12px rgba(28,53,87,0.10);
-    }
-    #contact-map { width: 100%; height: 420px; display: block; }
-    .cp-map-tabs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 14px;
-    }
-    .cp-map-tab {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--navy);
-      border-radius: 0 0 6px 6px;
-      padding: 14px 16px;
-    }
-    .cp-map-tab--orange { border-top-color: var(--orange); }
-    .cp-map-tab__type {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--navy);
-      margin-bottom: 5px;
-    }
-    .cp-map-tab--orange .cp-map-tab__type { color: var(--orange-dk); }
-    .cp-map-tab__address {
-      font-size: 13px;
-      color: var(--text-body);
-      line-height: 1.55;
-    }
-
-    /* ---- FAQ / Info section ---- */
-    .cp-faq-section {
-      padding: 64px 0 72px;
-      background: var(--off-white);
-      border-top: 1px solid var(--border);
-    }
-    .cp-info-cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      padding: 32px 0 36px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 40px;
-    }
-    .cp-info-cols__heading {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 8px;
-    }
-    .cp-info-cols__text {
-      font-size: 14px;
-      color: var(--text-body);
-      line-height: 1.8;
-    }
-    .cp-faq-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    .cp-faq-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    .cp-faq-card__q {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 16px 18px 15px;
-      border-left: 3px solid var(--orange);
-    }
-    .cp-faq-card__num {
-      font-size: 0.875rem;
-      font-weight: 800;
-      color: var(--orange);
-      flex-shrink: 0;
-      line-height: 1.45;
-      min-width: 18px;
-    }
-    .cp-faq-card__q-text {
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.45;
-    }
-    .cp-faq-card__a {
-      padding: 14px 18px;
-      font-size: 13px;
-      color: var(--text-body);
-      line-height: 1.75;
-      background: var(--off-white);
-      border-top: 1px solid var(--border);
-    }
-
-    /* Responsive */
-    @media (max-width: 1100px) {
-      .cp-grid { grid-template-columns: 340px 1fr; }
-    }
-    @media (max-width: 900px) {
-      .cp-grid { grid-template-columns: 1fr; }
-      .cp-faq-grid { grid-template-columns: 1fr; }
-      .cp-info-cols { grid-template-columns: 1fr; gap: 24px; }
-    }
-    @media (max-width: 640px) {
-      .cp-map-tabs { grid-template-columns: 1fr; }
-      .cp-hero-pills { gap: 8px; }
-      .cp-company__grid { grid-template-columns: 1fr; }
-      .cp-company__cell { border-right: none; }
-      .cp-company__cell:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
-      .cp-company__cell:last-child { border-bottom: none; }
-      #contact-map { height: 280px; }
-    }
   </style>
   <link rel="alternate" hreflang="en" href="https://www.agros-grain.com/contact" />
   <link rel="alternate" hreflang="bg" href="https://www.agros-grain.com/bg/contact" />
   <link rel="alternate" hreflang="de" href="https://www.agros-grain.com/de/contact" />
   <link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/contact" />
   <link rel="canonical" href="https://www.agros-grain.com/contact" />
+  <!-- Open Graph / Social -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://www.agros-grain.com/contact" />
-  <meta property="og:title"       content="Contact — Stufiyan Agro Bulgaria" />
-  <meta property="og:description" content="Contact Stufiyan Agro for product inquiries, samples, and export quotes. Sales: Viktoria Yordanova. Based in Neofit Bozveli 15, Varna, Bulgaria." />
+  <meta property="og:title"       content="Contact — Agros-98 AD Bulgaria" />
+  <meta property="og:description" content="Contact Agros-98 AD for product inquiries, samples, and export quotes. Sales: Georgi Berbenkov. Based in Suvorovo & Varna, Bulgaria." />
   <meta property="og:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:site_name"   content="Stufiyan Agro" />
+  <meta property="og:site_name"   content="Agros-98 AD" />
   <meta property="og:locale"      content="en_US" />
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Contact — Stufiyan Agro Bulgaria" />
-  <meta name="twitter:description" content="Contact Stufiyan Agro for product inquiries, samples, and export quotes. Sales: Viktoria Yordanova. Based in Neofit Bozveli 15, Varna, Bulgaria." />
+  <meta name="twitter:title"       content="Contact — Agros-98 AD Bulgaria" />
+  <meta name="twitter:description" content="Contact Agros-98 AD for product inquiries, samples, and export quotes. Sales: Georgi Berbenkov. Based in Suvorovo & Varna, Bulgaria." />
   <meta name="twitter:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["Organization","LocalBusiness"],
-  "name": "Stufiyan Agro",
+  "@type": [
+    "Organization",
+    "LocalBusiness"
+  ],
+  "name": "Agros-98 AD",
   "url": "https://www.agros-grain.com/",
-  "logo": "https://www.agros-grain.com/Media/logo.jpg",
+  "logo": "https://www.agros-grain.com/Media/agros-logo.webp",
   "image": "https://www.agros-grain.com/Media/og-image.webp",
   "description": "Bulgarian producer and exporter of sunflower kernels, cold-pressed oils, flaxseed, coriander, and specialty flours. FSSC 22000, EU Organic, Halal & Kosher certified.",
-  "foundingDate": "2013",
-  "vatID": "BG204623096",
+  "foundingDate": "1994",
+  "vatID": "BG208709219",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Neofit Bozveli 15",
-    "addressLocality": "Varna",
+    "streetAddress": "Industrial Zone",
+    "addressLocality": "Suvorovo",
     "addressRegion": "Varna Province",
-    "postalCode": "9000",
+    "postalCode": "9170",
     "addressCountry": "BG"
   },
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+359-889-297-893",
-      "email": "sales@stufiyan-agro.com",
+      "telephone": "+359-879-127-112",
+      "email": "g.berbenkov@agros.net",
       "contactType": "sales",
       "areaServed": "Worldwide",
-      "availableLanguage": ["English","Bulgarian","German"]
+      "availableLanguage": [
+        "English",
+        "Bulgarian",
+        "German"
+      ]
     },
     {
       "@type": "ContactPoint",
-      "email": "info@stufiyan-agro.com",
+      "email": "office@agros.net",
       "contactType": "customer service"
     }
   ],
-  "sameAs": ["https://www.linkedin.com/company/stufiyan-agro-llc"],
+  "sameAs": [
+    "https://www.linkedin.com/company/agros-98/"
+  ],
   "@id": "https://www.agros-grain.com/#organization"
 }
 </script>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://www.agros-grain.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.agros-grain.com/contact" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.agros-grain.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://www.agros-grain.com/contact"
+    }
   ]
 }
 </script>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "@id": "https://www.agros-grain.com/contact",
-  "name": "Contact Stufiyan Agro",
+  "name": "Contact Agros-98 AD",
   "url": "https://www.agros-grain.com/contact",
   "inLanguage": "en",
-  "mainEntity": { "@id": "https://www.agros-grain.com/#organization" },
-  "breadcrumb": { "@id": "https://www.agros-grain.com/contact#breadcrumb" }
+  "mainEntity": {
+    "@id": "https://www.agros-grain.com/#organization"
+  },
+  "breadcrumb": {
+    "@id": "https://www.agros-grain.com/contact#breadcrumb"
+  }
 }
 </script>
 </head>
 <body>
 
-<!-- ===== UTILITY BAR ===== -->
-<div class="util-bar">
-  <div class="container">
-    <div class="util-bar__inner">
-      <div class="util-bar__left">
-        <a href="tel:+359889297893" class="util-bar__item">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
-          +359 889 297 893
-        </a>
-        <a href="mailto:sales@stufiyan-agro.com" class="util-bar__item">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          sales@stufiyan-agro.com
-        </a>
-        <span class="util-bar__item util-bar__loc">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Varna, Bulgaria
-        </span>
-      </div>
-      <div class="util-bar__right">
-        <a href="/" class="util-bar__lang util-bar__lang--active" hreflang="en" aria-current="true">EN</a>
-        <a href="/bg" class="util-bar__lang" hreflang="bg">BG</a>
-        <a href="/de" class="util-bar__lang" hreflang="de">DE</a>
-        <a href="https://www.linkedin.com/company/stufiyan-agro-llc" class="util-bar__linkedin" target="_blank" rel="noopener noreferrer" aria-label="Stufiyan Agro on LinkedIn">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ===== NAV ===== -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="container">
     <div class="nav__inner">
-      <a href="/" class="nav__logo" aria-label="Stufiyan Agro Home"><img src="Media/logo.jpg" alt="Stufiyan Agro" class="nav__logo-img" /></a>
+      <a href="/" class="nav__logo" aria-label="Agros-98 AD Home"><img src="Media/agros-logo.webp" alt="Agros-98 AD" class="nav__logo-img" /></a>
       <ul class="nav__links" role="list">
         <li><a href="/" class="nav__link">Home</a></li>
         <li class="nav__item--has-dropdown">
@@ -525,12 +147,10 @@
           <div class="nav__mega-dropdown" id="nav-dropdown"></div>
         </li>
         <li><a href="/news" class="nav__link">News</a></li>
-      <li><a href="/about" class="nav__link">About Us</a></li>
-        <li><a href="/contact" class="nav__link nav__link--active">Contact</a></li>
+        <li><a href="/contact" class="nav__link">Contact</a></li>
       </ul>
       <a href="/contact" class="nav__cta">Request a Quote</a>
-      <a href="https://www.linkedin.com/company/stufiyan-agro-llc" class="nav__linkedin" target="_blank" rel="noopener noreferrer" aria-label="Stufiyan Agro on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-      <div class="nav__lang">
+      <a href="https://www.linkedin.com/company/agros-98/" class="nav__linkedin" target="_blank" rel="noopener noreferrer" aria-label="Agros-98 on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><div class="nav__lang">
         <a href="/contact" class="nav__lang-link nav__lang-link--active" hreflang="en" aria-current="true">EN</a>
         <a href="/bg/contact" class="nav__lang-link" hreflang="bg">BG</a>
         <a href="/de/contact" class="nav__lang-link" hreflang="de">DE</a>
@@ -546,12 +166,10 @@
     <a href="/" class="nav__mobile-link">Home</a>
     <a href="/products" class="nav__mobile-link">Products</a>
     <a href="/news" class="nav__mobile-link">News</a>
-    <a href="/about" class="nav__mobile-link">About Us</a>
-    <a href="/contact" class="nav__mobile-link nav__mobile-link--active">Contact</a>
+    <a href="/contact" class="nav__mobile-link">Contact</a>
   </nav>
   <a href="/contact" class="nav__mobile-cta">Request a Quote</a>
 </div>
-
 <main id="main-content">
 
 <!-- ===== PAGE HERO ===== -->
@@ -559,23 +177,8 @@
   <div class="page-hero__pattern" aria-hidden="true"></div>
   <div class="container">
     <div class="page-hero__content">
-      <p class="page-hero__eyebrow">Get in Touch</p>
-      <h1 class="page-hero__title" id="contact-hero-title">Let's Discuss Your <span style="color:var(--orange)">Requirements</span></h1>
-      <p class="page-hero__subtitle">From sample requests and price lists to long-term supply contracts — our export team responds within one business day.</p>
-      <div class="cp-hero-pills">
-        <a href="mailto:sales@stufiyan-agro.com" class="cp-hero-pill cp-hero-pill--orange">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          sales@stufiyan-agro.com
-        </a>
-        <a href="tel:+359889297893" class="cp-hero-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
-          +359 889 297 893
-        </a>
-        <a href="https://wa.me/359889297893" class="cp-hero-pill" target="_blank" rel="noopener noreferrer">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          WhatsApp
-        </a>
-      </div>
+      <h1 class="page-hero__title" id="contact-hero-title">Let's Discuss Your Requirements</h1>
+      <p class="page-hero__subtitle">Whether you're requesting a sample, a price, or discussing a long-term supply contract — we're ready to talk.</p>
     </div>
   </div>
 </section>
@@ -591,117 +194,77 @@
   </div>
 </div>
 
-<!-- ===== CONTACT MAIN ===== -->
-<section class="cp-section" aria-label="Contact information">
+<!-- ===== CONTACT BODY ===== -->
+<section class="contact-page" aria-label="Contact information">
   <div class="container">
-    <div class="cp-grid">
+    <div class="contact-grid">
 
-      <!-- LEFT: Contact cards -->
-      <div class="reveal reveal--left">
+      <!-- Info Column -->
+      <div class="contact-info reveal reveal--left">
 
-        <!-- Sales Contact Card -->
-        <div class="cp-sales-card">
-          <div class="cp-sales-card__head">
-            <p class="cp-sales-card__badge">
-              <span class="cp-sales-card__badge-dot"></span>
-              Sales &amp; Export
-            </p>
-            <h2 class="cp-sales-card__name">Viktoria Yordanova</h2>
-            <p class="cp-sales-card__company">Stufiyan Agro &middot; Varna, Bulgaria</p>
-          </div>
-          <div class="cp-sales-card__actions">
-            <a href="mailto:sales@stufiyan-agro.com" class="cp-sales-action">
-              <div class="cp-sales-action__icon cp-sales-action__icon--email">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <div>
-                <span class="cp-sales-action__label">Email</span>
-                <span class="cp-sales-action__value">sales@stufiyan-agro.com</span>
-              </div>
-            </a>
-            <a href="tel:+359889297893" class="cp-sales-action">
-              <div class="cp-sales-action__icon cp-sales-action__icon--phone">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
-              </div>
-              <div>
-                <span class="cp-sales-action__label">Phone</span>
-                <span class="cp-sales-action__value">+359 889 297 893</span>
-              </div>
-            </a>
-            <a href="https://wa.me/359889297893" class="cp-sales-action" target="_blank" rel="noopener noreferrer">
-              <div class="cp-sales-action__icon cp-sales-action__icon--wa">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-              </div>
-              <div>
-                <span class="cp-sales-action__label">WhatsApp</span>
-                <span class="cp-sales-action__value">Available on same number</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Reception -->
-        <div class="cp-reception">
-          <div class="cp-reception__icon">
+        <!-- Sales -->
+        <div class="contact-info__block contact-info__block--card">
+          <p class="contact-info__role">Sales &amp; Export</p>
+          <h3 class="contact-info__name">Georgi Berbenkov</h3>
+          <div class="contact-info__row">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:g.berbenkov@agros.net">g.berbenkov@agros.net</a>
           </div>
-          <div>
-            <p class="cp-reception__label">Reception / General</p>
-            <p class="cp-reception__value"><a href="mailto:info@stufiyan-agro.com">info@stufiyan-agro.com</a></p>
+          <div class="contact-info__row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6.29 6.29l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+359879127112">+359 879 127 112</a>
+          </div>
+          <div class="contact-info__row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <a href="https://wa.me/359879127112" target="_blank" rel="noopener noreferrer">WhatsApp available on same number</a>
           </div>
         </div>
 
-        <!-- Hours -->
-        <div class="cp-hours">
-          <div class="cp-hours__dot"></div>
-          <p class="cp-hours__text">
-            <strong>Mon – Fri &nbsp;08:00 – 17:00 EET</strong><br>
-            WhatsApp for urgent matters outside office hours
-          </p>
+        <!-- Accounting -->
+        <div class="contact-info__block contact-info__block--card">
+          <p class="contact-info__role">Accounting &amp; Administration</p>
+          <h3 class="contact-info__name">Agros-98 AD Office</h3>
+          <div class="contact-info__row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:agros98@abv.bg">agros98@abv.bg</a>
+          </div>
+          <div class="contact-info__row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:office@agros.net">office@agros.net</a>
+          </div>
         </div>
 
         <!-- Company Details -->
-        <div class="cp-company">
-          <p class="cp-company__header">Company Details</p>
-          <div class="cp-company__grid">
-            <div class="cp-company__cell">
-              <p class="cp-company__key">Registered Name</p>
-              <p class="cp-company__val">Stufiyan Agro LLC</p>
-            </div>
-            <div class="cp-company__cell">
-              <p class="cp-company__key">VAT</p>
-              <p class="cp-company__val">BG204623096</p>
-            </div>
-            <div class="cp-company__cell">
-              <p class="cp-company__key">Head Office</p>
-              <p class="cp-company__val">Neofit Bozveli 15, Varna</p>
-            </div>
-            <div class="cp-company__cell">
-              <p class="cp-company__key">Founded</p>
-              <p class="cp-company__val">2013 &middot; 30+ export markets</p>
-            </div>
+        <div class="contact-info__block contact-info__block--card">
+          <p class="contact-info__role">Company Details</p>
+          <h3 class="contact-info__name">Agros-98 AD</h3>
+          <div class="contact-info__row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Tsarevets 36, Varna, Bulgaria</span>
+          </div>
+          <div class="contact-info__row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>VAT: BG208709219</span>
           </div>
         </div>
 
       </div>
 
-      <!-- RIGHT: Map -->
-      <div class="reveal reveal--right">
-        <div class="cp-map-header">
+      <!-- Map Column -->
+      <div class="contact-map-col reveal reveal--right">
+        <div class="contact-map-col__header">
           <p class="section__eyebrow">Our Locations</p>
-          <h2 class="cp-map-title">Find Us</h2>
+          <h2 class="contact-map-col__title">Find Us</h2>
         </div>
-        <div class="cp-map-wrap">
-          <div id="contact-map"></div>
-        </div>
-        <div class="cp-map-tabs">
-          <div class="cp-map-tab">
-            <p class="cp-map-tab__type">Head Office</p>
-            <p class="cp-map-tab__address">Neofit Bozveli 15<br>9000 Varna, Bulgaria</p>
+        <div id="contact-map" class="contact-map-col__map"></div>
+        <div class="contact-map-col__addresses">
+          <div class="contact-map-col__address">
+            <p class="contact-map-col__address-label">Factory</p>
+            <p class="contact-map-col__address-text">Street Buzludza 1B<br>9170 Suvorovo, Bulgaria</p>
           </div>
-          <div class="cp-map-tab cp-map-tab--orange">
-            <p class="cp-map-tab__type">Warehouse</p>
-            <p class="cp-map-tab__address">9200 Provadia<br>Bulgaria</p>
+          <div class="contact-map-col__address">
+            <p class="contact-map-col__address-label">Head Office</p>
+            <p class="contact-map-col__address-text">Street Tsarevets 36<br>9010 Varna, Bulgaria</p>
           </div>
         </div>
       </div>
@@ -709,91 +272,67 @@
     </div>
   </div>
 </section>
+
 
 <!-- ===== COMPANY INFO & FAQ ===== -->
-<section class="cp-faq-section" aria-labelledby="faq-title">
+<section style="padding:3.5rem 0;background:#fafaf8;border-top:1px solid #e8e0d0;" aria-labelledby="contact-info-title">
   <div class="container">
-
-    <div class="section__header">
-      <p class="section__eyebrow">Information</p>
-      <h2 class="section__title" id="faq-title">About Stufiyan Agro &amp; How to Order</h2>
-    </div>
-
-    <div class="cp-info-cols">
-      <div>
-        <h3 class="cp-info-cols__heading">Company Profile</h3>
-        <p class="cp-info-cols__text">Stufiyan Agro LLC is a Bulgarian limited liability company (VAT BG204623096) registered at Neofit Bozveli 15, Varna. We supply B2B customers across 30+ countries with sunflower kernels, cold-pressed oils, flaxseed, coriander, and specialty flours. All products are traceable from field to final packaging.</p>
-      </div>
-      <div>
-        <h3 class="cp-info-cols__heading">Business Hours</h3>
-        <p class="cp-info-cols__text">Sales and export are available Monday to Friday, 08:00 – 17:00 EET (UTC+2, UTC+3 summer). We aim to respond to all enquiries within one business day. For urgent matters, WhatsApp is fastest — Viktoria Yordanova at +359 889 297 893. Factory visits welcome by appointment.</p>
-      </div>
-    </div>
-
-    <div class="cp-faq-grid">
-
-      <div class="cp-faq-card reveal">
-        <div class="cp-faq-card__q">
-          <span class="cp-faq-card__num">Q1</span>
-          <p class="cp-faq-card__q-text">What is the minimum order quantity?</p>
+    <div style="max-width:860px;margin:0 auto;">
+      <h2 id="contact-info-title" style="font-size:1.35rem;font-weight:700;color:#1e160a;margin-bottom:1.5rem;letter-spacing:-0.02em;">About Agros-98 AD &amp; How to Order</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-bottom:2.5rem;">
+        <div>
+          <h3 style="font-size:1rem;font-weight:700;color:#1e160a;margin-bottom:0.5rem;">Company Profile</h3>
+          <p style="font-size:0.9rem;color:#5a4a38;line-height:1.75;margin:0;">Agros-98 AD is a Bulgarian joint-stock company (EIK 208709219) registered in Varna, Bulgaria. Our processing facility is located at Buzludza 1B, 9170 Suvorovo — approximately 40 km north-west of Varna city centre, with direct truck access from the A2 (Hemus) motorway corridor. The company was founded in 1998 and has since grown into a vertically integrated oilseed processor supplying B2B customers across 30+ countries.</p>
         </div>
-        <p class="cp-faq-card__a">For seeds and kernels (sunflower, flaxseed, coriander) the MOQ is 1 × 40ft container (approximately 20–22 MT). For cold-pressed oils and tahinis the MOQ is 500 kg. Smaller trial quantities may be discussed for established buyers — please mention this in your enquiry.</p>
-      </div>
-
-      <div class="cp-faq-card reveal reveal--delay-1">
-        <div class="cp-faq-card__q">
-          <span class="cp-faq-card__num">Q2</span>
-          <p class="cp-faq-card__q-text">Do you provide certificates of analysis and product specifications?</p>
+        <div>
+          <h3 style="font-size:1rem;font-weight:700;color:#1e160a;margin-bottom:0.5rem;">Business Hours</h3>
+          <p style="font-size:0.9rem;color:#5a4a38;line-height:1.75;margin:0;">Our sales and export team is available Monday to Friday, 08:00–17:00 EET (UTC+2, UTC+3 in summer). We aim to respond to all enquiries within one business day. For urgent matters, WhatsApp is the fastest channel — our sales contact Georgi Berbenkov is reachable at +359 879 127 112. Factory visits are welcome by appointment.</p>
         </div>
-        <p class="cp-faq-card__a">Yes. A current CoA and product specification sheet are available for all products upon request. We also provide phytosanitary certificates, fumigation certificates, and origin declarations as required by your import authority. All documents are issued in English.</p>
       </div>
-
-      <div class="cp-faq-card reveal reveal--delay-2">
-        <div class="cp-faq-card__q">
-          <span class="cp-faq-card__num">Q3</span>
-          <p class="cp-faq-card__q-text">What packaging options are available?</p>
+      <h3 style="font-size:1.1rem;font-weight:700;color:#1e160a;margin-bottom:1rem;">Frequently Asked Questions</h3>
+      <div style="display:flex;flex-direction:column;gap:1.25rem;">
+        <div style="border-left:3px solid #d4a843;padding-left:1rem;">
+          <p style="font-weight:700;color:#1e160a;margin:0 0 0.35rem;">What is the minimum order quantity?</p>
+          <p style="font-size:0.9rem;color:#5a4a38;line-height:1.7;margin:0;">For seeds and kernels (sunflower, flaxseed, coriander) the MOQ is 1 × 40ft container (approximately 20–22 MT). For cold-pressed oils and tahinis the MOQ is 500 kg. Smaller trial quantities may be discussed for established buyers — please mention this in your enquiry.</p>
         </div>
-        <p class="cp-faq-card__a">Seeds and flours are packed in 25 kg paper bags, 25 kg PP bags, 50 lb paper bags, or 500–1000 kg big bags. Oils are available in 5 L tins, 25 L drums, 200 L drums, or 1000 L IBC. Tahinis range from 300 g retail jars to 25 kg industrial drums. Custom packaging or private label can be arranged for sufficient volumes.</p>
-      </div>
-
-      <div class="cp-faq-card reveal reveal--delay-3">
-        <div class="cp-faq-card__q">
-          <span class="cp-faq-card__num">Q4</span>
-          <p class="cp-faq-card__q-text">Which certifications does Stufiyan Agro hold?</p>
+        <div style="border-left:3px solid #d4a843;padding-left:1rem;">
+          <p style="font-weight:700;color:#1e160a;margin:0 0 0.35rem;">Do you provide certificates of analysis and product specifications?</p>
+          <p style="font-size:0.9rem;color:#5a4a38;line-height:1.7;margin:0;">Yes. A current CoA and product specification sheet are available for all products upon request. We also provide phytosanitary certificates, fumigation certificates, and origin declarations as required by your import authority. All documents are issued in English.</p>
         </div>
-        <p class="cp-faq-card__a">We are certified under FSSC 22000, ISO 22000, EU Organic (for selected product lines), Halal, and Kosher. All certificates are current and available for download upon request. Our facility is also subject to regular third-party audits by Kiwa.</p>
-      </div>
-
-      <div class="cp-faq-card reveal reveal--delay-4" style="grid-column: 1 / -1;">
-        <div class="cp-faq-card__q">
-          <span class="cp-faq-card__num">Q5</span>
-          <p class="cp-faq-card__q-text">What are your payment and delivery terms?</p>
+        <div style="border-left:3px solid #d4a843;padding-left:1rem;">
+          <p style="font-weight:700;color:#1e160a;margin:0 0 0.35rem;">What packaging options are available?</p>
+          <p style="font-size:0.9rem;color:#5a4a38;line-height:1.7;margin:0;">Seeds and flours are packed in 25 kg paper bags, 25 kg PP bags, 50 lb paper bags, or 500–1000 kg big bags. Oils are available in 5 L tins, 25 L drums, 200 L drums, or 1000 L IBC. Tahinis range from 300 g retail jars to 25 kg industrial drums. Custom packaging or private label can be arranged for sufficient volumes.</p>
         </div>
-        <p class="cp-faq-card__a">We typically trade on L/C (Letter of Credit) or T/T (bank transfer) terms. Standard Incoterms offered include FOB Varna port, CFR, and CIF. DAP delivery within the EU can be arranged. Lead times vary by product and season — typical production-to-shipment is 5–10 business days for in-stock items.</p>
+        <div style="border-left:3px solid #d4a843;padding-left:1rem;">
+          <p style="font-weight:700;color:#1e160a;margin:0 0 0.35rem;">Which certifications does Agros-98 AD hold?</p>
+          <p style="font-size:0.9rem;color:#5a4a38;line-height:1.7;margin:0;">We are certified under FSSC 22000 (food safety management), ISO 22000, EU Organic (for selected product lines), Halal, and Kosher. All certificates are current and available for download upon request. Our facility is also subject to regular third-party audits by Kiwa.</p>
+        </div>
+        <div style="border-left:3px solid #d4a843;padding-left:1rem;">
+          <p style="font-weight:700;color:#1e160a;margin:0 0 0.35rem;">What are your payment and delivery terms?</p>
+          <p style="font-size:0.9rem;color:#5a4a38;line-height:1.7;margin:0;">We typically trade on L/C (Letter of Credit) or T/T (bank transfer) terms. Standard Incoterms offered include FOB Varna port, CFR, and CIF. DAP delivery within the EU can be arranged. Lead times vary by product and season — typical production-to-shipment is 5–10 business days for in-stock items.</p>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
 
-</main>
-
 <!-- ===== FOOTER ===== -->
+</main>
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="/" class="footer__logo"><img src="Media/logo.jpg" alt="Stufiyan Agro" class="footer__logo-img" loading="lazy" /></a>
-        <p class="footer__tagline">From field to final packaging — quality you can trace. Neofit Bozveli 15, Varna, Bulgaria.</p>
-        <p class="footer__vat">Registered in Bulgaria &middot; VAT BG204623096</p>
+        <a href="/" class="footer__logo"><img src="Media/agros-logo.webp" alt="Agros-98 AD" class="footer__logo-img" loading="lazy" /></a>
+        <p class="footer__tagline">From field to final packaging — quality you can trace. Suvorovo &amp; Varna, Bulgaria.</p>
+        <p class="footer__vat">Registered in Bulgaria &middot; VAT BG208709219</p>
       </div>
       <div>
         <p class="footer__heading">Products</p>
         <ul class="footer__links">
-          <li><a href="/products?cat=oil-seeds" class="footer__link">Oil Seeds</a></li>
-          <li><a href="/products?cat=grains" class="footer__link">Grains</a></li>
-          <li><a href="/products?cat=pulses" class="footer__link">Pulses &amp; Legumes</a></li>
-          <li><a href="/products?cat=retail" class="footer__link">Retail</a></li>
+          <li><a href="/products?cat=seeds" class="footer__link">Seeds &amp; Kernels</a></li>
+          <li><a href="/products?cat=oils" class="footer__link">Cold-Pressed Oils</a></li>
+          <li><a href="/products?cat=flours" class="footer__link">Flours &amp; Proteins</a></li>
+          <li><a href="/products?cat=tahinis" class="footer__link">Tahinis &amp; Butters</a></li>
           <li><a href="/products" class="footer__link">All Products →</a></li>
         </ul>
       </div>
@@ -802,8 +341,7 @@
         <ul class="footer__links">
           <li><a href="/" class="footer__link">Home</a></li>
           <li><a href="/contact" class="footer__link">Contact</a></li>
-          <li><a href="/contact" class="footer__link">Request a Sample</a></li>
-          <li><a href="/contact" class="footer__link">Request a Quote</a></li>
+          <li><a href="/contact" class="footer__link">Request a Sample</a></li><li><a href="/contact" class="footer__link">Request a Quote</a></li>
         </ul>
       </div>
       <div>
@@ -812,23 +350,24 @@
           <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           <div>
             <strong>Sales</strong>
-            Viktoria Yordanova<br>
-            <a href="mailto:sales@stufiyan-agro.com" class="footer__contact-link">sales@stufiyan-agro.com</a><br>
-            <a href="tel:+359889297893" class="footer__contact-link">+359 889 297 893</a>
+            Georgi Berbenkov<br>
+            <a href="mailto:g.berbenkov@agros.net" class="footer__contact-link">g.berbenkov@agros.net</a><br>
+            <a href="tel:+359879127112" class="footer__contact-link">+359 879 127 112</a>
           </div>
         </div>
         <div class="footer__contact-item">
           <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           <div>
-            <strong>Reception</strong>
-            <a href="mailto:info@stufiyan-agro.com" class="footer__contact-link">info@stufiyan-agro.com</a>
+            <strong>Accounting</strong>
+            <a href="mailto:agros98@abv.bg" class="footer__contact-link">agros98@abv.bg</a><br>
+            <a href="mailto:office@agros.net" class="footer__contact-link">office@agros.net</a>
           </div>
         </div>
         <div class="footer__contact-item">
           <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <div>
             <strong>Location</strong>
-            Neofit Bozveli 15, Varna, Bulgaria
+            Suvorovo &amp; Varna, Bulgaria
           </div>
         </div>
       </div>
@@ -836,11 +375,9 @@
   </div>
   <div class="footer__bottom">
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
-      <p class="footer__copy">&copy; 2026 Stufiyan Agro. All rights reserved.</p>
-      <div class="footer__bottom-links">
-        <a href="https://www.linkedin.com/company/stufiyan-agro-llc" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Stufiyan Agro on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-        <a href="/privacy" class="footer__bottom-link">Privacy Policy</a>
-        <a href="/contact" class="footer__bottom-link">Contact</a>
+      <p class="footer__copy">&copy; 2026 Agros-98 AD. All rights reserved.</p>
+      <div class="footer__bottom-links"><a href="https://www.linkedin.com/company/agros-98/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Agros-98 on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="/privacy" class="footer__bottom-link">Privacy Policy</a><a href="/contact" class="footer__bottom-link">Contact</a>
         <a href="/products" class="footer__bottom-link">Products</a>
       </div>
     </div>
@@ -862,26 +399,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var bluePin = L.divIcon({
     className: '',
-    html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 36" width="24" height="36"><path d="M12 0C5.373 0 0 5.373 0 12c0 9 12 24 12 24S24 21 24 12C24 5.373 18.627 0 12 0z" fill="#1c3557" stroke="white" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="white"/></svg>',
+    html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 36" width="24" height="36"><path d="M12 0C5.373 0 0 5.373 0 12c0 9 12 24 12 24S24 21 24 12C24 5.373 18.627 0 12 0z" fill="#4285F4" stroke="white" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="white"/></svg>',
     iconSize: [24, 36],
     iconAnchor: [12, 36],
     popupAnchor: [0, -38]
   });
 
-  L.marker([43.1841, 27.4287], { icon: bluePin }).addTo(map)
-    .bindPopup('<strong style="font-size:0.85rem">Warehouse</strong><br><span style="font-size:0.78rem;color:#666">9200 Provadia, Bulgaria</span>')
-    .bindTooltip('Warehouse', { permanent: true, direction: 'right', offset: [6, -18], className: 'map-label' });
+  var factory = L.marker([43.3358, 27.5981], { icon: bluePin }).addTo(map)
+    .bindPopup('<strong style="font-size:0.85rem">Factory</strong><br><span style="font-size:0.78rem;color:#666">Street Buzludza 1B<br>9170 Suvorovo, Bulgaria</span>')
+    .bindTooltip('Factory', { permanent: true, direction: 'right', offset: [6, -18], className: 'map-label' });
 
-  L.marker([43.2117, 27.9136], { icon: bluePin }).addTo(map)
-    .bindPopup('<strong style="font-size:0.85rem">Head Office</strong><br><span style="font-size:0.78rem;color:#666">Neofit Bozveli 15<br>Varna, Bulgaria</span>')
+  var office = L.marker([43.2117, 27.9136], { icon: bluePin }).addTo(map)
+    .bindPopup('<strong style="font-size:0.85rem">Head Office</strong><br><span style="font-size:0.78rem;color:#666">Street Tsarevets 36<br>9010 Varna, Bulgaria</span>')
     .bindTooltip('Head Office', { permanent: true, direction: 'right', offset: [6, -18], className: 'map-label' });
 
-  map.fitBounds(
-    L.featureGroup([
-      L.marker([43.1841, 27.4287]),
-      L.marker([43.2117, 27.9136])
-    ]).getBounds().pad(0.55)
-  );
+  map.fitBounds(L.featureGroup([factory, office]).getBounds().pad(0.55));
 });
 </script>
 </body>

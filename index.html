@@ -2,124 +2,271 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/jpeg" href="Media/logo.jpg" />
-  <link rel="apple-touch-icon" href="Media/logo.jpg" />
+  <link rel="icon" type="image/webp" href="Media/favicon.webp" />
+  <link rel="apple-touch-icon" href="Media/favicon.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stufiyan Agro — Seeds, Oils &amp; Flours from Bulgaria</title>
-  <meta name="description" content="Stufiyan Agro — Bulgarian wholesale exporter of sunflower kernels, cold-pressed oils, flaxseed &amp; specialty flours. FSSC 22000, EU Organic, Halal certified. Request a quote." />
+  <title>Agros-98 AD — Seeds, Oils &amp; Flours from Bulgaria</title>
+  <meta name="description" content="Agros-98 AD — Bulgarian wholesale exporter of sunflower kernels, cold-pressed oils, flaxseed &amp; specialty flours. FSSC 22000, EU Organic, Halal certified. Request a quote." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="preload" as="image" href="Media/wheat-field.jpg" />
+  <link rel="preload" as="image" href="Media/hero-poster.jpg" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="alternate" hreflang="en" href="https://www.agros-grain.com/" />
   <link rel="alternate" hreflang="bg" href="https://www.agros-grain.com/bg" />
   <link rel="alternate" hreflang="de" href="https://www.agros-grain.com/de" />
   <link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/" />
   <link rel="canonical" href="https://www.agros-grain.com/" />
+  <!-- Open Graph / Social -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://www.agros-grain.com/" />
-  <meta property="og:title"       content="Stufiyan Agro — Seeds, Oils & Flours from Bulgaria" />
-  <meta property="og:description" content="Stufiyan Agro is a Bulgarian producer and exporter of sunflower kernels, cold-pressed oils, flaxseed, coriander, and specialty flours. From field to final packaging." />
+  <meta property="og:title"       content="Agros-98 AD — Seeds, Oils & Flours from Bulgaria" />
+  <meta property="og:description" content="Agros-98 AD is a Bulgarian producer and exporter of sunflower kernels, cold-pressed oils, flaxseed, coriander, and specialty flours. From field to final packaging." />
   <meta property="og:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:site_name"   content="Stufiyan Agro" />
+  <meta property="og:site_name"   content="Agros-98 AD" />
   <meta property="og:locale"      content="en_US" />
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Stufiyan Agro — Seeds, Oils & Flours from Bulgaria" />
-  <meta name="twitter:description" content="Stufiyan Agro is a Bulgarian producer and exporter of sunflower kernels, cold-pressed oils, flaxseed, coriander, and specialty flours. From field to final packaging." />
+  <meta name="twitter:title"       content="Agros-98 AD — Seeds, Oils & Flours from Bulgaria" />
+  <meta name="twitter:description" content="Agros-98 AD is a Bulgarian producer and exporter of sunflower kernels, cold-pressed oils, flaxseed, coriander, and specialty flours. From field to final packaging." />
   <meta name="twitter:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
+
+  <!-- Grain SVG filter -->
+  <svg style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg">
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+  </svg>
+  <!-- TODO SEO: Add to sameAs when company profiles are created:
+     Europages : https://www.europages.com/[slug]
+     Kompass   : https://www.kompass.com/[slug]
+     Wikidata  : https://www.wikidata.org/wiki/Q[ID]
+     Crunchbase: https://www.crunchbase.com/organization/[slug]
+-->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization","Corporation","LocalBusiness"],
+      "@type": [
+        "Organization",
+        "Corporation",
+        "LocalBusiness"
+      ],
       "@id": "https://www.agros-grain.com/#organization",
-      "name": "Stufiyan Agro",
+      "name": "Agros-98 AD",
       "url": "https://www.agros-grain.com/",
-      "logo": {"@type":"ImageObject","url":"https://www.agros-grain.com/Media/logo.jpg"},
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.agros-grain.com/Media/agros-logo.webp"
+      },
       "image": "https://www.agros-grain.com/Media/og-image.webp",
       "description": "Bulgarian producer and exporter of sunflower kernels, cold-pressed oils, flaxseed, coriander, and specialty flours. FSSC 22000, EU Organic, Halal & Kosher certified.",
       "slogan": "From Field to Final Packaging — Quality You Can Trace.",
-      "foundingDate": "2013",
-      "vatID": "BG204623096",
+      "foundingDate": "1994",
+      "vatID": "BG208709219",
       "naics": "311224",
       "isicV4": "1040",
       "additionalType": "https://www.wikidata.org/wiki/Q936971",
-      "numberOfEmployees": {"@type":"QuantitativeValue","value":50},
-      "address": {"@type":"PostalAddress","streetAddress":"Industrial Zone","addressLocality":"Suvorovo","addressRegion":"Varna Province","postalCode":"9170","addressCountry":"BG"},
-      "contactPoint": [{"@type":"ContactPoint","telephone":"+359-889-297-893","email":"sales@stufiyan-agro.com","contactType":"sales","areaServed":"Worldwide","availableLanguage":["English","Bulgarian","German"]},{"@type":"ContactPoint","email":"info@stufiyan-agro.com","contactType":"customer service"}],
-      "areaServed": [{"@type":"Place","name":"Europe"},{"@type":"Place","name":"Middle East"},{"@type":"Place","name":"North America"}],
-      "knowsAbout": ["flaxseed","sunflower kernels","cold-pressed oils","coriander seeds","specialty flours","sunflower protein","seed processing","oilseed crushing"],
-      "hasOfferCatalog": {"@type":"OfferCatalog","name":"Stufiyan Agro Product Catalog","url":"https://www.agros-grain.com/products","numberOfItems":4,"itemListElement":[{"@type":"OfferCatalog","name":"Seeds & Kernels","url":"https://www.agros-grain.com/products"},{"@type":"OfferCatalog","name":"Cold-Pressed Oils","url":"https://www.agros-grain.com/products"},{"@type":"OfferCatalog","name":"Flours & Proteins","url":"https://www.agros-grain.com/products"},{"@type":"OfferCatalog","name":"Tahinis & Butters","url":"https://www.agros-grain.com/products"}]},
-      "hasCertification": [{"@type":"Certification","name":"FSSC 22000","issuedBy":{"@type":"Organization","name":"FSSC"}},{"@type":"Certification","name":"ISO 22000","issuedBy":{"@type":"Organization","name":"ISO"}},{"@type":"Certification","name":"EU Organic Certification","issuedBy":{"@type":"Organization","name":"European Commission"}},{"@type":"Certification","name":"Halal Certification","issuedBy":{"@type":"Organization","name":"Halal Certification Body"}},{"@type":"Certification","name":"Kosher Certification","issuedBy":{"@type":"Organization","name":"Kosher Certification Body"}}],
-      "sameAs": ["https://www.linkedin.com/company/stufiyan-agro-llc"]
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 50
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Industrial Zone",
+        "addressLocality": "Suvorovo",
+        "addressRegion": "Varna Province",
+        "postalCode": "9170",
+        "addressCountry": "BG"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+359-879-127-112",
+          "email": "g.berbenkov@agros.net",
+          "contactType": "sales",
+          "areaServed": "Worldwide",
+          "availableLanguage": [
+            "English",
+            "Bulgarian",
+            "German"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "office@agros.net",
+          "contactType": "customer service"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Europe"
+        },
+        {
+          "@type": "Place",
+          "name": "Middle East"
+        },
+        {
+          "@type": "Place",
+          "name": "North America"
+        }
+      ],
+      "knowsAbout": [
+        "flaxseed",
+        "sunflower kernels",
+        "cold-pressed oils",
+        "coriander seeds",
+        "specialty flours",
+        "sunflower protein",
+        "seed processing",
+        "oilseed crushing"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Agros-98 AD Product Catalog",
+        "url": "https://www.agros-grain.com/products",
+        "numberOfItems": 4,
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Seeds & Kernels",
+            "url": "https://www.agros-grain.com/products"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Cold-Pressed Oils",
+            "url": "https://www.agros-grain.com/products"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Flours & Proteins",
+            "url": "https://www.agros-grain.com/products"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Tahinis & Butters",
+            "url": "https://www.agros-grain.com/products"
+          }
+        ]
+      },
+      "hasCertification": [
+        {
+          "@type": "Certification",
+          "name": "FSSC 22000",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "FSSC"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "ISO 22000",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "ISO"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "EU Organic Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "European Commission"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "Halal Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Halal Certification Body"
+          }
+        },
+        {
+          "@type": "Certification",
+          "name": "Kosher Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Kosher Certification Body"
+          }
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/agros-98/"
+      ]
     },
-    {"@type":"Brand","@id":"https://www.agros-grain.com/#brand","name":"Stufiyan Agro","url":"https://www.agros-grain.com/","logo":{"@type":"ImageObject","url":"https://www.agros-grain.com/Media/logo.jpg"}},
-    {"@type":"WebSite","@id":"https://www.agros-grain.com/#website","url":"https://www.agros-grain.com/","name":"Stufiyan Agro","inLanguage":"en","publisher":{"@id":"https://www.agros-grain.com/#organization"}},
-    {"@type":"SiteNavigationElement","name":"Home","url":"https://www.agros-grain.com/"},
-    {"@type":"SiteNavigationElement","name":"Products","url":"https://www.agros-grain.com/products"},
-    {"@type":"SiteNavigationElement","name":"News","url":"https://www.agros-grain.com/news"},
-    {"@type":"SiteNavigationElement","name":"Contact","url":"https://www.agros-grain.com/contact"}
+    {
+      "@type": "Brand",
+      "@id": "https://www.agros-grain.com/#brand",
+      "name": "Agros-98 AD",
+      "url": "https://www.agros-grain.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.agros-grain.com/Media/agros-logo.webp"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.agros-grain.com/#website",
+      "url": "https://www.agros-grain.com/",
+      "name": "Agros-98 AD",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://www.agros-grain.com/#organization"
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Home",
+      "url": "https://www.agros-grain.com/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Products",
+      "url": "https://www.agros-grain.com/products"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "News",
+      "url": "https://www.agros-grain.com/news"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Contact",
+      "url": "https://www.agros-grain.com/contact"
+    }
   ]
 }
 </script>
 </head>
 <body>
 
-<!-- ===== UTILITY BAR ===== -->
-<div class="util-bar">
-  <div class="container">
-    <div class="util-bar__inner">
-      <div class="util-bar__left">
-        <a href="tel:+359889297893" class="util-bar__item">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
-          +359 889 297 893
-        </a>
-        <a href="mailto:sales@stufiyan-agro.com" class="util-bar__item">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          sales@stufiyan-agro.com
-        </a>
-        <span class="util-bar__item util-bar__loc">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Varna, Bulgaria
-        </span>
-      </div>
-      <div class="util-bar__right">
-        <a href="/" class="util-bar__lang util-bar__lang--active" hreflang="en" aria-current="true">EN</a>
-        <a href="/bg" class="util-bar__lang" hreflang="bg">BG</a>
-        <a href="/de" class="util-bar__lang" hreflang="de">DE</a>
-        <a href="https://www.linkedin.com/company/stufiyan-agro-llc" class="util-bar__linkedin" target="_blank" rel="noopener noreferrer" aria-label="Stufiyan Agro on LinkedIn">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ===== NAV ===== -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="container">
     <div class="nav__inner">
-      <a href="/" class="nav__logo" aria-label="Stufiyan Agro Home"><img src="Media/logo.jpg" alt="Stufiyan Agro" class="nav__logo-img" /></a>
+      <a href="/" class="nav__logo" aria-label="Agros-98 AD Home"><img src="Media/agros-logo.webp" alt="Agros-98 AD" class="nav__logo-img" /></a>
       <ul class="nav__links" role="list">
         <li><a href="/" class="nav__link">Home</a></li>
         <li class="nav__item--has-dropdown">
           <a href="/products" class="nav__link">
             Products
-            <svg class="nav__dropdown-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+            <svg class="nav__dropdown-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 6l4 4 4-4"/>
+            </svg>
           </a>
           <div class="nav__mega-dropdown" id="nav-dropdown"></div>
         </li>
         <li><a href="/news" class="nav__link">News</a></li>
-      <li><a href="/about" class="nav__link">About Us</a></li>
         <li><a href="/contact" class="nav__link">Contact</a></li>
       </ul>
       <a href="/contact" class="nav__cta">Request a Quote</a>
-      <div class="nav__lang">
+      <a href="https://www.linkedin.com/company/agros-98/" class="nav__linkedin" target="_blank" rel="noopener noreferrer" aria-label="Agros-98 on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><div class="nav__lang">
         <a href="/" class="nav__lang-link nav__lang-link--active" hreflang="en" aria-current="true">EN</a>
         <a href="/bg" class="nav__lang-link" hreflang="bg">BG</a>
         <a href="/de" class="nav__lang-link" hreflang="de">DE</a>
@@ -137,53 +284,40 @@
     <a href="/" class="nav__mobile-link">Home</a>
     <a href="/products" class="nav__mobile-link">Products</a>
     <a href="/news" class="nav__mobile-link">News</a>
-    <a href="/about" class="nav__mobile-link">About Us</a>
     <a href="/contact" class="nav__mobile-link">Contact</a>
   </nav>
   <a href="/contact" class="nav__mobile-cta">Request a Quote</a>
 </div>
-
 <main id="main-content">
 
-<!-- ===== HERO: split panel layout ===== -->
+<!-- ===== HERO ===== -->
 <section class="hero" aria-label="Hero">
-  <div class="hero__panel">
-    <div class="hero__panel-inner">
-      <p class="hero__eyebrow">Bulgarian Agricultural Trading Company</p>
-      <h1 class="hero__title">Quality grains and <span class="hero__accent">agricultural products.</span></h1>
-      <div class="hero__badge">
-        <span class="hero__badge-star" style="font-size:2.2rem;font-weight:900;line-height:1;color:#f5a623;">№1</span>
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="Media/hero-poster.jpg" aria-hidden="true">
+    <source src="Media/hero.mp4" type="video/mp4" />
+  </video>
+  <div class="hero__video-overlay" aria-hidden="true"></div>
+  <div class="hero__grain" style="background-image:url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"300\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.75\" numOctaves=\"4\" stitchTiles=\"stitch\"/></filter><rect width=\"300\" height=\"300\" filter=\"url(%23n)\" opacity=\"1\"/></svg>');background-size:200px 200px;"></div>
+  <div class="hero__pattern" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero__content">
+      <h1 style="font-size:clamp(0.72rem,1.3vw,0.88rem);font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:rgba(255,255,255,0.62);margin-bottom:0.9rem;line-height:1.5">Bulgarian Producer &amp; Exporter of Seeds, Oils, and Flours</h1>
+      <p class="hero__title">We produce, clean, <br>pack and deliver <br><span class="hero__title-world">to the world.</span></p>
+      <div class="hero__flaxseed-badge">
+        <span class="hero__flaxseed-badge-icon">★</span>
         <div>
-          <strong>Trusted Supplier in Bulgaria</strong>
-          <span>Of Grains &amp; Agricultural Commodities</span>
+          <strong>#1 Producer &amp; Exporter</strong>
+          <span>Of Yellow Flaxseed in Europe</span>
         </div>
       </div>
       <div class="hero__actions">
-        <a href="/products" class="btn btn--orange">Our Products</a>
-        <a href="/contact" class="btn btn--outline-white">Contact Us</a>
-      </div>
-      <div class="hero__partners">
-        <p class="hero__partners-label">In proud partnership with:</p>
-        <div class="hero__partners-logos">
-          <svg class="hero__partner-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 28" role="img" aria-label="SGS">
-            <text x="1" y="22" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="24" fill="white" letter-spacing="3">SGS</text>
-          </svg>
-          <svg class="hero__partner-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 28" role="img" aria-label="Control Union Certifications">
-            <polygon points="11,1 22,1 28,14 22,27 11,27 5,14" fill="white"/>
-            <text x="16.5" y="18" font-family="Arial,sans-serif" font-weight="900" font-size="10" fill="#1b2d4e" text-anchor="middle">CU</text>
-            <text x="34" y="12" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="9.5" fill="white" letter-spacing="0.8">CONTROL UNION</text>
-            <text x="34" y="23" font-family="Arial,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.7)" letter-spacing="0.5">CERTIFICATIONS</text>
-          </svg>
-          <svg class="hero__partner-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 28" role="img" aria-label="U.S. Food and Drug Administration">
-            <text x="1" y="20" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="21" fill="white" letter-spacing="1">FDA</text>
-            <text x="1" y="27" font-family="Arial,sans-serif" font-size="4.8" fill="rgba(255,255,255,0.65)" letter-spacing="0.25">U.S. FOOD &amp; DRUG ADMINISTRATION</text>
-          </svg>
-        </div>
+        <a href="/flaxseed-yellow" class="btn btn--gold">Our Yellow Flaxseed</a>
+        <a href="/products" class="btn btn--outline-light">All Products</a>
       </div>
     </div>
   </div>
-  <div class="hero__visual" aria-hidden="true">
-    <img src="Media/wheat-field.jpg" alt="Wheat field — Stufiyan Agro" />
+  <div class="hero__scroll" role="button" tabindex="0" aria-label="Scroll down to content">
+    <div class="hero__scroll-line"></div>
+    <span>Scroll</span>
   </div>
 </section>
 
@@ -192,20 +326,20 @@
   <div class="container">
     <div class="stats-bar__grid">
       <div class="stats-bar__item">
-        <span class="stats-bar__number">12+</span>
+        <span class="stats-bar__number" data-counter="30" data-suffix="+">30+</span>
         <span class="stats-bar__label">Years in Business</span>
       </div>
       <div class="stats-bar__item">
-        <span class="stats-bar__number">Best</span>
-        <span class="stats-bar__label">Prices</span>
+        <span class="stats-bar__number" data-counter="19">19</span>
+        <span class="stats-bar__label">Product Lines</span>
       </div>
       <div class="stats-bar__item">
         <span class="stats-bar__number">100%</span>
-        <span class="stats-bar__label">EU Compliant</span>
+        <span class="stats-bar__label">Own Processing</span>
       </div>
       <div class="stats-bar__item">
         <span class="stats-bar__number">BG</span>
-        <span class="stats-bar__label">Origin</span>
+        <span class="stats-bar__label">Bulgaria Origin</span>
       </div>
     </div>
   </div>
@@ -213,28 +347,40 @@
 
 <!-- ===== INTRO / WHO WE ARE ===== -->
 <section class="intro section" aria-labelledby="intro-title">
+  <div class="intro__bg" aria-hidden="true"></div>
+  <div class="intro__overlay" aria-hidden="true"></div>
   <div class="container">
     <div class="intro__inner reveal">
       <div class="intro__header">
-        <p class="section__eyebrow intro__eyebrow">About Us</p>
-        <h2 class="section__title intro__title" id="intro-title">Stufiyan Agro LLC</h2>
+        <p class="section__eyebrow intro__eyebrow">Who We Are</p>
+        <h2 class="section__title intro__title" id="intro-title">Rooted in Bulgarian Agriculture</h2>
       </div>
-      <div class="intro__content intro__content--split">
+      <div class="intro__content">
         <div class="intro__text">
-          <p class="intro__lead">Stufiyan Agro LLC is a company that has been working in the field of wholesale procurement and export of agricultural products from Bulgaria since 2013.</p>
-          <p class="intro__body">We have built a successful agricultural business, established reliable and strong relationships with leading grain producers, large and small farms, and major global buyers of agricultural and agrotechnical products.</p>
-          <blockquote class="intro__quote">
-            <p>"Agriculture is not just a business — it is the foundation of every nation. We are proud to connect Bulgarian fields with the world."</p>
-            <cite>— Yani Kolev, Owner</cite>
-          </blockquote>
+          <p class="intro__lead">Agros-98 AD is a Bulgarian agricultural company producing and exporting seeds, cold-pressed oils, and specialty flours to food manufacturers across Europe and beyond.</p>
+          <p class="intro__body">Founded in 1994, we control the complete supply chain — from cultivating low-pesticide crops on our own farmland, through mechanical cold-press extraction, to final packaging and export documentation.</p>
+          <p class="intro__body" style="margin-bottom:0">Our production facility in Suvorovo processes sunflower, coriander, flaxseed, pumpkin, and walnut crops under strict food safety protocols. At the moment we are the largest European producer of <a href="/flaxseed-yellow" style="font-weight: 600; color: inherit; text-decoration: underline;">bulk yellow flaxseed (golden flaxseed)</a>. Every batch is traceable from the field to the label.</p>
         </div>
-        <div class="intro__image-wrap">
-          <div class="intro__image-square">
-            <img src="Media/founder.jpg" alt="Yani Kolev — Owner, Stufiyan Agro" loading="lazy" />
-            <div class="intro__image-overlay"></div>
+        <div class="intro__pillars">
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">🌱</div>
+            <div class="intro__pillar-title">Own Farmland</div>
+            <div class="intro__pillar-text">We cultivate our own fields in the Varna region under low-pesticide protocols.</div>
           </div>
-          <div class="intro__image-logo">
-            <img src="Media/logo.jpg" alt="Stufiyan Agro" />
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">⚙️</div>
+            <div class="intro__pillar-title">In-House Processing</div>
+            <div class="intro__pillar-text">Mechanical cold-press extraction preserves nutritional value without solvents.</div>
+          </div>
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">📦</div>
+            <div class="intro__pillar-title">Full Integration</div>
+            <div class="intro__pillar-text">Field → cleaning → pressing → packaging → export — all under one roof.</div>
+          </div>
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">🔍</div>
+            <div class="intro__pillar-title">Full Traceability</div>
+            <div class="intro__pillar-text">COA, Certificate of Origin, and phytosanitary documentation on request.</div>
           </div>
         </div>
       </div>
@@ -242,68 +388,79 @@
   </div>
 </section>
 
-<!-- ===== PRODUCTS ===== -->
+<!-- ===== PRODUCTS (homepage categories) ===== -->
 <section class="products-home" aria-labelledby="products-home-title">
   <div class="container">
     <div class="section__header section__header--center reveal">
       <h2 class="section__title" id="products-home-title">Our Products</h2>
     </div>
     <div class="products-home__grid">
-      <a href="/products?cat=oil-seeds" class="cat-card reveal reveal--delay-1">
+      <!-- Seeds Card -->
+      <a href="/products?cat=seeds" class="cat-card reveal reveal--delay-1">
         <div class="cat-card__img-wrap">
-          <img src="Media/products/golden-flaxseed-grano.jpg" alt="Oil seeds — flaxseed, coriander, sunflower seeds, mustard and sorghum from Bulgaria" class="cat-card__img" loading="lazy">
+          <img src="Media/seeds.webp" alt="Bulk wholesale sunflower seeds and flaxseed kernels cleaned and processed in Suvorovo, Bulgaria" class="cat-card__img" loading="lazy">
         </div>
         <div class="cat-card__content">
-          <h3 class="cat-card__title">Oil Seeds</h3>
+          <h3 class="cat-card__title">Seeds &amp; Kernels</h3>
           <ul class="cat-card__list">
-            <li class="cat-card__item">Flaxseed (Brown &amp; Yellow)</li>
+            <li class="cat-card__item">Sunflower Kernels</li>
             <li class="cat-card__item">Coriander Seeds</li>
-            <li class="cat-card__item">Sunflower Seeds &amp; Kernels</li>
-            <li class="cat-card__item">Mustard · Sorghum</li>
+            <li class="cat-card__item">Brown / Yellow Flaxseed</li>
           </ul>
           <span class="cat-card__link">VIEW ALL →</span>
         </div>
       </a>
-      <a href="/products?cat=grains" class="cat-card reveal reveal--delay-2">
+
+      <!-- Oils Card -->
+      <a href="/products?cat=oils" class="cat-card reveal reveal--delay-2">
         <div class="cat-card__img-wrap">
-          <img src="Media/products/wheat.jpg" alt="Grains — wheat, barley, oats and corn from Bulgarian farms" class="cat-card__img" loading="lazy">
+          <img src="Media/oil.webp" alt="Cold-pressed sunflower, coriander, flaxseed and pumpkin seed oils produced in Bulgaria" class="cat-card__img" loading="lazy">
         </div>
         <div class="cat-card__content">
-          <h3 class="cat-card__title">Grains</h3>
+          <h3 class="cat-card__title">Cold-Pressed Oils</h3>
           <ul class="cat-card__list">
-            <li class="cat-card__item">Wheat</li>
-            <li class="cat-card__item">Barley</li>
-            <li class="cat-card__item">Oats</li>
-            <li class="cat-card__item">Corn (Maize)</li>
+            <li class="cat-card__item">Sunflower</li>
+            <li class="cat-card__item">Coriander</li>
+            <li class="cat-card__item">Flaxseed</li>
+            <li class="cat-card__item">Pumpkin</li>
+            <li class="cat-card__item">Walnut</li>
+            <li class="cat-card__item">Milk Thistle</li>
           </ul>
           <span class="cat-card__link">VIEW ALL →</span>
         </div>
       </a>
-      <a href="/products?cat=pulses" class="cat-card reveal reveal--delay-3">
+
+      <!-- Flours Card -->
+      <a href="/products?cat=flours" class="cat-card reveal reveal--delay-3">
         <div class="cat-card__img-wrap">
-          <img src="Media/products/lentils.jpg" alt="Pulses and legumes — lentils, peas, beans and chickpeas from Bulgaria" class="cat-card__img" loading="lazy">
+          <img src="Media/flour.webp" alt="Specialty sunflower protein powder and flaxseed flour from Agros-98 AD production facility, Bulgaria" class="cat-card__img" loading="lazy">
         </div>
         <div class="cat-card__content">
-          <h3 class="cat-card__title">Pulses &amp; Legumes</h3>
+          <h3 class="cat-card__title">Flours &amp; Proteins</h3>
           <ul class="cat-card__list">
-            <li class="cat-card__item">Lentils</li>
-            <li class="cat-card__item">Peas</li>
-            <li class="cat-card__item">Beans</li>
-            <li class="cat-card__item">Chickpeas</li>
+            <li class="cat-card__item">Sunflower Flour &amp; Protein</li>
+            <li class="cat-card__item">Milled Coriander</li>
+            <li class="cat-card__item">Flaxseed Flour</li>
+            <li class="cat-card__item">Pumpkin Flour</li>
+            <li class="cat-card__item">Walnut Flour</li>
+            <li class="cat-card__item">Milk Thistle</li>
           </ul>
           <span class="cat-card__link">VIEW ALL →</span>
         </div>
       </a>
-      <a href="/products?cat=retail" class="cat-card reveal reveal--delay-4">
+
+      <!-- Tahinis Card -->
+      <a href="/products?cat=tahinis" class="cat-card reveal reveal--delay-4">
         <div class="cat-card__img-wrap">
-          <img src="Media/products/oat-flakes.jpg" alt="Retail packs — oat flakes, split peas and dehulled lentils" class="cat-card__img" loading="lazy">
+          <img src="Media/products/tahini.webp" alt="Artisan sunflower and flaxseed tahini butter produced at Agros-98 AD, Suvorovo, Bulgaria" class="cat-card__img" loading="lazy">
         </div>
         <div class="cat-card__content">
-          <h3 class="cat-card__title">Retail</h3>
+          <h3 class="cat-card__title">Tahinis &amp; Butters</h3>
           <ul class="cat-card__list">
-            <li class="cat-card__item">Oat Flakes</li>
-            <li class="cat-card__item">Split Peas</li>
-            <li class="cat-card__item">Dehulled Lentils</li>
+            <li class="cat-card__item">Sunflower Creamy Tahini</li>
+            <li class="cat-card__item">Flaxseed Creamy Tahini</li>
+            <li class="cat-card__item">Pumpkin Creamy Tahini</li>
+            <li class="cat-card__item">Walnut Creamy Tahini</li>
           </ul>
           <span class="cat-card__link">VIEW ALL →</span>
         </div>
@@ -322,30 +479,76 @@
       <div class="certs__label">Our Certifications</div>
       <div class="certs__logos">
         <div class="cert-logo">
-          <picture><source srcset="Media/certs/fssc22000.webp" type="image/webp"><img src="Media/certs/fssc22000.webp" alt="FSSC 22000" class="cert-logo__img" loading="lazy"></picture>
+          <picture>
+            <source srcset="Media/certs/fssc22000.webp" type="image/webp">
+            <img src="Media/certs/fssc22000.webp" alt="FSSC 22000" class="cert-logo__img" loading="lazy">
+          </picture>
           <div class="cert-logo__name">FSSC 22000</div>
           <div class="cert-logo__sub">Food Safety</div>
         </div>
         <div class="cert-logo">
-          <picture><source srcset="Media/certs/eu-organic.webp" type="image/webp"><img src="Media/certs/eu-organic.webp" alt="EU Organic" class="cert-logo__img" loading="lazy"></picture>
+          <picture>
+            <source srcset="Media/certs/eu-organic.webp" type="image/webp">
+            <img src="Media/certs/eu-organic.webp" alt="EU Organic" class="cert-logo__img" loading="lazy">
+          </picture>
           <div class="cert-logo__name">EU Organic</div>
           <div class="cert-logo__sub">Certified</div>
         </div>
         <div class="cert-logo">
-          <picture><source srcset="Media/certs/kosher.webp" type="image/webp"><img src="Media/certs/kosher.webp" alt="Kosher" class="cert-logo__img" loading="lazy"></picture>
+          <picture>
+            <source srcset="Media/certs/kosher.webp" type="image/webp">
+            <img src="Media/certs/kosher.webp" alt="Kosher" class="cert-logo__img" loading="lazy">
+          </picture>
           <div class="cert-logo__name">Kosher</div>
           <div class="cert-logo__sub">Certified</div>
         </div>
         <div class="cert-logo">
-          <picture><source srcset="Media/certs/halal.webp" type="image/webp"><img src="Media/certs/halal.webp" alt="Halal" class="cert-logo__img" loading="lazy"></picture>
+          <picture>
+            <source srcset="Media/certs/halal.webp" type="image/webp">
+            <img src="Media/certs/halal.webp" alt="Halal" class="cert-logo__img" loading="lazy">
+          </picture>
           <div class="cert-logo__name">Halal</div>
           <div class="cert-logo__sub">Certified</div>
         </div>
         <div class="cert-logo">
-          <picture><source srcset="Media/certs/kiwa.webp" type="image/webp"><img src="Media/certs/kiwa.webp" alt="KIWA" class="cert-logo__img" loading="lazy"></picture>
+          <picture>
+            <source srcset="Media/certs/kiwa.webp" type="image/webp">
+            <img src="Media/certs/kiwa.webp" alt="KIWA" class="cert-logo__img" loading="lazy">
+          </picture>
           <div class="cert-logo__name">KIWA</div>
           <div class="cert-logo__sub">3rd Party Audit</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="why-us section--cream section" aria-labelledby="why-title">
+  <div class="container">
+    <div class="section__header section__header--center reveal">
+      <h2 class="section__title" id="why-title">We Don't Trade. We Produce.</h2>
+    </div>
+    <div class="why-us__grid">
+      <div class="why-card reveal reveal--delay-1">
+        <div class="why-card__icon">🌱</div>
+        <h3 class="why-card__title">Own Farmland</h3>
+        <p class="why-card__text">We cultivate sunflower, coriander, flaxseed, and other crops on land we own in the Varna region — no third-party sourcing, full traceability from seed to shipment.</p>
+      </div>
+      <div class="why-card reveal reveal--delay-2">
+        <div class="why-card__icon">🌿</div>
+        <h3 class="why-card__title">Low-Pesticide</h3>
+        <p class="why-card__text">Our cultivation program uses minimal pesticide inputs and follows integrated pest management practices, producing cleaner raw material for food-grade applications.</p>
+      </div>
+      <div class="why-card reveal reveal--delay-3">
+        <div class="why-card__icon">⚙️</div>
+        <h3 class="why-card__title">Full Integration</h3>
+        <p class="why-card__text">From cleaning and cold-press extraction to packaging and labelling, every step of the value chain happens in our own facility in Suvorovo — no outsourced processing.</p>
+      </div>
+      <div class="why-card reveal reveal--delay-4">
+        <div class="why-card__icon">✅</div>
+        <h3 class="why-card__title">Food Safety Docs</h3>
+        <p class="why-card__text">We supply full documentation: COA, Certificate of Origin, phytosanitary certificates, and EUR.1 preferential origin documents for every shipment to EU buyers.</p>
       </div>
     </div>
   </div>
@@ -360,38 +563,36 @@
         <p class="cta-band__subtitle">Let's discuss your requirements — volumes, packaging, specifications, and delivery terms.</p>
       </div>
       <div class="cta-band__actions">
-        <a href="/contact" class="btn btn--white">Get in Touch</a>
-        <a href="/products" class="btn btn--outline-white">Browse Products</a>
+        <a href="/contact" class="btn btn--gold">Get in Touch</a>
+        <a href="/products" class="btn btn--outline-light">Browse Products</a>
       </div>
     </div>
   </div>
 </section>
 
-</main>
-
 <!-- ===== FOOTER ===== -->
+</main>
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer__grid">
+      <!-- Brand -->
       <div class="footer__brand">
-        <a href="/" class="footer__logo"><img src="Media/logo.jpg" alt="Stufiyan Agro" class="footer__logo-img" loading="lazy" /></a>
-        <p class="footer__tagline">From field to final packaging — quality you can trace. Neofit Bozveli 15, Varna, Bulgaria.</p>
-        <p class="footer__vat">Registered in Bulgaria · VAT BG204623096</p>
-        <a href="https://www.linkedin.com/company/stufiyan-agro-llc" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Stufiyan Agro on LinkedIn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
+        <a href="/" class="footer__logo"><img src="Media/agros-logo.webp" alt="Agros-98 AD" class="footer__logo-img" loading="lazy" /></a>
+        <p class="footer__tagline">From field to final packaging — quality you can trace. Suvorovo &amp; Varna, Bulgaria.</p>
+        <p class="footer__vat" style="font-size:0.75rem;margin-top:0.5rem">Registered in Bulgaria · VAT BG208709219</p>
       </div>
+      <!-- Products -->
       <div>
         <p class="footer__heading">Products</p>
         <ul class="footer__links">
-          <li><a href="/products?cat=oil-seeds" class="footer__link">Oil Seeds</a></li>
-          <li><a href="/products?cat=grains" class="footer__link">Grains</a></li>
-          <li><a href="/products?cat=pulses" class="footer__link">Pulses &amp; Legumes</a></li>
-          <li><a href="/products?cat=retail" class="footer__link">Retail</a></li>
+          <li><a href="/products?cat=seeds" class="footer__link">Seeds &amp; Kernels</a></li>
+          <li><a href="/products?cat=oils" class="footer__link">Cold-Pressed Oils</a></li>
+          <li><a href="/products?cat=flours" class="footer__link">Flours &amp; Proteins</a></li>
+          <li><a href="/products?cat=tahinis" class="footer__link">Tahinis &amp; Butters</a></li>
           <li><a href="/products" class="footer__link">All Products →</a></li>
         </ul>
       </div>
+      <!-- Company -->
       <div>
         <p class="footer__heading">Company</p>
         <ul class="footer__links">
@@ -401,29 +602,31 @@
           <li><a href="/contact" class="footer__link">Request a Quote</a></li>
         </ul>
       </div>
+      <!-- Contact -->
       <div>
         <p class="footer__heading">Contact</p>
         <div class="footer__contact-item">
           <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           <div>
             <strong>Sales</strong>
-            Viktoria Yordanova<br>
-            <a href="mailto:sales@stufiyan-agro.com" class="footer__contact-link">sales@stufiyan-agro.com</a><br>
-            <a href="tel:+359889297893" class="footer__contact-link">+359 889 297 893</a>
+            Georgi Berbenkov<br>
+            <a href="mailto:g.berbenkov@agros.net" class="footer__contact-link">g.berbenkov@agros.net</a><br>
+            <a href="tel:+359879127112" class="footer__contact-link">+359 879 127 112</a>
           </div>
         </div>
         <div class="footer__contact-item">
           <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           <div>
-            <strong>Reception</strong>
-            <a href="mailto:info@stufiyan-agro.com" class="footer__contact-link">info@stufiyan-agro.com</a>
+            <strong>Accounting</strong>
+            <a href="mailto:agros98@abv.bg" class="footer__contact-link">agros98@abv.bg</a><br>
+            <a href="mailto:office@agros.net" class="footer__contact-link">office@agros.net</a>
           </div>
         </div>
         <div class="footer__contact-item">
           <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <div>
             <strong>Location</strong>
-            Neofit Bozveli 15, Varna, Bulgaria
+            Suvorovo &amp; Varna, Bulgaria
           </div>
         </div>
       </div>
@@ -431,10 +634,9 @@
   </div>
   <div class="footer__bottom">
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
-      <p class="footer__copy">&copy; 2026 Stufiyan Agro. All rights reserved.</p>
-      <div class="footer__bottom-links">
-        <a href="/privacy" class="footer__bottom-link">Privacy Policy</a>
-        <a href="/contact" class="footer__bottom-link">Contact</a>
+      <p class="footer__copy">&copy; 2026 Agros-98 AD. All rights reserved.</p>
+      <div class="footer__bottom-links"><a href="https://www.linkedin.com/company/agros-98/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Agros-98 on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="/privacy" class="footer__bottom-link">Privacy Policy</a><a href="/contact" class="footer__bottom-link">Contact</a>
         <a href="/products" class="footer__bottom-link">Products</a>
       </div>
     </div>
