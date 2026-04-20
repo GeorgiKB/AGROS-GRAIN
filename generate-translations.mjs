@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const BASE = 'C:/Users/G.Berbenkov/Desktop/Agros-98 Website';
+const BASE = 'C:/Users/G.Berbenkov/Desktop/Stufiyan Agro';
 
 const pages = [
   'index.html', 'products.html', 'contact.html',

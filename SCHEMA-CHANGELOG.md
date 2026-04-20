@@ -22,7 +22,7 @@
 
 **New Organization properties added:**
 - `@id: "https://www.agros-grain.com/#organization"` — canonical entity anchor
-- `@type` extended to `["Organization", "Corporation", "LocalBusiness"]` — Corporation added (Agros-98 AD is a Bulgarian joint-stock company)
+- `@type` extended to `["Organization", "Corporation", "LocalBusiness"]` — Corporation added (Stufiyan Agro is a Bulgarian joint-stock company)
 - `additionalType: "https://www.wikidata.org/wiki/Q936971"` — Wikidata food manufacturer entity
 - `naics: "311224"` — oilseed processing NAICS code
 - `isicV4: "1040"` — vegetable/animal oils & fats ISIC code
@@ -82,7 +82,7 @@ Both schema structures present across the site were handled:
 {
   "@type": "ItemList",
   "@id": "https://www.agros-grain.com/products#product-list",
-  "name": "Agros-98 AD Products",
+  "name": "Stufiyan Agro Products",
   "url": "https://www.agros-grain.com/products",
   "numberOfItems": 27,
   "itemListElement": [ ... ]
@@ -92,7 +92,7 @@ Both schema structures present across the site were handled:
 - 27 `ListItem` entries, each referencing a `Product` entity by `@id`
 - DE version uses `leinsamen-gelb` (not `flaxseed-yellow`) in position 14
 - BG and DE versions use language-scoped `@id` URLs (`/bg/[slug]#product`, `/de/[slug]#product`)
-- List name translated: BG = "Продукти на Agros-98 AD", DE = "Produkte von Agros-98 AD"
+- List name translated: BG = "Продукти на Stufiyan Agro", DE = "Produkte von Stufiyan Agro"
 
 ---
 
@@ -108,14 +108,14 @@ Both schema structures present across the site were handled:
 {
   "@type": "ContactPage",
   "@id": "https://www.agros-grain.com/contact",
-  "name": "Contact Agros-98 AD",
+  "name": "Contact Stufiyan Agro",
   "url": "https://www.agros-grain.com/contact",
   "inLanguage": "en",
   "mainEntity": { "@id": "https://www.agros-grain.com/#organization" }
 }
 ```
 
-Contact page name translated: BG = "Свържете се с Agros-98 AD", DE = "Kontakt — Agros-98 AD"
+Contact page name translated: BG = "Свържете се с Stufiyan Agro", DE = "Kontakt — Stufiyan Agro"
 
 ---
 
@@ -130,8 +130,8 @@ Contact page name translated: BG = "Свържете се с Agros-98 AD", DE = 
   "@type": "WebPage",
   "@id": "https://www.agros-grain.com/production-process",
   "url": "https://www.agros-grain.com/production-process",
-  "name": "Production Process — Agros-98 AD",
-  "description": "Five controlled stages from raw seed intake to finished product dispatch at Agros-98 AD.",
+  "name": "Production Process — Stufiyan Agro",
+  "description": "Five controlled stages from raw seed intake to finished product dispatch at Stufiyan Agro.",
   "inLanguage": "en",
   "about": { "@id": "https://www.agros-grain.com/#organization" },
   "publisher": { "@id": "https://www.agros-grain.com/#organization" }
@@ -153,7 +153,7 @@ Name and description translated per language (BG/DE).
   "@type": "CollectionPage",
   "@id": "https://www.agros-grain.com/news",
   "url": "https://www.agros-grain.com/news",
-  "name": "News & Updates — Agros-98 AD",
+  "name": "News & Updates — Stufiyan Agro",
   "inLanguage": "en",
   "publisher": { "@id": "https://www.agros-grain.com/#organization" },
   "mainEntity": {
@@ -175,8 +175,8 @@ Article URL slugs differ per language (BG: `hcn-sadarzhanie-leneno-seme-rakovods
 
 **Before:**
 ```json
-"author": { "@type": "Organization", "name": "Agros-98 AD", "url": "..." },
-"publisher": { "@type": "Organization", "name": "Agros-98 AD", "url": "...", "logo": {...} }
+"author": { "@type": "Organization", "name": "Stufiyan Agro", "url": "..." },
+"publisher": { "@type": "Organization", "name": "Stufiyan Agro", "url": "...", "logo": {...} }
 ```
 
 **After:**
@@ -185,7 +185,7 @@ Article URL slugs differ per language (BG: `hcn-sadarzhanie-leneno-seme-rakovods
 "publisher": {
   "@type": "Organization",
   "@id": "https://www.agros-grain.com/#organization",
-  "name": "Agros-98 AD",
+  "name": "Stufiyan Agro",
   "url": "https://www.agros-grain.com/",
   "logo": { "@type": "ImageObject", "url": "https://www.agros-grain.com/Media/agros-logo.webp" }
 }

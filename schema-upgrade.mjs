@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * schema-upgrade.mjs
- * Upgrades all JSON-LD structured data across the Agros-98 AD website.
+ * Upgrades all JSON-LD structured data across the Stufiyan Agro website.
  *
  * Run from project root: node schema-upgrade.mjs
  *
@@ -132,9 +132,9 @@ function buildHomepageSchema(lang) {
     de: 'Vom Feld zur fertigen Verpackung — Qualität, die Sie zurückverfolgen können.',
   };
   const catalogNames = {
-    en: { catalog: 'Agros-98 AD Product Catalog', seeds: 'Seeds & Kernels', oils: 'Cold-Pressed Oils', flours: 'Flours & Proteins', tahinis: 'Tahinis & Butters' },
-    bg: { catalog: 'Продуктов каталог на Agros-98 AD', seeds: 'Семена и ядки', oils: 'Студено пресовани масла', flours: 'Брашна и протеини', tahinis: 'Тахани и масла' },
-    de: { catalog: 'Agros-98 AD Produktkatalog', seeds: 'Saaten & Kerne', oils: 'Kaltgepresste Öle', flours: 'Mehle & Proteine', tahinis: 'Tahinis & Buttern' },
+    en: { catalog: 'Stufiyan Agro Product Catalog', seeds: 'Seeds & Kernels', oils: 'Cold-Pressed Oils', flours: 'Flours & Proteins', tahinis: 'Tahinis & Butters' },
+    bg: { catalog: 'Продуктов каталог на Stufiyan Agro', seeds: 'Семена и ядки', oils: 'Студено пресовани масла', flours: 'Брашна и протеини', tahinis: 'Тахани и масла' },
+    de: { catalog: 'Stufiyan Agro Produktkatalog', seeds: 'Saaten & Kerne', oils: 'Kaltgepresste Öle', flours: 'Mehle & Proteine', tahinis: 'Tahinis & Buttern' },
   };
   const navLabels = {
     en: { home: 'Home', products: 'Products', news: 'News', contact: 'Contact' },
@@ -152,7 +152,7 @@ function buildHomepageSchema(lang) {
       {
         '@type': ['Organization', 'Corporation', 'LocalBusiness'],
         '@id': `${BASE}/#organization`,
-        'name': 'Agros-98 AD',
+        'name': 'Stufiyan Agro',
         'url': `${BASE}/`,
         'logo': {
           '@type': 'ImageObject',
@@ -228,13 +228,13 @@ function buildHomepageSchema(lang) {
           { '@type': 'Certification', 'name': 'Kosher Certification',       'issuedBy': { '@type': 'Organization', 'name': 'Kosher Certification Body' } },
         ],
         'sameAs': [
-          'https://www.linkedin.com/company/agros-98/',
+          'https://www.linkedin.com/company/stufiyan-agro-llc',
         ],
       },
       {
         '@type': 'Brand',
         '@id': `${BASE}/#brand`,
-        'name': 'Agros-98 AD',
+        'name': 'Stufiyan Agro',
         'url': `${BASE}/`,
         'logo': {
           '@type': 'ImageObject',
@@ -245,7 +245,7 @@ function buildHomepageSchema(lang) {
         '@type': 'WebSite',
         '@id': `${BASE}/#website`,
         'url': `${BASE}/`,
-        'name': 'Agros-98 AD',
+        'name': 'Stufiyan Agro',
         'inLanguage': lang,
         'publisher': { '@id': `${BASE}/#organization` },
       },
@@ -326,7 +326,7 @@ function buildItemList(lang) {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     '@id': `${BASE}${pfx}/products#product-list`,
-    'name': lang === 'bg' ? 'Продукти на Agros-98 AD' : lang === 'de' ? 'Produkte von Agros-98 AD' : 'Agros-98 AD Products',
+    'name': lang === 'bg' ? 'Продукти на Stufiyan Agro' : lang === 'de' ? 'Produkte von Stufiyan Agro' : 'Stufiyan Agro Products',
     'url': `${BASE}${pfx}/products`,
     'numberOfItems': slugs.length,
     'itemListElement': slugs.map((slug, i) => ({
@@ -345,7 +345,7 @@ function buildItemList(lang) {
 
 function buildContactPage(lang) {
   const pfx = urlPrefix(lang);
-  const names = { en: 'Contact Agros-98 AD', bg: 'Свържете се с Agros-98 AD', de: 'Kontakt — Agros-98 AD' };
+  const names = { en: 'Contact Stufiyan Agro', bg: 'Свържете се с Stufiyan Agro', de: 'Kontakt — Stufiyan Agro' };
   return {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
@@ -363,14 +363,14 @@ function buildContactPage(lang) {
 function buildProductionProcessPage(lang) {
   const pfx = urlPrefix(lang);
   const names = {
-    en: 'Production Process — Agros-98 AD',
-    bg: 'Производствен процес — Agros-98 AD',
-    de: 'Produktionsprozess — Agros-98 AD',
+    en: 'Production Process — Stufiyan Agro',
+    bg: 'Производствен процес — Stufiyan Agro',
+    de: 'Produktionsprozess — Stufiyan Agro',
   };
   const descs = {
-    en: 'Five controlled stages from raw seed intake to finished product dispatch at Agros-98 AD.',
-    bg: 'Пет контролирани етапа от приемане на суровото семе до изпращане на готовия продукт в Agros-98 AD.',
-    de: 'Fünf kontrollierte Stufen von der Rohwarenerfassung bis zum Versand des Fertigprodukts bei Agros-98 AD.',
+    en: 'Five controlled stages from raw seed intake to finished product dispatch at Stufiyan Agro.',
+    bg: 'Пет контролирани етапа от приемане на суровото семе до изпращане на готовия продукт в Stufiyan Agro.',
+    de: 'Fünf kontrollierte Stufen von der Rohwarenerfassung bis zum Versand des Fertigprodukts bei Stufiyan Agro.',
   };
   return {
     '@context': 'https://schema.org',
@@ -390,7 +390,7 @@ function buildProductionProcessPage(lang) {
 function buildNewsCollectionPage(lang) {
   const pfx = urlPrefix(lang);
   const slugs = NEWS_SLUGS[lang];
-  const names = { en: 'News & Updates — Agros-98 AD', bg: 'Новини — Agros-98 AD', de: 'Neuigkeiten — Agros-98 AD' };
+  const names = { en: 'News & Updates — Stufiyan Agro', bg: 'Новини — Stufiyan Agro', de: 'Neuigkeiten — Stufiyan Agro' };
   return {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -422,7 +422,7 @@ function upgradeArticleSchema(block) {
   art['publisher'] = {
     '@type': 'Organization',
     '@id': `${BASE}/#organization`,
-    'name': 'Agros-98 AD',
+    'name': 'Stufiyan Agro',
     'url': `${BASE}/`,
     'logo': {
       '@type': 'ImageObject',
@@ -632,7 +632,7 @@ function walk(dir, callback) {
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 
-console.log('Agros-98 Schema Upgrade — starting...\n');
+console.log('Stufiyan Agro Schema Upgrade — starting...\n');
 
 let total = 0;
 let modified = 0;
