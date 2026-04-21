@@ -111,6 +111,11 @@
       "source": "/de/news/what-separates-good-flaxseed-from-cheap-flaxseed",
       "destination": "/de/news/guter-leinsamen-vs-billig",
       "permanent": true
+    },
+    {
+      "source": "/news/yellow-vs-brown-flaxseed-food-manufacturers",
+      "destination": "/news/yellow-vs-brown-flaxseed",
+      "permanent": true
     }
   ]
 }
