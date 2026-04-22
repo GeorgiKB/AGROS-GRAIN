@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/webp" href="Media/favicon.webp" />
+  <link rel="apple-touch-icon" href="Media/favicon.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What We Do — Agros-98 AD Bulgaria</title>
+  <meta name="description" content="From Bulgarian fields to global markets: Agros-98 grows yellow and brown flaxseed, coriander and sunflower, cleans to 99.98% purity with 3× SORTEX, packs to spec, and handles full export logistics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="alternate" hreflang="en" href="https://www.agros-grain.com/what-we-do" />
+  <link rel="alternate" hreflang="bg" href="https://www.agros-grain.com/bg/what-we-do" />
+  <link rel="alternate" hreflang="de" href="https://www.agros-grain.com/de/what-we-do" />
+  <link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/what-we-do" />
+  <link rel="canonical" href="https://www.agros-grain.com/what-we-do" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.agros-grain.com/what-we-do" />
+  <meta property="og:title"       content="What We Do — Agros-98 AD Bulgaria" />
+  <meta property="og:description" content="We grow, clean, pack and dispatch — four capabilities, one reliable partner. Bulgaria's #1 flaxseed producer and exporter." />
+  <meta property="og:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name"   content="Agros-98 AD" />
+  <meta property="og:locale"      content="en_US" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="What We Do — Agros-98 AD Bulgaria" />
+  <meta name="twitter:description" content="We grow, clean, pack and dispatch — four capabilities, one reliable partner." />
+  <meta name="twitter:image"       content="https://www.agros-grain.com/Media/og-image.webp" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.agros-grain.com/what-we-do",
+  "url": "https://www.agros-grain.com/what-we-do",
+  "name": "What We Do — Agros-98 AD Bulgaria",
+  "description": "From Bulgarian fields to global markets: Agros-98 grows yellow and brown flaxseed, coriander and sunflower, cleans to 99.98% purity with 3× SORTEX, packs to spec, and handles full export logistics.",
+  "inLanguage": "en",
+  "about": { "@id": "https://www.agros-grain.com/#organization" },
+  "publisher": { "@id": "https://www.agros-grain.com/#organization" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.agros-grain.com/" },
+      { "@type": "ListItem", "position": 2, "name": "What We Do", "item": "https://www.agros-grain.com/what-we-do" }
+    ]
+  }
+}
+</script>
+  <style>
+    /* ── Page Hero ───────────────────────────────────────────── */
+    .wwd-hero {
+      background: var(--brand-deep);
+      padding: 7rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .wwd-hero__bg-img {
+      position: absolute;
+      inset: 0;
+      background-image: url('Media/coriander-field.jpeg');
+      background-size: cover;
+      background-position: center 40%;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    .wwd-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 90% at 85% 40%, rgba(184,114,58,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 60% at 5% 85%, rgba(212,168,67,0.10) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .wwd-hero__grain {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      z-index: 2;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch"/></filter><rect width="300" height="300" filter="url(%23n)" opacity="1"/></svg>');
+      background-size: 200px 200px;
+      pointer-events: none;
+    }
+    .wwd-hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .wwd-hero__eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--gold);
+    }
+    .wwd-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+      position: relative;
+      z-index: 1;
+    }
+    .wwd-hero__title span {
+      color: var(--gold);
+    }
+    .wwd-hero__subtitle {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.75;
+      max-width: 580px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 2.5rem;
+    }
+    /* ── Pillar Sections ─────────────────────────────────────── */
+    .pillar {
+      padding: 5.5rem 0;
+    }
+    .pillar--dark {
+      background: var(--brand-deep);
+    }
+    .pillar--grow,
+    .pillar--clean,
+    .pillar--pack,
+    .pillar--ship {
+      position: relative;
+      overflow: hidden;
+    }
+    .pillar--cream {
+      background: var(--cream);
+    }
+    .pillar--white {
+      background: var(--white);
+    }
+    .pillar__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .pillar__grid--reverse {
+      direction: rtl;
+    }
+    .pillar__grid--reverse > * {
+      direction: ltr;
+    }
+    @media (max-width: 860px) {
+      .pillar__grid,
+      .pillar__grid--reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 2.5rem;
+      }
+    }
+
+    /* Visual / Image side */
+    .pillar__visual {
+      position: relative;
+    }
+    .pillar__img-card {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: var(--radius-xl);
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 2px 8px rgba(30,22,10,0.10),
+        0 8px 32px rgba(30,22,10,0.14),
+        0 32px 80px rgba(30,22,10,0.10);
+    }
+    .pillar__img {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+    }
+    .pillar__img-card:hover .pillar__img {
+      transform: scale(1.04);
+    }
+    .pillar__img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(20,12,4,0.65) 0%, rgba(20,12,4,0.1) 45%, transparent 70%);
+      pointer-events: none;
+    }
+    .pillar__img-step {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--brand-amber);
+      padding: 0.35rem 0.875rem;
+      border-radius: 100px;
+      box-shadow: 0 2px 12px rgba(184,114,58,0.45);
+    }
+    .pillar__img-step--gold {
+      background: var(--gold);
+      color: var(--brand-deep);
+    }
+    .pillar__img-caption {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 1.25rem;
+      right: 1.25rem;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    /* Text side */
+    .pillar__step-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .pillar__step-tag--amber { color: var(--brand-amber); }
+    .pillar__step-tag--gold  { color: var(--gold); }
+    .pillar__step-tag--amber::before,
+    .pillar__step-tag--gold::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1.5px;
+    }
+    .pillar__step-tag--amber::before { background: var(--brand-amber); }
+    .pillar__step-tag--gold::before  { background: var(--gold); }
+
+    .pillar__title {
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    .pillar__title--light { color: var(--white) !important; }
+    .pillar__title--dark  { color: var(--text-dark) !important; }
+
+    .pillar__lead {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+    .pillar__lead--light { color: rgba(255,255,255,0.7); }
+    .pillar__lead--dark  { color: var(--text-muted); }
+
+    .pillar__facts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+    .pillar__fact {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.875rem;
+    }
+    .pillar__fact-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-top: 0.45rem;
+      flex-shrink: 0;
+    }
+    .pillar__fact-dot--amber { background: var(--brand-amber); }
+    .pillar__fact-dot--gold  { background: var(--gold); }
+    .pillar__fact-text {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .pillar__fact-text--light { color: rgba(255,255,255,0.72); }
+    .pillar__fact-text--dark  { color: var(--text-body); }
+    .pillar__fact-text strong {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.15rem;
+    }
+    .pillar__fact-text--light strong { color: rgba(255,255,255,0.95); }
+    .pillar__fact-text--dark  strong { color: var(--text-dark); }
+
+    /* Highlight box */
+    .pillar__highlight {
+      margin-top: 2rem;
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .pillar__highlight--amber {
+      background: rgba(184,114,58,0.12);
+      border: 1px solid rgba(184,114,58,0.28);
+    }
+    .pillar__highlight--gold {
+      background: rgba(212,168,67,0.1);
+      border: 1px solid rgba(212,168,67,0.28);
+    }
+    .pillar__highlight-icon {
+      font-size: 1.75rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .pillar__highlight-text {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+    }
+    .pillar__highlight-text--light { color: var(--gold-light); }
+    .pillar__highlight-text--dark  { color: var(--text-dark); }
+
+    /* ── Stats Strip ─────────────────────────────────────────── */
+    .wwd-stats {
+      background: var(--brand-amber);
+      border-top: 2px solid var(--gold);
+      border-bottom: 2px solid rgba(212,168,67,0.35);
+      padding: 2.5rem 0;
+    }
+    .wwd-stats__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .wwd-stats__item {
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-right: 1px solid rgba(255,255,255,0.2);
+    }
+    .wwd-stats__item:last-child { border-right: none; }
+    .wwd-stats__num {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      display: block;
+    }
+    .wwd-stats__label {
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      margin-top: 0.35rem;
+      display: block;
+    }
+    @media (max-width: 640px) {
+      .wwd-stats__grid { grid-template-columns: repeat(2,1fr); gap: 0; }
+      .wwd-stats__item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+      .wwd-stats__item:nth-last-child(-n+2) { border-bottom: none; }
+    }
+
+    /* ── CTA ─────────────────────────────────────────────────── */
+    .wwd-cta {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      padding: 5.5rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .wwd-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 50% -10%, rgba(184,114,58,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .wwd-cta__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brand-amber);
+      margin-bottom: 1.25rem;
+    }
+    .wwd-cta__eyebrow::before {
+      content: ''; display: block;
+      width: 24px; height: 1.5px;
+      background: var(--brand-amber);
+    }
+    .wwd-cta__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      color: var(--text-dark);
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .wwd-cta__sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .wwd-cta__actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 640px) {
+      .pillar { padding: 3.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container"><div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="Agros-98 AD Home">
+      <img src="Media/agros-logo.webp" alt="Agros-98 AD" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="/" class="nav__link">Home</a></li>
+      <li><a href="/what-we-do" class="nav__link nav__link--active">What We Do</a></li>
+      <li class="nav__item--has-dropdown">
+        <a href="/products" class="nav__link">Products <svg class="nav__dropdown-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></a>
+        <div class="nav__mega-dropdown" id="nav-dropdown"></div>
+      </li>
+      <li><a href="/news" class="nav__link">News</a></li>
+      <li><a href="/contact" class="nav__link">Contact</a></li>
+    </ul>
+    <a href="https://www.linkedin.com/company/agros-98/" class="nav__linkedin" target="_blank" rel="noopener noreferrer" aria-label="Agros-98 on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    <div class="nav__lang">
+      <a href="/what-we-do" class="nav__lang-link nav__lang-link--active" hreflang="en" aria-current="true">EN</a>
+      <a href="/bg/what-we-do" class="nav__lang-link" hreflang="bg">BG</a>
+      <a href="/de/what-we-do" class="nav__lang-link" hreflang="de">DE</a>
+    </div>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div></div>
+</nav>
+<div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+  <nav class="nav__mobile-links">
+    <a href="/" class="nav__mobile-link">Home</a>
+    <a href="/what-we-do" class="nav__mobile-link nav__mobile-link--active">What We Do</a>
+    <a href="/products" class="nav__mobile-link">Products</a>
+    <a href="/news" class="nav__mobile-link">News</a>
+    <a href="/contact" class="nav__mobile-link">Contact</a>
+  </nav>
+</div>
+<main id="main-content">
+
+<!-- ===== HERO ===== -->
+<section class="wwd-hero" aria-label="What We Do">
+  <div class="wwd-hero__bg-img" aria-hidden="true"></div>
+  <div class="wwd-hero__grain" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:3;">
+    <p class="wwd-hero__eyebrow">Agros-98 AD — Our Capabilities</p>
+    <h1 class="wwd-hero__title">We grow, clean,<br>pack <span>and deliver.</span></h1>
+    <p class="wwd-hero__subtitle">From Bulgarian fields to your facility — four integrated capabilities under one roof. No intermediaries. Direct from producer to buyer.</p>
+  </div>
+</section>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item"><a href="/">Home</a></li>
+      <li class="breadcrumb__sep" aria-hidden="true">›</li>
+      <li class="breadcrumb__item" aria-current="page">What We Do</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ===== 01 WE GROW ===== -->
+<section class="pillar pillar--cream pillar--grow reveal" aria-labelledby="pillar-grow-title">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="pillar__grid">
+
+      <div class="pillar__visual reveal reveal--left">
+        <div class="pillar__img-card">
+          <div class="pillar__img" style="background-image: url('Media/flaxseed-field.jpg'); background-position: center 35%;"></div>
+          <div class="pillar__img-overlay"></div>
+          <span class="pillar__img-step">Step 01</span>
+          <span class="pillar__img-caption">Bulgarian fields, Dobruja region</span>
+        </div>
+      </div>
+
+      <div class="reveal reveal--right">
+        <p class="pillar__step-tag pillar__step-tag--amber">Step 01 — Origin</p>
+        <h2 class="pillar__title pillar__title--dark" id="pillar-grow-title">Our fields.<br>Our seeds.</h2>
+        <p class="pillar__lead pillar__lead--dark">We cultivate yellow flaxseed, brown flaxseed, coriander and sunflower directly in the Bulgarian fields of Dobruja — one of Europe's most fertile agricultural regions. As a vertically integrated producer, we control quality from the first day of the growing season.</p>
+        <div class="pillar__facts">
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--amber"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>Yellow &amp; Brown Flaxseed</strong>
+              Bulgaria's #1 producer and exporter — unmatched traceability from field to bag.
+            </div>
+          </div>
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--amber"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>Coriander &amp; Sunflower</strong>
+              Grown under controlled agronomic conditions with full lot documentation per harvest year.
+            </div>
+          </div>
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--amber"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>EU Organic Available</strong>
+              Certified organic production available on selected crops. EU Organic certification held.
+            </div>
+          </div>
+        </div>
+        <div class="pillar__highlight pillar__highlight--amber">
+          <span class="pillar__highlight-icon">★</span>
+          <span class="pillar__highlight-text pillar__highlight-text--dark">#1 Producer &amp; Exporter of Yellow Flaxseed in Europe</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS STRIP ===== -->
+<div class="wwd-stats" aria-label="Key figures">
+  <div class="container">
+    <div class="wwd-stats__grid">
+      <div class="wwd-stats__item">
+        <span class="wwd-stats__num">30+</span>
+        <span class="wwd-stats__label">Years in Business</span>
+      </div>
+      <div class="wwd-stats__item">
+        <span class="wwd-stats__num">3×</span>
+        <span class="wwd-stats__label">SORTEX Optical Sorters</span>
+      </div>
+      <div class="wwd-stats__item">
+        <span class="wwd-stats__num">99.98%</span>
+        <span class="wwd-stats__label">Achieved Purity</span>
+      </div>
+      <div class="wwd-stats__item">
+        <span class="wwd-stats__num">40+</span>
+        <span class="wwd-stats__label">Export Destinations</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 02 WE CLEAN ===== -->
+<section class="pillar pillar--cream pillar--clean reveal" aria-labelledby="pillar-clean-title">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="pillar__grid pillar__grid--reverse">
+
+      <div class="pillar__visual reveal reveal--right">
+        <div class="pillar__img-card">
+          <div class="pillar__img" style="background-image: url('Media/sortex-agros.jpg');"></div>
+          <div class="pillar__img-overlay"></div>
+          <span class="pillar__img-step">Step 02</span>
+          <span class="pillar__img-caption">3× SORTEX optical sorting cascade</span>
+        </div>
+      </div>
+
+      <div class="reveal reveal--left">
+        <p class="pillar__step-tag pillar__step-tag--amber">Step 02 — Precision Cleaning</p>
+        <h2 class="pillar__title pillar__title--dark" id="pillar-clean-title">99.98% purity.<br>No compromise.</h2>
+        <p class="pillar__lead pillar__lead--dark">Our facility runs three SORTEX optical sorters operating in cascade — each pass removing what the previous missed. The result is product that consistently exceeds food-grade specifications at global standard.</p>
+        <div class="pillar__facts">
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--amber"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>3× SORTEX Optical Sorting</strong>
+              Three-pass cascade sorting eliminates discoloured seeds, foreign matter and off-spec material to 99.98% purity.
+            </div>
+          </div>
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--amber"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>Multi-Stage Pre-Cleaning</strong>
+              Scalping, gravity separation and fine-mesh sieving before optical sorting ensure consistent incoming quality.
+            </div>
+          </div>
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--amber"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>In-Line Metal Detection</strong>
+              Final metal detection on every filled bag. Zero tolerance. Every lot documented and traceable.
+            </div>
+          </div>
+        </div>
+        <div class="pillar__highlight pillar__highlight--amber">
+          <span class="pillar__highlight-icon">🏅</span>
+          <span class="pillar__highlight-text pillar__highlight-text--dark">FSSC 22000 &amp; ISO 22000 certified — audited annually</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 WE PACK ===== -->
+<section class="pillar pillar--white pillar--pack reveal" aria-labelledby="pillar-pack-title">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="pillar__grid">
+
+      <div class="pillar__visual reveal reveal--left">
+        <div class="pillar__img-card">
+          <div class="pillar__img" style="background-image: url('Media/warehouse.webp');"></div>
+          <div class="pillar__img-overlay"></div>
+          <span class="pillar__img-step pillar__img-step--gold">Step 03</span>
+          <span class="pillar__img-caption">Automated packaging to buyer specification</span>
+        </div>
+      </div>
+
+      <div class="reveal reveal--right">
+        <p class="pillar__step-tag pillar__step-tag--gold">Step 03 — Packaging</p>
+        <h2 class="pillar__title pillar__title--dark" id="pillar-pack-title">Your spec.<br>Our execution.</h2>
+        <p class="pillar__lead pillar__lead--dark">We pack to buyer specification — from bag type and net weight to label language, lot numbering and pallet configuration. No standard SKU imposed on you. You define the requirement; we execute it precisely.</p>
+        <div class="pillar__facts">
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--gold"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>Flexible Bag Formats</strong>
+              25 kg paper bags, 25 kg woven PP bags, 50 lb bags, and 1,000 kg big bags — all options available.
+            </div>
+          </div>
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--gold"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>Custom Labelling</strong>
+              Labels printed to your design: brand name, nutritional data, language, barcode, lot code — whatever you need.
+            </div>
+          </div>
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--gold"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>Automated &amp; Auditable</strong>
+              Fully automated bagging and weighing with every pallet stretch-wrapped and lot-coded for traceability.
+            </div>
+          </div>
+        </div>
+        <div class="pillar__highlight pillar__highlight--gold">
+          <span class="pillar__highlight-icon">📦</span>
+          <span class="pillar__highlight-text pillar__highlight-text--dark">Halal &amp; Kosher certified — documentation available on request</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 WE SHIP ===== -->
+<section class="pillar pillar--white pillar--ship reveal" aria-labelledby="pillar-ship-title">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="pillar__grid pillar__grid--reverse">
+
+      <div class="pillar__visual reveal reveal--right">
+        <div class="pillar__img-card">
+          <div class="pillar__img" style="background-image: url('Media/truck-agros.png');"></div>
+          <div class="pillar__img-overlay"></div>
+          <span class="pillar__img-step">Step 04</span>
+          <span class="pillar__img-caption">Export to 40+ countries worldwide</span>
+        </div>
+      </div>
+
+      <div class="reveal reveal--left">
+        <p class="pillar__step-tag pillar__step-tag--amber">Step 04 — Export &amp; Logistics</p>
+        <h2 class="pillar__title pillar__title--dark" id="pillar-ship-title">One call covers<br>everything.</h2>
+        <p class="pillar__lead pillar__lead--dark">We organise loading, transport and export from our facility in Suvorovo. We issue all required export documentation in-house — no freight forwarder required on your side unless you prefer it. Shipping by truck, sea container or rail.</p>
+        <div class="pillar__facts">
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--amber"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>Full Export Documentation</strong>
+              Certificate of Origin, EUR.1 movement certificate, Phytosanitary certificate, COA and health certificates — all issued by us.
+            </div>
+          </div>
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--amber"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>Flexible Dispatch Options</strong>
+              FCA Suvorovo, FOB Varna, CFR or CIF to your destination port. We arrange haulage to port when required.
+            </div>
+          </div>
+          <div class="pillar__fact">
+            <span class="pillar__fact-dot pillar__fact-dot--amber"></span>
+            <div class="pillar__fact-text pillar__fact-text--dark">
+              <strong>Direct Communication</strong>
+              One dedicated sales contact from quote to delivery. No call centres, no ticket queues.
+            </div>
+          </div>
+        </div>
+        <div class="pillar__highlight pillar__highlight--amber">
+          <span class="pillar__highlight-icon">🌍</span>
+          <span class="pillar__highlight-text pillar__highlight-text--dark">Exporting to 40+ countries across Europe, Asia and the Middle East</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="wwd-cta" aria-labelledby="wwd-cta-title">
+  <div class="container">
+    <p class="wwd-cta__eyebrow">Ready to source direct?</p>
+    <h2 class="wwd-cta__title" id="wwd-cta-title">From our field to your production line.</h2>
+    <p class="wwd-cta__sub">Contact us to request a sample, discuss specifications or get a quote. Every inquiry gets a direct response from our sales team — usually within one business day.</p>
+    <div class="wwd-cta__actions">
+      <a href="/contact" class="btn btn--gold">Request a Sample</a>
+      <a href="/contact" class="btn btn--outline">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="/" class="footer__logo"><img src="Media/agros-logo.webp" alt="Agros-98 AD" class="footer__logo-img" loading="lazy" /></a>
+        <p class="footer__tagline">From field to final packaging — quality you can trace. Suvorovo &amp; Varna, Bulgaria.</p>
+        <p class="footer__vat">Registered in Bulgaria &middot; VAT BG208709219</p>
+      </div>
+      <div>
+        <p class="footer__heading">Products</p>
+        <ul class="footer__links">
+          <li><a href="/products?cat=seeds" class="footer__link">Seeds &amp; Kernels</a></li>
+          <li><a href="/products?cat=oils" class="footer__link">Cold-Pressed Oils</a></li>
+          <li><a href="/products?cat=flours" class="footer__link">Flours &amp; Proteins</a></li>
+          <li><a href="/products?cat=tahinis" class="footer__link">Tahinis &amp; Butters</a></li>
+          <li><a href="/products" class="footer__link">All Products →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Company</p>
+        <ul class="footer__links">
+          <li><a href="/" class="footer__link">Home</a></li>
+          <li><a href="/what-we-do" class="footer__link">What We Do</a></li>
+          <li><a href="/contact" class="footer__link">Contact</a></li>
+          <li><a href="/contact" class="footer__link">Request a Sample</a></li>
+          <li><a href="/contact" class="footer__link">Request a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Contact</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div>
+            <strong>Sales</strong> Georgi Berbenkov<br>
+            <a href="mailto:g.berbenkov@agros.net" class="footer__contact-link">g.berbenkov@agros.net</a><br>
+            <a href="tel:+359879127112" class="footer__contact-link">+359 879 127 112</a>
+          </div>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <strong>Accounting</strong>
+            <a href="mailto:agros98@abv.bg" class="footer__contact-link">agros98@abv.bg</a><br>
+            <a href="mailto:office@agros.net" class="footer__contact-link">office@agros.net</a>
+          </div>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <strong>Location</strong>
+            Suvorovo &amp; Varna, Bulgaria
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+      <p class="footer__copy">&copy; 2026 Agros-98 AD. All rights reserved.</p>
+      <div class="footer__bottom-links">
+        <a href="https://www.linkedin.com/company/agros-98/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Agros-98 on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="/privacy" class="footer__bottom-link">Privacy Policy</a>
+        <a href="/contact" class="footer__bottom-link">Contact</a>
+        <a href="/products" class="footer__bottom-link">Products</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/products-data.js"></script>
+<script src="js/main.js"></script>
+<script>
+renderNavDropdown({ pathPrefix: '/' });
+</script>
+</body>
+</html>

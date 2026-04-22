@@ -315,8 +315,60 @@
   <url>
     <loc>https://www.agros-grain.com/news/yellow-vs-brown-flaxseed</loc>
     <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/news/yellow-vs-brown-flaxseed"/>
+    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/news/zhalto-vs-kafyavo-leneno-seme"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/news/gelber-vs-brauner-leinsamen"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/news/yellow-vs-brown-flaxseed"/>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.agros-grain.com/what-we-do</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/what-we-do"/>
+    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/what-we-do"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/what-we-do"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/what-we-do"/>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.agros-grain.com/broken-sunflower-kernels</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/broken-sunflower-kernels"/>
+    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/broken-sunflower-kernels"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/broken-sunflower-kernels"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/broken-sunflower-kernels"/>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.agros-grain.com/hulled-sunflower-kernels-bakery</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/hulled-sunflower-kernels-bakery"/>
+    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/hulled-sunflower-kernels-bakery"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/hulled-sunflower-kernels-bakery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/hulled-sunflower-kernels-bakery"/>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.agros-grain.com/hulled-sunflower-kernels-confectionery</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/hulled-sunflower-kernels-confectionery"/>
+    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/hulled-sunflower-kernels-confectionery"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/hulled-sunflower-kernels-confectionery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/hulled-sunflower-kernels-confectionery"/>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.agros-grain.com/coriander-splits</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/coriander-splits"/>
+    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/coriander-splits"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/coriander-splits"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/coriander-splits"/>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
