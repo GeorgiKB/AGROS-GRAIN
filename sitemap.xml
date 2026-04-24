@@ -313,6 +313,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.agros-grain.com/news/sunflower-kernel-grades-bakery-confectionery-comparison</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/news/sunflower-kernel-grades-bakery-confectionery-comparison"/>
+    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/news/gradove-slanchogledovi-yadki-hlebni-konfektsionerni"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/news/sonnenblumenkerne-qualitaetsstufen-baeckerei-konfekt-vergleich"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/news/sunflower-kernel-grades-bakery-confectionery-comparison"/>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.agros-grain.com/news/yellow-vs-brown-flaxseed</loc>
     <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/news/yellow-vs-brown-flaxseed"/>
     <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/news/zhalto-vs-kafyavo-leneno-seme"/>
@@ -345,8 +355,6 @@
   <url>
     <loc>https://www.agros-grain.com/hulled-sunflower-kernels-bakery</loc>
     <xhtml:link rel="alternate" hreflang="en"        href="https://www.agros-grain.com/hulled-sunflower-kernels-bakery"/>
-    <xhtml:link rel="alternate" hreflang="bg"        href="https://www.agros-grain.com/bg/hulled-sunflower-kernels-bakery"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://www.agros-grain.com/de/hulled-sunflower-kernels-bakery"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.agros-grain.com/hulled-sunflower-kernels-bakery"/>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
